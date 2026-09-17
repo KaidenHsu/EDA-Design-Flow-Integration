@@ -6,4 +6,4 @@ Labs | Description
 --------|:-----
 W2 Lab | Warmup: RTL and Verification Fundamentals
 
-<p align="center"><img src="images/banner.png" alt="banner" /></p>
+<p align="center"><img src="images/EDA_banner.png" alt="banner" /></p>
