@@ -1,0 +1,38 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Sep 17 19:45:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mux2_sim/xsim_script.tcl
+# xsim {tb_mux2_sim} -autoloadwcfg -tclbatch {/home/kaiden/EDA/build/xsim_mux2/run_mux2.tcl}
+Time resolution is 1 ps
+source /home/kaiden/EDA/build/xsim_mux2/run_mux2.tcl
+## if {[catch {log_wave -recursive *} msg]} { puts "WARN: log_wave failed: $msg" }
+## if {[catch {open_vcd ../../waves/mux2.vcd} msg]} {
+##     puts "WARN: open_vcd failed: $msg"
+## } else {
+##     catch {log_vcd /}
+## }
+WARNING: [Simtcl 6-216] No such HDL Object /
+## run all
+ERROR: Could not open vcd file waves/mux2.vcd. A VCD file by name ../../waves/mux2.vcd has already been opened. Only one VCD file is allowed to be open.
+============================================================
+Week 2 mux2 functional simulation started
+Expected behavior: sel=0 selects a; sel=1 selects b
+============================================================
+[PASS] case=1 sel=0 a=0 b=1 y=0
+[PASS] case=2 sel=1 a=0 b=1 y=1
+[PASS] case=3 sel=0 a=1 b=0 y=1
+[PASS] case=4 sel=1 a=1 b=0 y=0
+============================================================
+[RESULT] MUX2 TEST PASSED
+============================================================
+$finish called at time : 7 ns : File "/home/kaiden/EDA/tb/tb_mux2.v" Line 75
+## catch {close_vcd}
+## quit
+INFO: xsimkernel Simulation Memory Usage: 491596 KB (Peak: 549128 KB), Simulation CPU Usage: 840 ms
+INFO: [Common 17-206] Exiting xsim at Thu Sep 17 19:45:09 2026...

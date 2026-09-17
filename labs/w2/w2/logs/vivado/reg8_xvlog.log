@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/rtl/reg8.v" into library work
+INFO: [VRFC 10-311] analyzing module reg8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/tb/tb_reg8.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_reg8

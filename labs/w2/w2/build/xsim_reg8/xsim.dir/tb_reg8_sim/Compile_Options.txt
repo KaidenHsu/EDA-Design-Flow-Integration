@@ -1,0 +1,1 @@
+-nolog "tb_reg8" -debug "typical" -s "tb_reg8_sim" 

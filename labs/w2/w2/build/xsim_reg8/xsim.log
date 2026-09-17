@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Sep 17 19:45:12 2026
+# Process ID         : 2154421
+# Current directory  : /home/kaiden/EDA/build/xsim_reg8
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_reg8_sim/xsim_script.tcl}
+# Log file           : /home/kaiden/EDA/build/xsim_reg8/xsim.log
+# Journal file       : /home/kaiden/EDA/build/xsim_reg8/xsim.jou
+# Running On         : scd-lab-server63
+# Platform           : RockyLinux
+# Operating System   : Rocky Linux 9.7 (Blue Onyx)
+# Processor Detail   : INTEL(R) XEON(R) GOLD 6526Y
+# CPU Frequency      : 800.339 MHz
+# CPU Physical cores : 32
+# CPU Logical cores  : 64
+# Host memory        : 134361 MB
+# Swap memory        : 68719 MB
+# Total Virtual      : 203081 MB
+# Available Virtual  : 190535 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_reg8_sim/xsim_script.tcl
+# xsim {tb_reg8_sim} -autoloadwcfg -tclbatch {/home/kaiden/EDA/build/xsim_reg8/run_reg8.tcl}
+Time resolution is 1 ps
+source /home/kaiden/EDA/build/xsim_reg8/run_reg8.tcl
+## if {[catch {log_wave -recursive *} msg]} { puts "WARN: log_wave failed: $msg" }
+## if {[catch {open_vcd ../../waves/reg8.vcd} msg]} {
+##     puts "WARN: open_vcd failed: $msg"
+## } else {
+##     catch {log_vcd /}
+## }
+WARNING: [Simtcl 6-216] No such HDL Object /
+## run all
+ERROR: Could not open vcd file waves/reg8.vcd. A VCD file by name ../../waves/reg8.vcd has already been opened. Only one VCD file is allowed to be open.
+============================================================
+Week 2 reg8 functional simulation started
+Expected behavior: rst_n=0 clears q asynchronously;
+after release, q captures d only on rising clock edges
+============================================================
+[PASS] ASYNC_RESET time=2000 q=00
+[PASS] RESET_HELD_AT_EDGE time=6000 q=00
+[PASS] RESET_RELEASE_NO_CAPTURE time=13000 q=00
+[PASS] CAPTURE_A5 time=16000 q=a5
+[PASS] HOLD_BETWEEN_EDGES time=21000 q=a5
+[PASS] CAPTURE_3C time=26000 q=3c
+[PASS] HOLD_AFTER_D_CHANGE time=29000 q=3c
+[PASS] ASYNC_RESET_AGAIN time=31000 q=00
+[PASS] SECOND_RELEASE_NO_CAPTURE time=33000 q=00
+[PASS] CAPTURE_0F time=36000 q=0f
+============================================================
+[RESULT] REG8 TEST PASSED
+============================================================
+$finish called at time : 40 ns : File "/home/kaiden/EDA/tb/tb_reg8.v" Line 121
+## catch {close_vcd}
+## quit
+INFO: xsimkernel Simulation Memory Usage: 491864 KB (Peak: 549136 KB), Simulation CPU Usage: 830 ms
+INFO: [Common 17-206] Exiting xsim at Thu Sep 17 19:45:14 2026...

@@ -1,0 +1,20 @@
+VCD info: dumpfile waves/reg8.vcd opened for output.
+============================================================
+Week 2 reg8 functional simulation started
+Expected behavior: rst_n=0 clears q asynchronously;
+after release, q captures d only on rising clock edges
+============================================================
+[PASS] ASYNC_RESET time=2000 q=00
+[PASS] RESET_HELD_AT_EDGE time=6000 q=00
+[PASS] RESET_RELEASE_NO_CAPTURE time=13000 q=00
+[PASS] CAPTURE_A5 time=16000 q=a5
+[PASS] HOLD_BETWEEN_EDGES time=21000 q=a5
+[PASS] CAPTURE_3C time=26000 q=3c
+[PASS] HOLD_AFTER_D_CHANGE time=29000 q=3c
+[PASS] ASYNC_RESET_AGAIN time=31000 q=00
+[PASS] SECOND_RELEASE_NO_CAPTURE time=33000 q=00
+[PASS] CAPTURE_0F time=36000 q=0f
+============================================================
+[RESULT] REG8 TEST PASSED
+============================================================
+tb/tb_reg8.v:121: $finish called at 40000 (1ps)

@@ -1,0 +1,1 @@
+-nolog "tb_mux2" -debug "typical" -s "tb_mux2_sim" 

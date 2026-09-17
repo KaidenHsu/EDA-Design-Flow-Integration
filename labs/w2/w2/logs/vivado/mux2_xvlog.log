@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/rtl/mux2.v" into library work
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/tb/tb_mux2.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_mux2
