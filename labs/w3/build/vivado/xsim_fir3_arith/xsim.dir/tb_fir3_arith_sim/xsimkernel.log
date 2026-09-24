@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_fir3_arith_sim/xsimk -runall -simmode gui -wdb tb_fir3_arith_sim.wdb -simrunnum 0 -socket 40791
+Design successfully loaded
+Design Loading Memory Usage: 409872 KB (Peak: 409928 KB)
+Design Loading CPU Usage: 830 ms
+Simulation completed
+Simulation Memory Usage: 495708 KB (Peak: 549140 KB)
+Simulation CPU Usage: 830 ms

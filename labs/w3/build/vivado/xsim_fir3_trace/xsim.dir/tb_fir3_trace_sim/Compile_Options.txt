@@ -1,0 +1,1 @@
+-nolog "tb_fir3_trace" -debug "typical" -s "tb_fir3_trace_sim" 

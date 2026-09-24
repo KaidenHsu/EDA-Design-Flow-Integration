@@ -1,0 +1,22 @@
+VCD info: dumpfile waves/fir3_trace.vcd opened for output.
+============================================================
+Week 3 FIR hand-trace simulation started
+Reset history begins at state [0,0,0]
+============================================================
+[PASS] reset state [d0,d1,d2]=[0,0,0]
+[PASS] reset release does not capture a sample
+[TRACE] n=0 x=1 state[d0,d1,d2]=[1,0,0] p=[1,0,0] y=1
+[PASS] n=0 expected y=1
+[TRACE] n=1 x=2 state[d0,d1,d2]=[2,1,0] p=[2,2,0] y=4
+[PASS] n=1 expected y=4
+[TRACE] n=2 x=3 state[d0,d1,d2]=[3,2,1] p=[3,4,1] y=8
+[PASS] n=2 expected y=8
+[TRACE] n=3 x=0 state[d0,d1,d2]=[0,3,2] p=[0,6,2] y=8
+[PASS] n=3 expected y=8
+[TRACE] n=4 x=0 state[d0,d1,d2]=[0,0,3] p=[0,0,3] y=3
+[PASS] n=4 expected y=3
+============================================================
+Expected output sequence: 1, 4, 8, 8, 3
+[RESULT] FIR3 TRACE TEST PASSED
+============================================================
+tb/tb_fir3_trace.v:144: $finish called at 76000 (1ps)

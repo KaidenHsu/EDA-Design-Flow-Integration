@@ -1,6 +1,12 @@
 # Week 2. Warmup: RTL and Verification Fundamentals
 
-## 1. DUT 1: 1-bit 2:1 multiplexer
+## 0. Introduction
+
+This Week 2 lab establishes the baseline for the EDA design-flow integration project: a very small RTL design should be verified with the same discipline that will be needed later for larger datapaths, controllers, and timing-sensitive blocks. The two DUTs in this folder, a 1-bit multiplexer and an 8-bit resettable register, are intentionally simple enough to reason about by hand while still exposing the behaviors that matter in real hardware verification: reset semantics, edge-triggered capture, and the reliability of a self-checking testbench. The goal is not only to confirm the logic works, but to show how the same RTL can be validated in different simulation environments and compared in a controlled, reusable workflow.
+
+The project uses both an open-source flow and a vendor-supported flow to show how verification scales from quick design sanity checks to a more production-like toolchain. In the Icarus flow, `iverilog` compiles the HDL source and `vvp` runs the generated simulation, producing VCD output that is easy to debug and share. In the Vivado flow, `xvlog` compiles the source files, `xelab` elaborates and links the design, and `xsim` executes the simulation in the Xilinx environment. This comparison is the heart of the lab: Icarus gives rapid iteration and portability, while Vivado/XSim reflects the toolchain and workflow used in commercial FPGA verification.
+
+## 2. DUT 1: 1-bit 2:1 multiplexer
 
 `rtl/mux2.v` implements:
 
@@ -17,7 +23,21 @@ testbench's stimuli:
 | 3 | 0 | 1 | 0 | 1 |
 | 4 | 1 | 1 | 0 | 0 |
 
-## 2. DUT 2: resettable 8-bit register
+## 2. Package Files
+
+| File | Purpose |
+|---|---|
+| `rtl/mux2.v` | 1-bit combinational 2:1 mux |
+| `tb/tb_mux2.v` | Self-checking mux testbench |
+| `rtl/reg8.v` | 8-bit resettable register |
+| `tb/tb_reg8.v` | Self-checking clock/reset testbench |
+| `scripts/run_icarus.sh` | Optional Icarus simulation helper |
+| `scripts/run_xsim_direct.sh` | Standalone Vivado/XSim helper |
+| `scripts/vivado/*.tcl` | Vivado batch wrappers |
+| `logs/` | Simulation transcripts |
+| `waves/` | Waveform evidence |
+
+## 3. DUT 2: resettable 8-bit register
 
 `rtl/reg8.v` intentionally has **no enable input** here.
 
@@ -36,20 +56,6 @@ The testbench demonstrates that:
 2. releasing reset does not itself capture `d`;
 3. after reset release, `q` captures `d` only on rising clock edges;
 4. changing `d` between rising edges does not immediately change `q`.
-
-## 3. Package Files
-
-| File | Purpose |
-|---|---|
-| `rtl/mux2.v` | 1-bit combinational 2:1 mux |
-| `tb/tb_mux2.v` | Self-checking mux testbench |
-| `rtl/reg8.v` | 8-bit resettable register |
-| `tb/tb_reg8.v` | Self-checking clock/reset testbench |
-| `scripts/run_icarus.sh` | Optional Icarus simulation helper |
-| `scripts/run_xsim_direct.sh` | Standalone Vivado/XSim helper |
-| `scripts/vivado/*.tcl` | Vivado batch wrappers |
-| `logs/` | Simulation transcripts |
-| `waves/` | Waveform evidence |
 
 ## 4. Timescale Policy
 
@@ -116,3 +122,9 @@ $ bash scripts/run_xsim_direct.sh
 [INFO] Running reg8 with standalone XSim tools
 [INFO] XSim run complete. Check logs/ and waves/.
 ```
+
+## 6. Conclusion
+
+This Week 2 lab reinforces that verification must be part of the RTL workflow from the start. The simple mux and register examples are enough to validate reset behavior, clocked capture, and the consistency of the simulation output.
+
+The comparison between the Icarus and Vivado/XSim flows is the most important takeaway. `iverilog` and `vvp` are well suited to fast functional checks and quick iteration during design bring-up, while `xvlog`, `xelab`, and `xsim` are better aligned with vendor-driven design workflows that require tighter integration with FPGA tooling and a more production-like simulation environment. In practice, the open-source flow is ideal for rapid verification, while the Vivado/XSim flow is better for validating the design in a system closer to the intended implementation path. Going forward, the best practice is to use Icarus for early functional sanity checks and Vivado/XSim for vendor-grade confirmation before progressing to broader implementation work.

@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_fir3_trace_sim/xsimk -runall -simmode gui -wdb tb_fir3_trace_sim.wdb -simrunnum 0 -socket 58259
+Design successfully loaded
+Design Loading Memory Usage: 409876 KB (Peak: 409932 KB)
+Design Loading CPU Usage: 840 ms
+Simulation completed
+Simulation Memory Usage: 495712 KB (Peak: 549144 KB)
+Simulation CPU Usage: 840 ms

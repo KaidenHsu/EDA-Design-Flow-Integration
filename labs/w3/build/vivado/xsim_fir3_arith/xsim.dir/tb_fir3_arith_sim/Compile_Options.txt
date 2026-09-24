@@ -1,0 +1,1 @@
+-nolog "tb_fir3_arith" -debug "typical" -s "tb_fir3_arith_sim" 

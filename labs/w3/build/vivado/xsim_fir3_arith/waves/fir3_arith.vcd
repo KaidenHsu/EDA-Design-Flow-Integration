@@ -1,0 +1,160 @@
+$date
+   Thu Sep 24 16:45:27 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("waves/fir3_arith.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_fir3_arith $end
+$var reg 8 ! d0 [7:0] $end
+$var reg 8 " d1 [7:0] $end
+$var reg 8 # d2 [7:0] $end
+$var reg 8 $ h0 [7:0] $end
+$var reg 8 % h1 [7:0] $end
+$var reg 8 & h2 [7:0] $end
+$var wire 16 ' p0 [15:0] $end
+$var wire 16 ( p1 [15:0] $end
+$var wire 16 ) p2 [15:0] $end
+$var wire 17 * s0 [16:0] $end
+$var wire 18 + y_out [17:0] $end
+$var integer 32 , errors [31:0] $end
+$scope module dut $end
+$var wire 8 - d0 [7:0] $end
+$var wire 8 . d1 [7:0] $end
+$var wire 8 / d2 [7:0] $end
+$var wire 8 0 h0 [7:0] $end
+$var wire 8 1 h1 [7:0] $end
+$var wire 8 2 h2 [7:0] $end
+$var wire 16 ' p0 [15:0] $end
+$var wire 16 ( p1 [15:0] $end
+$var wire 16 ) p2 [15:0] $end
+$var wire 17 * s0 [16:0] $end
+$var wire 18 + y_out [17:0] $end
+$upscope $end
+$scope task check_state $end
+$var reg 8 3 td0 [7:0] $end
+$var reg 8 4 td1 [7:0] $end
+$var reg 8 5 td2 [7:0] $end
+$var reg 18 6 expected_y [17:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+b0 !
+b0 "
+b0 #
+b1 $
+b10 %
+b1 &
+b0 '
+b0 (
+b0 )
+b0 *
+b0 +
+b0 ,
+b0 -
+b0 .
+b0 /
+b1 0
+b10 1
+b1 2
+bx 3
+bx 4
+bx 5
+bx 6
+$end
+
+#5000
+b1 !
+b1 '
+b1 *
+b1 +
+b1 -
+b1 3
+b0 4
+b0 5
+b1 6
+
+#6000
+b10 !
+b1 "
+b10 '
+b10 (
+b100 *
+b100 +
+b10 -
+b1 .
+b10 3
+b1 4
+b100 6
+
+#7000
+b11 !
+b10 "
+b1 #
+b11 '
+b100 (
+b1 )
+b111 *
+b1000 +
+b11 -
+b10 .
+b1 /
+b11 3
+b10 4
+b1 5
+b1000 6
+
+#8000
+b0 !
+b11 "
+b10 #
+b0 '
+b110 (
+b10 )
+b110 *
+b1000 +
+b0 -
+b11 .
+b10 /
+b0 3
+b11 4
+b10 5
+
+#9000
+b0 "
+b11 #
+b0 (
+b11 )
+b0 *
+b11 +
+b0 .
+b11 /
+b0 4
+b11 5
+b11 6
+
+#10000
+b10000000 !
+b10000000 "
+b10000000 #
+b1111111110000000 '
+b1111111100000000 (
+b1111111110000000 )
+b11111111010000000 *
+b111111111000000000 +
+b10000000 -
+b10000000 .
+b10000000 /
+b10000000 3
+b10000000 4
+b10000000 5
+b111111111000000000 6

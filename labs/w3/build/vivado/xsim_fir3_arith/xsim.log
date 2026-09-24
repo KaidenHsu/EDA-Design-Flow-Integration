@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Sep 24 16:45:25 2026
+# Process ID         : 2820115
+# Current directory  : /home/kaiden/EDA/w3/build/vivado/xsim_fir3_arith
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_fir3_arith_sim/xsim_script.tcl}
+# Log file           : /home/kaiden/EDA/w3/build/vivado/xsim_fir3_arith/xsim.log
+# Journal file       : /home/kaiden/EDA/w3/build/vivado/xsim_fir3_arith/xsim.jou
+# Running On         : scd-lab-server63
+# Platform           : RockyLinux
+# Operating System   : Rocky Linux 9.7 (Blue Onyx)
+# Processor Detail   : INTEL(R) XEON(R) GOLD 6526Y
+# CPU Frequency      : 1368.984 MHz
+# CPU Physical cores : 32
+# CPU Logical cores  : 64
+# Host memory        : 134361 MB
+# Swap memory        : 68719 MB
+# Total Virtual      : 203081 MB
+# Available Virtual  : 190995 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_fir3_arith_sim/xsim_script.tcl
+# xsim {tb_fir3_arith_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+============================================================
+Week 3 FIR arithmetic simulation started
+Equation: y_out = h0*d0 + h1*d1 + h2*d2
+Coefficients: h0=1 h1=2 h2=1
+============================================================
+[PASS] d0=1 d1=0 d2=0 -> p=[1,0,0] s0=1 y=1
+[PASS] d0=2 d1=1 d2=0 -> p=[2,2,0] s0=4 y=4
+[PASS] d0=3 d1=2 d2=1 -> p=[3,4,1] s0=7 y=8
+[PASS] d0=0 d1=3 d2=2 -> p=[0,6,2] s0=6 y=8
+[PASS] d0=0 d1=0 d2=3 -> p=[0,0,3] s0=0 y=3
+[PASS] d0=-128 d1=-128 d2=-128 -> p=[-128,-256,-128] s0=-384 y=-512
+============================================================
+[RESULT] FIR3 ARITH TEST PASSED
+============================================================
+$finish called at time : 16 ns : File "/home/kaiden/EDA/w3/tb/tb_fir3_arith.v" Line 95
+exit
+INFO: xsimkernel Simulation Memory Usage: 495708 KB (Peak: 549140 KB), Simulation CPU Usage: 830 ms
+INFO: [Common 17-206] Exiting xsim at Thu Sep 24 16:45:27 2026...
