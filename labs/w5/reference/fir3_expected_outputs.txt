@@ -1,0 +1,38 @@
+Week 5 FIR3 expected outputs
+
+Coefficients:
+h = [1, 2, 1]
+
+Equation:
+y[n] = 1*x[n] + 2*x[n-1] + 1*x[n-2]
+
+Initial sample history is zero after reset.
+For the Week 5 lab sequence x = [1, 2, 3, 4, 5]:
+
+y = [1, 4, 8, 12, 16]
+
+n   x[n]   x[n-1]   x[n-2]   y[n]
+0     1       0        0        1
+1     2       1        0        4
+2     3       2        1        8
+3     4       3        2       12
+4     5       4        3       16
+
+The sample-history registers d0/d1/d2 are signed 10-bit, matching the Week 4 baseline.
+The signed 8-bit x_in value is sign-extended to 10 bits before being stored.
+
+Main parallel-FIR hold check:
+After accepting x=1 and x=2, an invalid cycle with x_in=99 must NOT shift d0/d1/d2,
+must deassert valid_out, and must leave the previous y_out value held but invalid.
+
+Main pipelined-FIR bubble check:
+Accepted sequence: 1, 2, [invalid 99], 3, 4, 5.
+- The invalid x=99 cycle must hold d0/d1/d2 and p0_s1/p1_s1/p2_s1.
+- The result for accepted x=2 still appears on that bubble edge because it was already in Stage 1.
+- One cycle later valid_out must be 0, creating the delayed output bubble.
+- Valid traffic then resumes correctly for x=3,4,5 and the final result drains one cycle later.
+
+Signed boundary regression:
+Repeated x=-128 reaches the exact FIR lower bound:
+accepted outputs = [-128, -384, -512].
+Both Week 5 architectures must produce these values exactly; the pipelined version produces them one cycle later.

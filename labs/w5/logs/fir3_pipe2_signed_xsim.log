@@ -1,0 +1,23 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct  8 15:25:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_fir3_pipe2_signed_sim/xsim_script.tcl
+# xsim {tb_fir3_pipe2_signed_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[PASS] signed E1 no output yet y=0 valid=0
+[PASS] signed E2 output -128 y=-128 valid=1
+[PASS] signed E3 output -384 y=-384 valid=1
+[PASS] signed E4 drain output -512 y=-512 valid=1
+[PASS] signed E5 idle after drain y=-512 valid=0
+[RESULT] FIR3_PIPE2 SIGNED TEST PASSED
+$finish called at time : 70 ns : File "/home/kaiden/EDA/w5/tb/tb_fir3_pipe2_signed.v" Line 90
+exit
+INFO: xsimkernel Simulation Memory Usage: 495976 KB (Peak: 549148 KB), Simulation CPU Usage: 830 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct  8 15:25:25 2026...

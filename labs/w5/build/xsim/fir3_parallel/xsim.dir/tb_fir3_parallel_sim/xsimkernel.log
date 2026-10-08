@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_fir3_parallel_sim/xsimk -runall -simmode gui -wdb tb_fir3_parallel_sim.wdb -simrunnum 0 -socket 46203
+Design successfully loaded
+Design Loading Memory Usage: 409888 KB (Peak: 409944 KB)
+Design Loading CPU Usage: 840 ms
+Simulation completed
+Simulation Memory Usage: 495984 KB (Peak: 549156 KB)
+Simulation CPU Usage: 840 ms

@@ -1,0 +1,41 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct  8 15:25:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_fir3_pipe2_sim/xsim_script.tcl
+# xsim {tb_fir3_pipe2_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[PASS] reset clears delay/product/valid/output state
+[PASS] reset release does not capture input
+[PASS] E1 first accepted sample y=0 valid=0
+[PASS] E1 product stage products=1/0/0 valid_s1=1
+[PASS] E1 delay state delay state=1/0/0
+[PASS] E2 output sample 1 y=1 valid=1
+[PASS] E2 product stage products=2/2/0 valid_s1=1
+[PASS] E2 delay state delay state=2/1/0
+[PASS] E3 bubble emits prior sample 2 y=4 valid=1
+[PASS] E3 bubble product hold products=2/2/0 valid_s1=0
+[PASS] E3 bubble delay hold delay state=2/1/0
+[PASS] E4 delayed output bubble y=4 valid=0
+[PASS] E4 recovery product stage products=3/4/1 valid_s1=1
+[PASS] E4 recovery delay state delay state=3/2/1
+[PASS] E5 output sample 3 y=8 valid=1
+[PASS] E5 product stage products=4/6/2 valid_s1=1
+[PASS] E6 output sample 4 y=12 valid=1
+[PASS] E6 product stage products=5/8/3 valid_s1=1
+[PASS] E7 drain final output y=16 valid=1
+[PASS] E7 held products ignored next cycle products=5/8/3 valid_s1=0
+[PASS] E7 drain delay hold delay state=5/4/3
+[PASS] idle after drain y=16 valid=0
+[PASS] idle product hold products=5/8/3 valid_s1=0
+[RESULT] FIR3_PIPE2 TEST PASSED
+$finish called at time : 101 ns : File "/home/kaiden/EDA/w5/tb/tb_fir3_pipe2.v" Line 191
+exit
+INFO: xsimkernel Simulation Memory Usage: 496004 KB (Peak: 549176 KB), Simulation CPU Usage: 830 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct  8 15:25:19 2026...

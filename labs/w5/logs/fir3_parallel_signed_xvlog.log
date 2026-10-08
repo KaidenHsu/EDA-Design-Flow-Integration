@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w5/rtl/fir3_parallel.v" into library work
+INFO: [VRFC 10-311] analyzing module fir3_parallel
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w5/tb/tb_fir3_parallel_signed.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_fir3_parallel_signed

@@ -1,0 +1,1 @@
+-nolog "tb_fir3_parallel" -debug "typical" -s "tb_fir3_parallel_sim" 
