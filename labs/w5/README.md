@@ -36,7 +36,7 @@ One-cycle pipelined FIR. Stage 1 registers products and `valid_s1`; Stage 2 adds
 - Output valid is delayed relative to input valid.
 - The testbench checks both values and timing.
 
-<p align="center"><img src="images/pipelined.png" alt="pipelined FIR" /></p>
+<p align="center"><img src="images/pipelined_FIR.png" alt="pipelined FIR" /></p>
 
 ## 4. Simulator Run
 
