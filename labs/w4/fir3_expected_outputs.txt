@@ -1,0 +1,26 @@
+Week 4 reference: 3-tap FIR, h = [1, 2, 1]
+Baseline architecture:
+  - d0 = newest accepted sample
+  - d1 = previous accepted sample
+  - d2 = sample from two accepted inputs earlier
+  - y_out = d0 + 2*d1 + d2 (combinational)
+  - valid_out = 1 for a cycle after an accepted rising edge; 0 after an invalid edge
+
+Accepted sample sequence (ignoring invalid/held cycles):
+accepted_index  x_in  d0  d1  d2  y_out
+0               1     1   0   0   1
+1               2     2   1   0   4
+2               3     3   2   1   8
+3               4     4   3   2   12
+4               5     5   4   3   16
+
+Main testbench timing (10 ns clock, rising edges at 5,15,25,... ns):
+- rst_n releases at 22 ns; release itself does NOT capture x_in.
+- 25 ns: valid_in=0 -> zero state holds.
+- 35 ns: accept 1 -> d0,d1,d2 = 1,0,0 -> y_out=1
+- 45 ns: accept 2 -> d0,d1,d2 = 2,1,0 -> y_out=4
+- 55 ns: x_in=99 but valid_in=0 -> HOLD 2,1,0 -> y_out=4, valid_out=0
+- 65 ns: accept 3 -> d0,d1,d2 = 3,2,1 -> y_out=8
+- 75 ns: accept 4 -> d0,d1,d2 = 4,3,2 -> y_out=12
+- 85 ns: accept 5 -> d0,d1,d2 = 5,4,3 -> y_out=16
+- 95 ns: valid_in=0 -> HOLD 5,4,3 -> y_out=16, valid_out=0

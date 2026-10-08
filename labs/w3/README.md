@@ -1,4 +1,4 @@
-# Week 3. Combinatinal FIR Filter
+# Week 3. Combinatinal 3-tap FIR Filter
 
 ## 1. Introduction
 

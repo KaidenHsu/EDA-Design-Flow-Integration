@@ -1,0 +1,13 @@
+VCD info: dumpfile waves/fir3_seq.vcd opened for output.
+[PASS] reset asserted t=3000 d0=0 d1=0 d2=0 y=0 valid=0
+[PASS] reset release does not capture input at t=23000
+[PASS] post-reset hold t=26000 d0=0 d1=0 d2=0 y=0 valid=0
+[PASS] accept x=1 t=36000 d0=1 d1=0 d2=0 y=1 valid=1
+[PASS] accept x=2 t=46000 d0=2 d1=1 d2=0 y=4 valid=1
+[PASS] ignore invalid x=99 t=56000 d0=2 d1=1 d2=0 y=4 valid=0
+[PASS] accept x=3 t=66000 d0=3 d1=2 d2=1 y=8 valid=1
+[PASS] accept x=4 t=76000 d0=4 d1=3 d2=2 y=12 valid=1
+[PASS] accept x=5 t=86000 d0=5 d1=4 d2=3 y=16 valid=1
+[PASS] final hold t=96000 d0=5 d1=4 d2=3 y=16 valid=0
+[RESULT] FIR3_SEQ TEST PASSED
+tb/tb_fir3_seq.v:130: $finish called at 100000 (1ps)

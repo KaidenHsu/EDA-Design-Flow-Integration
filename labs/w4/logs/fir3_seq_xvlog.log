@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w4/rtl/fir3_seq.v" into library work
+INFO: [VRFC 10-311] analyzing module fir3_seq
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w4/tb/tb_fir3_seq.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_fir3_seq

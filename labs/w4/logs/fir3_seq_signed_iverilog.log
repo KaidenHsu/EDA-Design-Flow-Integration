@@ -1,0 +1,5 @@
+[pass] signed sample=-128 y=-128
+[pass] signed sample=-128 y=-384
+[pass] signed sample=-128 y=-512
+[RESULT] FIR3_SEQ SIGNED TEST PASSED
+tb/tb_fir3_seq_signed.v:58: $finish called at 50000 (1ps)
