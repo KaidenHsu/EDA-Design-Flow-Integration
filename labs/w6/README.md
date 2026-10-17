@@ -1,4 +1,4 @@
-# Week 6. Sequential 3-tap FIR: Understanding Synthesis Reports
+# Week 6. FIR Filter: Understanding FPGA Pre-route Synthesis Reports
 
 ## 1. Introduction
 

@@ -8,7 +8,7 @@ Labs | Description
 [W3 Lab][2] | Combinational 3-tap FIR Filter
 [W4 Lab][3] | Sequential 3-tap FIR
 [W5 Lab][4] | FIR Filter: Parallelism and Pipelining
-[W6 Lab][5] | Sequential 3-tap FIR: Understanding Synthesis Reports
+[W6 Lab][5] | FIR Filter: Understanding FPGA Pre-route Synthesis Reports
 
 [1]: labs/w2/
 [2]: labs/w3/
