@@ -1,0 +1,6 @@
+Week 7 FIR: routed implementation saved for xc7z020clg400-1
+Source: checkpoints/B/post_synth.dcp (10.000 ns Week 6 baseline)
+Routed checkpoint: checkpoints/B/post_route.dcp
+Status: PRE-BITSTREAM ONLY; review reports and constraints before future deployment.
+Week 7 generates NO .bit and performs NO PYNQ-Z2 hardware execution.
+Week 8 board-level LOC/IOSTANDARD, bitstream, and download remain outstanding.

@@ -1,0 +1,6 @@
+$ xvlog -nolog /home/kaiden/EDA/w6/rtl/fir3_pipe2.v /home/kaiden/EDA/w6/tb/tb_fir3_pipe2.v
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w6/rtl/fir3_pipe2.v" into library work
+INFO: [VRFC 10-311] analyzing module fir3_pipe2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w6/tb/tb_fir3_pipe2.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_fir3_pipe2

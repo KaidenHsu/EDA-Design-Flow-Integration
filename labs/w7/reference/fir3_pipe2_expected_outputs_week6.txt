@@ -1,0 +1,15 @@
+Week 6 FIR3 pipelined design expected outputs
+Equation: y[n] = x[n] + 2*x[n-1] + x[n-2]
+Initial previous samples: x[-1] = 0, x[-2] = 0
+Pipeline relation: an input accepted at edge E_k produces valid_out/y_out at E_(k+1)
+
+n    x[n]    expected y[n]
+0      1          1
+1      2          4
+2      3          8
+3      0          8
+4      0          3
+
+Sequence summary:
+x_in  = [1, 2, 3, 0, 0]
+y_out = [1, 4, 8, 8, 3]

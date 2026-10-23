@@ -1,0 +1,264 @@
+$ vivado -mode batch -nolog -nojournal -source /home/kaiden/EDA/w6/vivado/synth_modes.tcl -tclargs C
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 22 19:20:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/kaiden/EDA/w6/vivado/synth_modes.tcl
+# if {[llength $argv] != 1} {
+#   error "Expected one mode argument: A B C D or E"
+# }
+# set mode [string toupper [lindex $argv 0]]
+# if {$mode ni {A B C D E}} {
+#   error "Invalid mode $mode"
+# }
+# set root [file normalize [file join [file dirname [file normalize [info script]]] ..]]
+# set rtl [file join $root rtl fir3_pipe2.v]
+# set xdc [file join $root constraints fir3_pipe2.xdc]
+# set out [file join $root reports $mode synth]
+# set checkpoints [file join $root checkpoints $mode]
+# file mkdir $checkpoints
+# file mkdir $out
+# foreach f [list $rtl $xdc] {
+#   if {![file isfile $f]} {
+#     error "Missing: $f"
+#   }
+# }
+# set part xc7z020clg400-1
+# puts "MODE=$mode PART=$part RTL=$rtl XDC=$xdc"
+MODE=C PART=xc7z020clg400-1 RTL=/home/kaiden/EDA/w6/rtl/fir3_pipe2.v XDC=/home/kaiden/EDA/w6/constraints/fir3_pipe2.xdc
+# puts "VIVADO_VERSION=[version -short]"
+VIVADO_VERSION=2025.2
+# set directive default
+# set flatten_hierarchy rebuilt
+# set resource_sharing auto
+# set global_retiming off
+# switch -- $mode {
+#   A {}
+#   B {set directive AreaOptimized_high}
+#   C {set flatten_hierarchy full}
+#   D {set resource_sharing off}
+#   E {set global_retiming on}
+# }
+# set args [list \
+#   -top fir3_pipe2 \
+#   -part $part \
+#   -directive $directive \
+#   -flatten_hierarchy $flatten_hierarchy \
+#   -resource_sharing $resource_sharing \
+#   -global_retiming $global_retiming]
+# puts "SYNTH_ARGUMENTS=$args"
+SYNTH_ARGUMENTS=-top fir3_pipe2 -part xc7z020clg400-1 -directive default -flatten_hierarchy full -resource_sharing auto -global_retiming off
+# read_verilog $rtl
+# read_xdc $xdc
+# synth_design {*}$args
+Command: synth_design -top fir3_pipe2 -part xc7z020clg400-1 -directive default -flatten_hierarchy full -resource_sharing auto -global_retiming off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3652790
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2486.457 ; gain = 481.156 ; free physical = 63181 ; free virtual = 178372
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir3_pipe2' [/home/kaiden/EDA/w6/rtl/fir3_pipe2.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'fir3_pipe2' (0#1) [/home/kaiden/EDA/w6/rtl/fir3_pipe2.v:7]
+WARNING: [Synth 8-6014] Unused sequential element d2_reg was removed.  [/home/kaiden/EDA/w6/rtl/fir3_pipe2.v:36]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2572.426 ; gain = 567.125 ; free physical = 63089 ; free virtual = 178281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2584.301 ; gain = 579.000 ; free physical = 63081 ; free virtual = 178273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2584.301 ; gain = 579.000 ; free physical = 63081 ; free virtual = 178273
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.301 ; gain = 0.000 ; free physical = 63081 ; free virtual = 178273
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/kaiden/EDA/w6/constraints/fir3_pipe2.xdc]
+Finished Parsing XDC File [/home/kaiden/EDA/w6/constraints/fir3_pipe2.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2689.039 ; gain = 0.000 ; free physical = 63052 ; free virtual = 178244
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2689.074 ; gain = 0.000 ; free physical = 63053 ; free virtual = 178245
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2689.074 ; gain = 683.773 ; free physical = 63058 ; free virtual = 178250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2697.043 ; gain = 691.742 ; free physical = 63058 ; free virtual = 178250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2697.043 ; gain = 691.742 ; free physical = 63058 ; free virtual = 178250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2697.043 ; gain = 691.742 ; free physical = 63057 ; free virtual = 178250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 5     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.043 ; gain = 691.742 ; free physical = 63055 ; free virtual = 178253
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2763.043 ; gain = 757.742 ; free physical = 62964 ; free virtual = 178161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2763.043 ; gain = 757.742 ; free physical = 62964 ; free virtual = 178161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2773.059 ; gain = 767.758 ; free physical = 62957 ; free virtual = 178154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2959.871 ; gain = 954.570 ; free physical = 62778 ; free virtual = 177976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2959.871 ; gain = 954.570 ; free physical = 62778 ; free virtual = 177976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2959.871 ; gain = 954.570 ; free physical = 62778 ; free virtual = 177976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     3|
+|3     |LUT1   |     1|
+|4     |LUT2   |     1|
+|5     |LUT3   |     8|
+|6     |LUT4   |     6|
+|7     |LUT5   |     1|
+|8     |FDCE   |    36|
+|9     |IBUF   |    11|
+|10    |OBUF   |    11|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2959.871 ; gain = 954.570 ; free physical = 62778 ; free virtual = 177976
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2959.871 ; gain = 849.797 ; free physical = 62778 ; free virtual = 177976
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2959.879 ; gain = 954.570 ; free physical = 62778 ; free virtual = 177976
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2959.879 ; gain = 0.000 ; free physical = 62778 ; free virtual = 177976
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/kaiden/EDA/w6/constraints/fir3_pipe2.xdc]
+Finished Parsing XDC File [/home/kaiden/EDA/w6/constraints/fir3_pipe2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3015.898 ; gain = 0.000 ; free physical = 62949 ; free virtual = 178146
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f6812a99
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 3015.934 ; gain = 1183.336 ; free physical = 62955 ; free virtual = 178152
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2183.504; main = 2183.504; forked = 344.895
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4313.664; main = 3015.902; forked = 1616.617
+# if {[llength [get_clocks -quiet]] < 1} {
+#   error "No synthesis clock found after applying $xdc"
+# }
+# check_timing -file [file join $out check_timing.rpt]
+# report_utilization -file [file join $out utilization.rpt]
+# report_timing_summary -delay_type min_max -report_unconstrained \
+#   -file [file join $out timing_summary.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+# report_timing -delay_type max -max_paths 10 -nworst 1 \
+#   -file [file join $out worst10_setup_paths.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 10 -nworst 1 -delay_type max -sort_by slack.
+# write_checkpoint -force [file join $checkpoints post_synth.dcp]
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3047.914 ; gain = 0.000 ; free physical = 62954 ; free virtual = 178152
+INFO: [Common 17-1381] The checkpoint '/home/kaiden/EDA/w6/checkpoints/C/post_synth.dcp' has been generated.
+# puts "[format {%s} SYNTH_COMPLETE]=$mode"
+SYNTH_COMPLETE=C
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 19:20:44 2026...
