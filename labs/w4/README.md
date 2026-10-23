@@ -1,4 +1,4 @@
-# Week 4. Sequential 3-tap FIR
+# Week 4. Sequential 3-tap FIR Filter
 
 ## 1. Introduction
 

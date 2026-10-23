@@ -6,7 +6,7 @@ Labs | Description
 --------|:-----
 [W2 Lab][1] | Warmup: RTL and Verification Fundamentals
 [W3 Lab][2] | Combinational 3-tap FIR Filter
-[W4 Lab][3] | Sequential 3-tap FIR
+[W4 Lab][3] | Sequential 3-tap FIR Filter
 [W5 Lab][4] | FIR Filter: Parallelism and Pipelining
 [W6 Lab][5] | FIR Filter: FPGA Synthesis Options, Phases, and Reports
 [W7 Lab][6] | FIR Filter: FPGA Implementation Phases and Reports
