@@ -4,9 +4,7 @@
 
 Week 7 takes the sequential FIR filter from Week 6's synthesized netlist to a fully routed FPGA implementation. The focus is on reading the `opt_design`, `place_design`, and `route_design` logs; interpreting methodology, design-rule, routing, and power reports; and comparing post-synthesis estimates with post-route results.
 
-The experiment uses five synthesis configurations, A–E, with the same RTL, device, clock constraint, and implementation commands. The checked-in reports were generated with Vivado 2025.2 for `xc7z020clg400-1`, the Zynq-7000 device on PYNQ-Z2, with a 10 ns (100 MHz) clock.
-
-All five configurations finish routing and meet the specified internal timing constraints. However, external I/O timing, physical pin assignments, and I/O standards remain incomplete. This project stops before bitstream generation and board execution.
+All five synthesis configurations finish routing and meet the 10 ns (100 MHz) timing constraints. However, external I/O timing, physical pin assignments, and I/O standards remain incomplete. Bitstream generation and board execution is not included in this week's lab.
 
 ## 2. Reproduction Flow
 
@@ -262,6 +260,6 @@ All variants meet the specified 100 MHz internal checks. The 20 missing external
 
 Week 7 turns the synthesized FIR into a fully routed implementation and shows how to read the evidence at each step. All five variants retain 11 slice LUTs, 36 registers, and three CARRY4s, occupy nine routed slices, and route all 59 routable nets without errors. None of the tested synthesis options yields a measurable advantage in the reported implementation metrics.
 
-The main progression is in timing: setup slack changes from 6.642 ns to 6.268 ns and hold slack from 0.156 ns to 0.121 ns as estimated connections become actual routes. Estimated total on-chip power is 0.113 W, but its Low confidence and assumed thermal environment limit the conclusion.
+The main progression is in timing: setup slack changes from 6.642 ns to 6.268 ns and hold slack from 0.156 ns to 0.121 ns as estimated connections become actual routes. Estimated total on-chip power is 0.113 W, but its `Low` confidence and assumed thermal environment limit the conclusion.
 
-Successful routing is one milestone in the implementation flow. Before board deployment, the project still needs board-specific pin and I/O-standard constraints, complete external timing requirements, and review of the Zynq PS7 configuration. These findings explain why a routed design with passing internal timing is not yet ready for bitstream generation and hardware execution.
+Before board deployment, the project still needs board-specific pin and I/O-standard constraints, complete external timing requirements, and review of the Zynq PS7 configuration. These findings explain why a routed design with passing internal timing is not yet ready for bitstream generation and hardware execution.
