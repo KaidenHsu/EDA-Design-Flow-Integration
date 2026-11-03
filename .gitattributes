@@ -1,0 +1,58 @@
+# -----------------------------------------------------------
+# Vivado Working Directories (Recursive)
+# -----------------------------------------------------------
+**/*.runs/** linguist-generated=true
+**/*.cache/** linguist-generated=true
+**/*.hw/** linguist-generated=true
+**/*.sim/** linguist-generated=true
+**/*.ip_user_files/** linguist-generated=true
+**/*.gen/** linguist-generated=true
+**/.Xil/** linguist-generated=true
+
+# -----------------------------------------------------------
+# Xilinx IP and Block Designs (VHDL)
+# -----------------------------------------------------------
+**/*.srcs/sources_1/ip/** linguist-generated=true
+**/*.srcs/sources_1/bd/** linguist-generated=true
+
+# -----------------------------------------------------------
+# Vivado Logs and Journals
+# -----------------------------------------------------------
+**/*.jou linguist-generated=true
+**/*.log linguist-generated=true
+**/*.str linguist-generated=true
+
+
+
+# -----------------------------------------------------------
+# Xilinx SDK Generated Directories
+# -----------------------------------------------------------
+# The Hardware Platform contains generated HTML docs, XML, and init C code.
+**/*_hw_platform_*/** linguist-generated=true
+
+# The Board Support Package (BSP) contains massive Xilinx C/Assembly drivers.
+**/*_bsp/** linguist-generated=true
+
+# SDK Debug/Release build directories
+**/*.sdk/**/Debug/** linguist-generated=true
+**/*.sdk/**/Release/** linguist-generated=true
+
+# -----------------------------------------------------------
+# Global Extension Overrides (Cleans up the chart)
+# -----------------------------------------------------------
+# Ignore all generated documentation, scripts, and startup assembly
+*.html linguist-generated=true
+*.tcl linguist-generated=true
+*.S linguist-generated=true
+*.s linguist-generated=true
+
+# -----------------------------------------------------------
+# Remove Linker Scripts and False Positives
+# -----------------------------------------------------------
+# Ignore the SDK-generated bare-metal linker scripts (lscript.ld)
+*.ld linguist-generated=true
+
+# Force GitHub to ignore files it misidentifies as SuperCollider 
+# (typically SystemC or Vivado intermediate .sc files)
+*.sc linguist-generated=true
+*.scd linguist-generated=true
