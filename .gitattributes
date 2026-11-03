@@ -42,6 +42,7 @@
 # -----------------------------------------------------------
 # Ignore all generated documentation, scripts, and startup assembly
 *.html linguist-generated=true
+*.tex linguist-generated=true
 *.tcl linguist-generated=true
 *.S linguist-generated=true
 *.s linguist-generated=true
