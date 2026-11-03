@@ -10,6 +10,7 @@ Labs | Description
 [W5 Lab][4] | FIR Filter: Parallelism and Pipelining
 [W6 Lab][5] | FIR Filter: FPGA Synthesis Options, Phases, and Reports
 [W7 Lab][6] | FIR Filter: FPGA Implementation Phases and Reports
+[W8 Lab][7] | FIR Filter: PYNQ-Z2 FPGA Bring-up
 
 [1]: labs/w2/
 [2]: labs/w3/
@@ -17,5 +18,6 @@ Labs | Description
 [4]: labs/w5/
 [5]: labs/w6/
 [6]: labs/w7/
+[7]: labs/w8/
 
 <p align="center"><img src="images/EDA_banner.png" alt="banner" /></p>
