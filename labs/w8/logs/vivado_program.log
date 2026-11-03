@@ -1,0 +1,110 @@
+$ vivado -mode batch -nolog -nojournal -source /home/kaiden/EDA/w8/w8_new/vivado/program.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Nov  2 20:00:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/kaiden/EDA/w8/w8_new/vivado/program.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set bit [file join $root artifacts fir3_pynqz2.bit]
+# set ltx [file join $root artifacts fir3_pynqz2.ltx]
+# foreach f [list $bit $ltx] {
+#     if {![file isfile $f] || [file size $f] <= 0} {error "Missing Week 8 handoff file: $f"}
+# }
+# open_hw_manager
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 16:07:00
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 14 2025-07:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+# set devices [get_hw_devices xc7z020*]
+# if {[llength $devices] != 1} {error "Expected exactly one XC7Z020 hardware target, found [llength $devices]. Check PYNQ-Z2 USB-JTAG."}
+# set dev [lindex $devices 0]
+# current_hw_device $dev
+# refresh_hw_device $dev
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) .
+The device design has 1 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+# set_property PROGRAM.FILE $bit $dev
+# set_property PROBES.FILE $ltx $dev
+# program_hw_devices $dev
+INFO: [Labtools 27-3164] End of startup status: HIGH
+# refresh_hw_device $dev
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+# if {[lsearch -exact [list_property $dev] IS_PROGRAMMED] >= 0} {
+#     if {![get_property IS_PROGRAMMED $dev]} {error "Hardware Manager device not programmed; check target and clock."}
+#     puts {[RESULT] HARDWARE_MANAGER_REPORTS_PROGRAMMED}
+# } else {
+#     puts {[INFO] Hardware Manager programming command returned; visually verify DONE/Programmed in GUI.}
+# }
+[INFO] Hardware Manager programming command returned; visually verify DONE/Programmed in GUI.
+# puts {[IMPORTANT] Record the actual programmed-status screenshot and VIO/ILA capture; this script does NOT claim a hardware FIR regression PASS.}
+[IMPORTANT] Record the actual programmed-status screenshot and VIO/ILA capture; this script does NOT claim a hardware FIR regression PASS.
+# set vio [lindex [get_hw_vios] 0]
+# set ila [lindex [get_hw_ilas] 0]
+# if {$vio eq "" || $ila eq ""} {error "Expected VIO and ILA debug cores were not found"}
+# puts [get_hw_probes -of_objects $vio]
+valid_out y_out rst_n sample_req x_in
+# puts [get_hw_probes -of_objects $ila]
+d0 d1 d2 rst_n_1 sample_req_1 valid_in valid_out_1 valid_s1 x_in_1 y_out_1
+# set_property OUTPUT_VALUE 0 [get_hw_probes rst_n]
+# set_property OUTPUT_VALUE 0 [get_hw_probes sample_req]
+# set_property OUTPUT_VALUE_RADIX HEX [get_hw_probes x_in]
+# set_property OUTPUT_VALUE 05 [get_hw_probes x_in]
+# commit_hw_vio $vio
+# set_property OUTPUT_VALUE 1 [get_hw_probes rst_n]
+# commit_hw_vio $vio
+# reset_hw_ila $ila
+# set_property CONTROL.DATA_DEPTH 1024 $ila
+# set_property CONTROL.TRIGGER_POSITION 32 $ila
+# set_property CONTROL.TRIGGER_CONDITION AND $ila
+# set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes valid_out_1]
+# run_hw_ila $ila
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Nov-02 20:00:17
+# set_property OUTPUT_VALUE 1 [get_hw_probes sample_req]
+# commit_hw_vio $vio
+# wait_on_hw_ila -timeout 0.2 $ila
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Nov-02 20:00:17
+# set capture [upload_hw_ila_data $ila]
+# set evidence [file join $root evidence]
+# file mkdir $evidence
+# write_hw_ila_data -force [file join $evidence ila_capture_plus5.ila] $capture
+# write_hw_ila_data -csv_file -force [file join $evidence ila_capture_plus5.csv] $capture
+# write_hw_ila_data -vcd_file -force [file join $evidence ila_capture_plus5.vcd] $capture
+# refresh_hw_vio $vio
+# puts "FIR y_out=[get_property INPUT_VALUE [get_hw_probes y_out]]"
+FIR y_out=005
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  2 20:00:17 2026...

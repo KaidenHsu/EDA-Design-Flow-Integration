@@ -1,0 +1,1 @@
+-nolog "tb_debug_wrapper" -debug "typical" -s "debug_wrapper_sim" 

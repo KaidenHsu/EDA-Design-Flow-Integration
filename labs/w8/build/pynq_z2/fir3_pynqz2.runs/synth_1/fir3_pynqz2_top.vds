@@ -1,0 +1,250 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  2 19:57:09 2026
+# Process ID         : 2454083
+# Current directory  : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1
+# Command line       : vivado -log fir3_pynqz2_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir3_pynqz2_top.tcl
+# Log file           : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/fir3_pynqz2_top.vds
+# Journal file       : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/vivado.jou
+# Running On         : scd-lab-server63
+# Platform           : RockyLinux
+# Operating System   : Rocky Linux 9.7 (Blue Onyx)
+# Processor Detail   : INTEL(R) XEON(R) GOLD 6526Y
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 32
+# CPU Logical cores  : 64
+# Host memory        : 134361 MB
+# Swap memory        : 68719 MB
+# Total Virtual      : 203081 MB
+# Available Virtual  : 185159 MB
+#-----------------------------------------------------------
+source fir3_pynqz2_top.tcl -notrace
+Command: synth_design -top fir3_pynqz2_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2454113
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2516.945 ; gain = 480.188 ; free physical = 47056 ; free virtual = 175246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir3_pynqz2_top' [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fir3_debug_wrapper' [/home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fir3_pipe2_debug' [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fir3_pipe2_debug' (0#1) [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fir3_debug_wrapper' (0#1) [/home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vio_fir3' [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/.Xil/Vivado-2454083-scd-lab-server63/realtime/vio_fir3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_fir3' (0#1) [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/.Xil/Vivado-2454083-scd-lab-server63/realtime/vio_fir3_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:18]
+INFO: [Synth 8-6157] synthesizing module 'ila_fir3' [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/.Xil/Vivado-2454083-scd-lab-server63/realtime/ila_fir3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_fir3' (0#1) [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/.Xil/Vivado-2454083-scd-lab-server63/realtime/ila_fir3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir3_pynqz2_top' (0#1) [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:3]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_vio'. This will prevent further optimization [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ila'. This will prevent further optimization [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:18]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_wrapper'. This will prevent further optimization [/home/kaiden/EDA/w8/w8_new/rtl/fir3_pynqz2_top.v:7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2605.914 ; gain = 569.156 ; free physical = 46963 ; free virtual = 175154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2605.914 ; gain = 569.156 ; free physical = 46963 ; free virtual = 175153
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2605.914 ; gain = 569.156 ; free physical = 46963 ; free virtual = 175153
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2605.914 ; gain = 0.000 ; free physical = 46963 ; free virtual = 175153
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.gen/sources_1/ip/vio_fir3/vio_fir3/vio_fir3_in_context.xdc] for cell 'u_vio'
+Finished Parsing XDC File [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.gen/sources_1/ip/vio_fir3/vio_fir3/vio_fir3_in_context.xdc] for cell 'u_vio'
+Parsing XDC File [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.gen/sources_1/ip/ila_fir3/ila_fir3/ila_fir3_in_context.xdc] for cell 'u_ila'
+Finished Parsing XDC File [/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.gen/sources_1/ip/ila_fir3/ila_fir3/ila_fir3_in_context.xdc] for cell 'u_ila'
+Parsing XDC File [/home/kaiden/EDA/w8/w8_new/constraints/fir3_pynqz2.xdc]
+Finished Parsing XDC File [/home/kaiden/EDA/w8/w8_new/constraints/fir3_pynqz2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kaiden/EDA/w8/w8_new/constraints/fir3_pynqz2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir3_pynqz2_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir3_pynqz2_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.715 ; gain = 0.000 ; free physical = 46936 ; free virtual = 175126
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.750 ; gain = 0.000 ; free physical = 46936 ; free virtual = 175127
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_ila' at clock pin 'clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_vio' at clock pin 'clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2702.750 ; gain = 665.992 ; free physical = 46942 ; free virtual = 175132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2710.719 ; gain = 673.961 ; free physical = 46942 ; free virtual = 175132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2710.719 ; gain = 673.961 ; free physical = 46942 ; free virtual = 175132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2710.719 ; gain = 673.961 ; free physical = 46941 ; free virtual = 175132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 5     
+	                1 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2710.719 ; gain = 673.961 ; free physical = 46932 ; free virtual = 175128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2792.719 ; gain = 755.961 ; free physical = 46998 ; free virtual = 175193
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2792.719 ; gain = 755.961 ; free physical = 46997 ; free virtual = 175193
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2802.734 ; gain = 765.977 ; free physical = 46988 ; free virtual = 175184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_fir3      |         1|
+|2     |ila_fir3      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |ila_fir3 |     1|
+|2     |vio_fir3 |     1|
+|3     |BUFG     |     1|
+|4     |CARRY4   |     3|
+|5     |LUT1     |     1|
+|6     |LUT2     |     3|
+|7     |LUT3     |     7|
+|8     |LUT4     |     8|
+|9     |LUT6     |     1|
+|10    |FDCE     |    52|
+|11    |IBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.547 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2989.547 ; gain = 855.953 ; free physical = 46813 ; free virtual = 175009
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2989.555 ; gain = 952.789 ; free physical = 46813 ; free virtual = 175009
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2989.555 ; gain = 0.000 ; free physical = 46814 ; free virtual = 175009
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3045.574 ; gain = 0.000 ; free physical = 46987 ; free virtual = 175182
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 7fd597b6
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 3045.609 ; gain = 1202.727 ; free physical = 46990 ; free virtual = 175186
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1948.495; main = 1948.495; forked = 282.893
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4327.469; main = 3045.578; forked = 1616.746
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3069.586 ; gain = 0.000 ; free physical = 46993 ; free virtual = 175188
+INFO: [Common 17-1381] The checkpoint '/home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/synth_1/fir3_pynqz2_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fir3_pynqz2_top_utilization_synth.rpt -pb fir3_pynqz2_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  2 19:57:34 2026...

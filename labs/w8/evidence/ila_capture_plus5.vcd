@@ -1,0 +1,55 @@
+$date
+        2026-Nov-02 20:00:17
+$end
+$version
+        Vivado v2025.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " rst_n_1 $end
+$var reg 1 # sample_req_1 $end
+$var reg 8 $ x_in_1 [7:0] $end
+$var reg 1 , valid_in $end
+$var reg 1 - valid_out_1 $end
+$var reg 10 . y_out_1 [9:0] $end
+$var reg 1 8 valid_s1 $end
+$var reg 10 9 d0 [9:0] $end
+$var reg 10 C d1 [9:0] $end
+$var reg 10 M d2 [9:0] $end
+$var reg 1 W _TRIGGER $end
+$var reg 1 X _WINDOW $end
+$var reg 1 Y _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0#
+b101 $
+0,
+0-
+b0 .
+08
+b0 9
+b0 C
+b0 M
+0W
+1X
+0Y
+$end
+#30
+1#
+1,
+#31
+0,
+18
+b101 9
+#32
+1-
+b101 .
+08
+1W
+#33
+0-

@@ -1,0 +1,8 @@
+$ xvlog -nolog /home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v /home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v /home/kaiden/EDA/w8/w8_new/tb/tb_debug_wrapper.v
+
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v" into library work
+INFO: [VRFC 10-311] analyzing module fir3_pipe2_debug
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v" into library work
+INFO: [VRFC 10-311] analyzing module fir3_debug_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kaiden/EDA/w8/w8_new/tb/tb_debug_wrapper.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_debug_wrapper

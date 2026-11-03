@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  2 19:57:44 2026
+# Process ID         : 2454395
+# Current directory  : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/impl_1
+# Command line       : vivado -log fir3_pynqz2_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fir3_pynqz2_top.tcl -notrace
+# Log file           : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/impl_1/fir3_pynqz2_top.vdi
+# Journal file       : /home/kaiden/EDA/w8/w8_new/build/pynq_z2/fir3_pynqz2.runs/impl_1/vivado.jou
+# Running On         : scd-lab-server63
+# Platform           : RockyLinux
+# Operating System   : Rocky Linux 9.7 (Blue Onyx)
+# Processor Detail   : INTEL(R) XEON(R) GOLD 6526Y
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 32
+# CPU Logical cores  : 64
+# Host memory        : 134361 MB
+# Swap memory        : 68719 MB
+# Total Virtual      : 203081 MB
+# Available Virtual  : 184539 MB
+#-----------------------------------------------------------
+source fir3_pynqz2_top.tcl -notrace

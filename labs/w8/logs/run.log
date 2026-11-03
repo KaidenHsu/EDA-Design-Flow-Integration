@@ -1,0 +1,17 @@
+$ bash /home/kaiden/EDA/w8/w8_new/scripts/build.sh
+
+$ xvlog -nolog /home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2.v /home/kaiden/EDA/w8/w8_new/tb/tb_fir3_pipe2.v
+$ xelab -nolog tb_fir3_pipe2 -debug typical -s tb_fir3_pipe2_sim
+$ xsim -nolog tb_fir3_pipe2_sim -runall
+$ xvlog -nolog /home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2.v /home/kaiden/EDA/w8/w8_new/tb/tb_fir3_pipe2_signed.v
+$ xelab -nolog tb_fir3_pipe2_signed -debug typical -s tb_fir3_pipe2_signed_sim
+$ xsim -nolog tb_fir3_pipe2_signed_sim -runall
+$ xvlog -nolog /home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v /home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v /home/kaiden/EDA/w8/w8_new/tb/tb_debug_wrapper.v
+$ xelab -nolog tb_debug_wrapper -debug typical -s debug_wrapper_sim
+$ xsim -nolog debug_wrapper_sim -runall
+[RESULT] STANDALONE WEEK 8 SIMULATION PASSED
+$ vivado -mode batch -nolog -nojournal -source /home/kaiden/EDA/w8/w8_new/vivado/build.tcl
+[PASS] Standalone Week 8 build accepted
+$ bash /home/kaiden/EDA/w8/w8_new/scripts/program.sh
+
+$ vivado -mode batch -nolog -nojournal -source /home/kaiden/EDA/w8/w8_new/vivado/program.tcl

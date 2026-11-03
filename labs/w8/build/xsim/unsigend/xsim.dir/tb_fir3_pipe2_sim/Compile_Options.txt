@@ -1,0 +1,1 @@
+-nolog "tb_fir3_pipe2" -debug "typical" -s "tb_fir3_pipe2_sim" 

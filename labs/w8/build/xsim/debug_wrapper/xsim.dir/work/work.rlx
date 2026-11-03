@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v,1793620490,verilog,,/home/kaiden/EDA/w8/w8_new/tb/tb_debug_wrapper.v,,fir3_debug_wrapper,,,,,,,,
+/home/kaiden/EDA/w8/w8_new/rtl/fir3_pipe2_debug.v,1793620490,verilog,,/home/kaiden/EDA/w8/w8_new/rtl/fir3_debug_wrapper.v,,fir3_pipe2_debug,,,,,,,,
+/home/kaiden/EDA/w8/w8_new/tb/tb_debug_wrapper.v,1793620490,verilog,,,,tb_debug_wrapper,,,,,,,,
