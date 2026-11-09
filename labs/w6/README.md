@@ -17,7 +17,7 @@ post-synthesis timing uses estimated nets; Week 7 checks routed timing.
 1. Run the regression before synthesis:
 
 ```bash
-$ ./scripts/run_xsim_regression.sh
+$ bash scripts/run_xsim_regression.sh
 ```
 
 Expected final marker: `[RESULT] WEEK6 INCLASS FIR REGRESSIONS PASSED`.
@@ -33,7 +33,7 @@ The simulation regression script uses three core XSim commands:
 2. Run the controlled synthesis configuration experiments
 
 ```bash
-$ ./scripts/run_synth_modes.sh A B C D E
+$ bash scripts/run_synth_modes.sh A B C D E
 ```
 
 The synthesis script runs Vivado in batch mode for each selected mode. Its
@@ -61,12 +61,13 @@ The synthesis flow then checks timing coverage, writes utilization and timing
 reports, saves the ten worst setup paths, and writes a post-synthesis
 checkpoint.
 
-## 3. Design and Verification
+## 3. RTL Design
 
 <p align="center"><img src="images/design.png" alt="design" /></p>
 
-`rtl/fir3_pipe2.v` is the same pipelined FIR design used in Week 5. It is a
-three-tap signed FIR filter with coefficients `[1, 2, 1]`. The design
+[`rtl/fir3_pipe2.v`](rtl/fir3_pipe2.v) is the same
+pipelined FIR design used in Week 5. It is a three-tap signed FIR filter with
+coefficients `[1, 2, 1]`. The design
 sign-extends each 8-bit input sample to 10 bits and maintains a short history
 of accepted samples so it can calculate the weighted sum:
 
@@ -81,17 +82,41 @@ sample is accepted, and `valid_out` indicates when the corresponding
 pipeline result is available. Invalid input cycles hold the datapath state and
 do not advance the sample history.
 
-The project uses two self-checking testbenches:
+The target is the PYNQ-Z2 FPGA (`xc7z020clg400-1`), with the 10 ns clock
+defined in `constraints/fir3_pipe2.xdc`. The RTL top is `fir3_pipe2`.
 
-- `tb/tb_fir3_pipe2.v` checks normal FIR operation, pipeline latency, and
-  invalid bubbles between accepted samples.
-- `tb/tb_fir3_pipe2_signed.v` checks signed boundary behavior using `-128` and
-  verifies the corresponding negative FIR results.
+## 4. Verification
 
-- PYNQ-Z2 FPGA target `xc7z020clg400-1`; source XDC is the uploaded Week 6 `constraints/fir3_pipe2.xdc` (10 ns clock).
-- RTL top `fir3_pipe2`, simulation tops `tb_fir3_pipe2`, `tb_fir3_pipe2_signed`.
+<p align="center"><img src="images/waveform.png" alt="waveform" /></p>
 
-## 4. Understanding Synthesis Options
+The project uses two self-checking testbenches under [`tb/`](tb/):
+
+- [`tb/tb_fir3_pipe2.v`](tb/tb_fir3_pipe2.v) checks reset
+  initialization, normal FIR operation, two-stage pipeline latency, invalid
+  bubbles, delay-line and product-register hold behavior, and final pipeline
+  drain. Its simulation top is `tb_fir3_pipe2`.
+- [`tb/tb_fir3_pipe2_signed.v`](tb/tb_fir3_pipe2_signed.v)
+  checks signed boundary behavior using `-128`, including the corresponding
+  negative FIR results through the lower output bound. Its simulation top is
+  `tb_fir3_pipe2_signed`.
+
+The main testbench progresses from initialization and asynchronous-reset
+checks to reset-release behavior, then accepts the first samples to establish
+the pipeline latency and verify the Stage-1 products and delay line. It next
+inserts an invalid input bubble to confirm that the datapath holds state while
+the previously accepted sample continues through Stage 2, and then checks
+recovery when valid traffic resumes. Consecutive valid samples verify normal
+steady-state FIR results, after which an invalid cycle drains the final
+pipeline result and a second idle cycle confirms that `valid_out` deasserts
+while the last output and internal state remain held. The signed testbench
+then separately exercises the same pipeline progression at the `-128`
+boundary, including the exact lower output value.
+
+Run both testbenches with `./scripts/run_xsim_regression.sh` before synthesis.
+The regression must finish with
+`[RESULT] WEEK6 INCLASS FIR REGRESSIONS PASSED`.
+
+## 5. Understanding Synthesis Options
 
 <p align="center"><img src="images/modes.png" alt="mode options" /></p>
 
@@ -105,7 +130,7 @@ The project uses two self-checking testbenches:
 
 Each mode changes exactly one synthesis setting.
 
-## 5. Understanding Synthesis Phases
+## 6. Understanding Synthesis Phases
 
 The `logs/synth_*.log` files show the following Vivado synthesis phases. The
 same major phases appear in modes A through E; mode E also reports a retiming
@@ -128,14 +153,14 @@ step during technology mapping.
 | Renaming and Hierarchy Cleanup | Renames generated instances, ports, and nets, rebuilds the user hierarchy, and preserves final netlist organization. |
 | Writing Synthesis Report | Reports black boxes and cell usage, then completes synthesis. All five logs report zero errors, zero critical warnings, and zero warnings. |
 
-## 6. Understanding Synthesis Reports
+## 7. Understanding Synthesis Reports
 
 The following reports are generated for the baseline synthesis, mode A, in
 `reports/A/`. They provide evidence about resource usage, timing coverage, and
 critical paths without requiring the full raw report output to be reproduced
 here.
 
-### 6.1 `utilization.rpt`
+### 7.1 `utilization.rpt`
 
 **Utilization Design Information** describes how much of the target FPGA is
 used by the synthesized design. It separates LUTs, registers, memory, DSP,
@@ -163,7 +188,7 @@ For this FIR, the report shows a small implementation using 36 flip-flops, 11
 LUTs, three `CARRY4` primitives, 22 I/O buffers, and one global clock buffer.
 No block RAM or DSP resources are used.
 
-### 6.2 `check_timing.rpt`
+### 7.2 `check_timing.rpt`
 
 **Timing Checks** lists checks for missing clocks, constant or multiple clocks,
 generated clocks, timing loops, and incomplete input or output delay
@@ -175,7 +200,7 @@ nine input ports without input delays and eleven output ports without output
 delays. Therefore, internal register-to-register timing is analyzed, while
 external interface timing is not fully modeled.
 
-### 6.3 `timing_summary.rpt`
+### 7.3 `timing_summary.rpt`
 
 **Design Timing Summary** consolidates setup, hold, and pulse-width results.
 The key metrics are worst negative slack (`WNS` and `WHS`), total negative
@@ -210,7 +235,7 @@ half-cycles exceed the required minimums.
 was available. Such paths are not proof of safe timing; they indicate where
 additional interface constraints may be needed.
 
-### 6.4 `worst10_setup_paths.rpt`
+### 7.4 `worst10_setup_paths.rpt`
 
 **Max Delay Paths** is repeated for the ten worst setup paths in this report.
 The ordered slack values show the critical path and the margin on the next
@@ -218,7 +243,7 @@ nine paths. Reviewing these paths helps determine whether timing risk is
 concentrated in one path or spread across many similar datapaths, and exposes
 the registers, logic levels, and routing segments most worth optimizing.
 
-## 7. Result
+## 8. Result
 
 This three-tap sequential FIR is a fairly small design. Its datapath contains
 only a few registers, LUTs, and carry-chain additions, so changing synthesis
@@ -226,7 +251,7 @@ options may have no observable impact on the synthesized result. The
 comparison must therefore use the generated logs and reports rather than
 assuming that an option produces a difference.
 
-### 7.1 Resource Comparison
+### 8.1 Resource Comparison
 
 | Mode | FDCE | OBUF | IBUF | LUT1 | LUT2 | LUT3 | LUT4 | LUT5 | CARRY4 | BRAM | DSP |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -238,17 +263,31 @@ assuming that an option produces a difference.
 
 Observations: 
 
-- All modes use 36 `FDCE` flip-flops, 11 `OBUF` instances, and 11 `IBUF`
-  instances.
-- The LUT primitive breakdown is identical: one `LUT1`, one `LUT2`, eight
-  `LUT3`, six `LUT4`, and one `LUT5`.
-- All modes use three `CARRY4` arithmetic primitives.
-- No mode uses block RAM or DSP resources; the I/O primitives account for the
-  design's external ports.
-- The identical resource counts show no observable resource impact from the
-  tested options.
+- All modes use the same number of resources
+- The `[1, 2, 1]` coefficients simplify the arithmetic: the first and third
+  products are direct signed samples, while the middle product is a one-bit
+  shift (`2x`) of the delayed sample. The synthesized implementation can
+  therefore use wiring, LUTs, and carry-chain additions instead of general
+  multipliers.
+- The delay registers hold the accepted-sample history needed by the FIR.
+  `d0` and `d1` feed the next products, while `d2` is not consumed by the
+  datapath and is optimized away, as reported by synthesis. The remaining
+  delay and product registers account for much of the sequential resource
+  usage and hold their state during invalid input cycles.
+- The two-stage pipeline registers the products in Stage 1 and registers the
+  summed result in Stage 2. This separates multiplication or shift logic from
+  addition logic, adds pipeline latency, and allows synthesis to map the
+  additions into short LUT/carry structures rather than one long
+  combinational path.
+- DSP use is not guaranteed merely because the RTL performs arithmetic.
+  DSP inference depends on the operand widths, constant-coefficient
+  expression, target architecture, synthesis settings, and the tool's
+  cost-based mapping decision. Here, the narrow constant operations are more
+  efficiently implemented with LUTs and `CARRY4` primitives, so zero DSP
+  usage is an expected implementation choice rather than evidence that the
+  FIR arithmetic was removed.
 
-### 7.2 Timing Comparison
+### 8.2 Timing Comparison
 
 | Mode | WNS (ns) | TNS (ns) | WHS (ns) | THS (ns) | WPWS (ns) | TPWS (ns) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -269,7 +308,7 @@ Observations:
 - Every mode reports 9 inputs without input delays and 11 outputs without
   output delays, so external I/O timing remains unconstrained.
 
-## 8. Conclusion
+## 9. Conclusion
 
 The five synthesis modes apply different optimization strategies: mode A uses
 the default settings, mode B applies `AreaOptimized_high`, mode C enables full

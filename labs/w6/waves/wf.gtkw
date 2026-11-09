@@ -1,0 +1,46 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Thu Nov  5 05:07:22 2026
+[*]
+[dumpfile] "/home/kaiden/EDA/w6/waves/fir3_pipe2.vcd"
+[dumpfile_mtime] "Wed Nov  4 16:14:16 2026"
+[dumpfile_size] 6416
+[savefile] "/home/kaiden/EDA/w6/waves/wf.gtkw"
+[timestart] 0
+[size] 1773 744
+[pos] -1 -1
+*-13.845181 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_fir3_pipe2.
+[sst_width] 276
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 208
+@28
+tb_fir3_pipe2.dut.clk
+tb_fir3_pipe2.dut.rst_n
+@200
+-
+@22
+tb_fir3_pipe2.dut.d0[9:0]
+tb_fir3_pipe2.dut.d1[9:0]
+tb_fir3_pipe2.dut.d2[9:0]
+tb_fir3_pipe2.dut.p0_s1[9:0]
+tb_fir3_pipe2.dut.p1_s1[9:0]
+tb_fir3_pipe2.dut.p2_s1[9:0]
+tb_fir3_pipe2.dut.s0_s1[9:0]
+@28
+tb_fir3_pipe2.dut.valid_in
+@200
+-
+@28
+tb_fir3_pipe2.dut.valid_out
+tb_fir3_pipe2.dut.valid_s1
+@22
+tb_fir3_pipe2.dut.x_ext[9:0]
+@23
+tb_fir3_pipe2.dut.x_in[7:0]
+@22
+tb_fir3_pipe2.dut.y_out[9:0]
+tb_fir3_pipe2.dut.y_s1[9:0]
+[pattern_trace] 1
+[pattern_trace] 0
