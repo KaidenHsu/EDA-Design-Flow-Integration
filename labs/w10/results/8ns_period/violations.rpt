@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : fir3_seq
+Version: Y-2026.03
+Date   : Thu Nov 12 20:55:52 2026
+****************************************
+
+
+   min_delay/hold ('core_clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   valid_out                    0.20           0.16 f        -0.04  (VIOLATED)
+
+
+1

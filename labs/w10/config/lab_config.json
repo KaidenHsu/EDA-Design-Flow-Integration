@@ -1,0 +1,15 @@
+{
+  "rtl_files": ["rtl/fir3_seq.v"],
+  "top": "fir3_seq",
+  "clk_port": "clk",
+  "reset_port": "rst_n",
+  "input_ports": ["x_in", "valid_in"],
+  "output_ports": ["y_out", "valid_out"],
+  "lib_db": "/tools/cad/CBDK/CBDK_TSMC018_Arm_f1.0/orig_lib/aci/sc/synopsys/typical.db",
+  "clock_periods_ns": [10, 8],
+  "input_max_ns": 2.0,
+  "input_min_ns": 0.5,
+  "output_max_ns": 2.5,
+  "output_min_ns": -0.2,
+  "compile_command": "compile"
+}

@@ -11,13 +11,15 @@ Labs | Description
 [W6 Lab][5] | FIR Filter: FPGA Synthesis Options, Phases, and Reports
 [W7 Lab][6] | FIR Filter: FPGA Implementation Phases and Reports
 [W8 Lab][7] | FIR Filter: PYNQ-Z2 FPGA Bring-up
+[W10 Lab][8] | FIR Filter: Cell-based Synthesis Phases and Reports
 
-[1]: labs/w2/
-[2]: labs/w3/
-[3]: labs/w4/
-[4]: labs/w5/
-[5]: labs/w6/
-[6]: labs/w7/
-[7]: labs/w8/
+[1]: labs/w02/
+[2]: labs/w03/
+[3]: labs/w04/
+[4]: labs/w05/
+[5]: labs/w06/
+[6]: labs/w07/
+[7]: labs/w08/
+[8]: labs/w10/
 
 <p align="center"><img src="images/EDA_banner.png" alt="banner" /></p>

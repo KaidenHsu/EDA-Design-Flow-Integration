@@ -1,0 +1,315 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : fir3_seq
+Version: Y-2026.03
+Date   : Thu Nov 12 20:55:52 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: valid_out_reg
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: valid_out (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock core_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  valid_out_reg/CK (DFFRHQX1)              0.00       0.00 r
+  valid_out_reg/Q (DFFRHQX1)               0.16       0.16 f
+  valid_out (out)                          0.00       0.16 f
+  data arrival time                                   0.16
+
+  clock core_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                    0.20       0.20
+  data required time                                  0.20
+  -----------------------------------------------------------
+  data required time                                  0.20
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.04
+
+
+  Startpoint: d2_reg[0] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[0] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d2_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d2_reg[0]/Q (DFFRHQX1)                                  0.21       0.21 f
+  add_1_root_add_0_root_add_36/A[0] (fir3_seq_DW01_add_1)
+                                                          0.00       0.21 f
+  add_1_root_add_0_root_add_36/U2/Y (XOR2X1)              0.11       0.32 f
+  add_1_root_add_0_root_add_36/SUM[0] (fir3_seq_DW01_add_1)
+                                                          0.00       0.32 f
+  add_0_root_add_0_root_add_36/B[0] (fir3_seq_DW01_add_0)
+                                                          0.00       0.32 f
+  add_0_root_add_0_root_add_36/SUM[0] (fir3_seq_DW01_add_0)
+                                                          0.00       0.32 f
+  y_out[0] (out)                                          0.00       0.32 f
+  data arrival time                                                  0.32
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.12
+
+
+  Startpoint: d1_reg[0] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[1] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[0]/Q (DFFRHQX1)                                  0.23       0.23 f
+  add_0_root_add_0_root_add_36/A[1] (fir3_seq_DW01_add_0)
+                                                          0.00       0.23 f
+  add_0_root_add_0_root_add_36/U2/Y (XOR2X1)              0.11       0.34 f
+  add_0_root_add_0_root_add_36/SUM[1] (fir3_seq_DW01_add_0)
+                                                          0.00       0.34 f
+  y_out[1] (out)                                          0.00       0.34 f
+  data arrival time                                                  0.34
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+  Startpoint: d1_reg[8] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[9] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[8]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[8]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[9] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_9/Y (XOR3X2)            0.19       0.40 f
+  add_0_root_add_0_root_add_36/SUM[9] (fir3_seq_DW01_add_0)
+                                                          0.00       0.40 f
+  y_out[9] (out)                                          0.00       0.40 f
+  data arrival time                                                  0.40
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: d1_reg[6] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[7] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[6]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[6]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[7] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_7/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[7] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[7] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: d1_reg[5] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[6] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[5]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[5]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[6] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_6/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[6] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[6] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: d1_reg[4] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[5] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[4]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[4]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[5] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_5/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[5] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[5] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: d1_reg[3] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[4] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[3]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[4] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_4/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[4] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[4] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: d1_reg[2] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[3] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[2]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[2]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[3] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_3/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[3] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[3] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: d1_reg[1] (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: y_out[2] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d1_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  d1_reg[1]/Q (DFFRHQX1)                                  0.22       0.22 f
+  add_0_root_add_0_root_add_36/A[2] (fir3_seq_DW01_add_0)
+                                                          0.00       0.22 f
+  add_0_root_add_0_root_add_36/U1_2/S (ADDFX2)            0.22       0.43 f
+  add_0_root_add_0_root_add_36/SUM[2] (fir3_seq_DW01_add_0)
+                                                          0.00       0.43 f
+  y_out[2] (out)                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                   0.20       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+1

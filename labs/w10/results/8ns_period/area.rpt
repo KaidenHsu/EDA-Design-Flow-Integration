@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : fir3_seq
+Version: Y-2026.03
+Date   : Thu Nov 12 20:55:52 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /tools/cad/CBDK/CBDK_TSMC018_Arm_f1.0/orig_lib/aci/sc/synopsys/typical.db)
+
+Number of ports:                           86
+Number of nets:                           211
+Number of cells:                          128
+Number of combinational cells:             92
+Number of sequential cells:                31
+Number of macros/black boxes:               0
+Number of buf/inv:                         40
+Number of references:                       7
+
+Combinational area:               2022.451210
+Buf/Inv area:                      266.112003
+Noncombinational area:            2165.486420
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  4187.937630
+Total area:                 undefined
+1

@@ -1,0 +1,39 @@
+{
+  "start_time": "2026-11-12T20:55:42",
+  "tool_command": "/usr/local/bin/dc",
+  "config_sha256": "a73953e1794fa1e6fd52823b4fe802ca8997c31812c13b4f2ee1b8552b0319e4",
+  "rtl_sha256": {
+    "rtl/fir3_seq.v": "b2a9e424730f47bb4f41bc71a14e88e56a112f1d8364bb37d8d5684c5b39fbc3"
+  },
+  "library_path": "/tools/cad/CBDK/CBDK_TSMC018_Arm_f1.0/orig_lib/aci/sc/synopsys/typical.db",
+  "periods_ns": [
+    10,
+    8
+  ],
+  "requested_compile_command": "compile",
+  "report_files_required": [
+    "mapped.v",
+    "area.rpt",
+    "refs.rpt",
+    "setup.rpt",
+    "hold.rpt",
+    "timing_coverage.rpt",
+    "violations.rpt"
+  ],
+  "timing_caveat": "Run completion is not a timing PASS; check_timing alone does not prove complete coverage.",
+  "status": "TOOL_COMMANDS_COMPLETED_REPORT_REVIEW_REQUIRED",
+  "runs": [
+    {
+      "period_ns": 10,
+      "exit_code": 0,
+      "completed_with_required_files": true,
+      "tool_log": "results/10ns_period/tool.log"
+    },
+    {
+      "period_ns": 8,
+      "exit_code": 0,
+      "completed_with_required_files": true,
+      "tool_log": "results/8ns_period/tool.log"
+    }
+  ]
+}
