@@ -1,12 +1,12 @@
 # Week 10: FIR Filter: Cell-based Synthesis Phases and Reports
 
-## Introduction
+## 1. Introduction
 
 This project takes the Week 4 three-tap FIR filter through logic synthesis using Synopsys Design Compiler and the ARM/TSMC T18 standard-cell library. The filter computes `y_out = d0 + 2*d1 + d2` from registered sample history. The synthesis flow translates this RTL into a mapped netlist containing flip-flops, arithmetic cells, and register-enable logic.
 
 The experiment compares clock periods of 10 ns and 8 ns while keeping the RTL, library corner, I/O delays, and compile command fixed. Tool logs show the mapping and optimization phases, while the generated netlists and reports show the resulting circuit structure, cell area, and setup and hold timing. The comparison examines whether the tighter clock target changes the implementation and how it affects the reported timing margins.
 
-## Reproduction Flow
+## 2. Reproduction Flow
 
 Run from the project root on a machine with Design Compiler and the configured T18 library installed:
 
@@ -18,7 +18,7 @@ The runner loads `config/lab_config.json` and invokes Design Compiler through th
 
 The runner performs synthesis only. Run the RTL testbench separately before synthesis. See [files_and_usage.md](docs/files_and_usage.md) for the file layout and report review workflow.
 
-## RTL Design
+## 3. RTL Design
 
 The synthesis input is [rtl/fir3_seq.v](rtl/fir3_seq.v), the Week 4 FIR filter baseline. It accepts signed 8-bit samples and computes a signed 10-bit output with coefficients `[1, 2, 1]`:
 
@@ -28,7 +28,7 @@ y_out = d0 + 2*d1 + d2
 
 Three 10-bit registers store the sample history and update when `valid_in` is asserted. The design uses an active-low asynchronous reset. `valid_out` is registered, while `y_out` is combinational. This lab does not repeat functional verification.
 
-## Synthesis Constraints
+## 4. Synthesis Constraints
 
 This project does not use a separate `.sdc` file. The synthesis constraints are included directly in [run_dc.tcl](scripts/run_dc.tcl), which applies `create_clock`, `set_input_delay`, and `set_output_delay` using the settings in [lab_config.json](config/lab_config.json).
 
@@ -53,7 +53,7 @@ The input delays apply to `x_in` and `valid_in`, excluding `rst_n`. No `set_fals
 
 Input/output delays specify external timing budgets, not input slew or output capacitance. Results depend on DC's applicable defaults and library settings for unspecified quantities; the area reports confirm that no wire-load model was active.
 
-## Synthesis Phases
+## 5. Synthesis Phases
 
 10ns: [tool.log](results/10ns_period/tool.log), 8ns: [tool.log](results/8ns_period/tool.log).
 
@@ -68,11 +68,11 @@ Input/output delays specify external timing budgets, not input slew or output ca
 
 Both clock targets follow the same logged phase sequence and area progression. Most of the displayed area reduction occurs during mapping optimization, followed by a smaller reduction during area recovery. The log area values are rounded library area units. Zero worst negative slack does not establish hold closure: the final reports still show a −0.04 ns hold violation.
 
-## Synthesized Netlist
+## 6. Synthesized Netlist
 
 10ns: [mapped.v](results/10ns_period/mapped.v), 8ns: [mapped.v](results/8ns_period/mapped.v).
 
-### Generated Adder Modules
+### 6.1 Generated Adder Modules
 
 DC implements the RTL additions as two generated DesignWare-derived modules. Their definitions are identical in the 10 ns and 8 ns netlists, including cell types, drive-strength variants, and internal connections.
 
@@ -93,7 +93,7 @@ DC implements the RTL additions as two generated DesignWare-derived modules. The
 
 - **The timing path crosses both modules:** The reported worst setup path passes through `_add_1` and then `_add_0`, including their carry logic. The 8 ns run retains the same ripple-carry structure and exact arithmetic cell variants as the 10 ns run; it does not introduce a different adder architecture or larger arithmetic cells.
 
-### Register and Enable Logic
+### 6.2 Register and Enable Logic
 
 The following counts are direct instances inside the top module, excluding cells inside the two adder modules.
 
@@ -115,9 +115,9 @@ The following counts are direct instances inside the top module, excluding cells
 
 - **Reset and output structure are preserved:** All 31 flip-flops connect `CK` to `clk` and `RN` to `rst_n`: 30 store sample history and one stores `valid_out`. `y_out` is driven directly by `_add_0`. These observations describe the mapped structure; they are not a formal equivalence result.
 
-## Results
+## 7. Results
 
-### Area and Mapping
+### 7.1 Area and Mapping
 
 10ns: [area.rpt](results/10ns_period/area.rpt), [refs.rpt](results/10ns_period/refs.rpt), 8ns: [area.rpt](results/8ns_period/area.rpt), [refs.rpt](results/8ns_period/refs.rpt).
 
@@ -142,7 +142,7 @@ The following counts are direct instances inside the top module, excluding cells
 
 - Both area reports state `Net Interconnect area: undefined (No wire load specified)`. The cell area is available, but the reports provide no interconnect-area estimate or total area including interconnect. Area values are left in library units because these reports do not establish the physical area unit.
 
-### Setup and Hold Timing
+### 7.2 Setup and Hold Timing
 
 10ns: [setup.rpt](results/10ns_period/setup.rpt), [hold.rpt](results/10ns_period/hold.rpt), [violations.rpt](results/10ns_period/violations.rpt), 8ns: [setup.rpt](results/8ns_period/setup.rpt), [hold.rpt](results/8ns_period/hold.rpt), [violations.rpt](results/8ns_period/violations.rpt).
 
@@ -161,7 +161,7 @@ The following counts are direct instances inside the top module, excluding cells
 
 - Both runs report a hold violation from `valid_out_reg` to `valid_out`: the actual path delay is 0.16 ns against a required 0.20 ns, giving −0.04 ns slack. The violation is recorded in both `hold.rpt` and `violations.rpt`.
 
-### Constraint Checks and Warnings
+### 7.3 Constraint Checks and Warnings
 
 10ns: [timing_coverage.rpt](results/10ns_period/timing_coverage.rpt), [tool.log](results/10ns_period/tool.log), 8ns: [timing_coverage.rpt](results/8ns_period/timing_coverage.rpt), [tool.log](results/8ns_period/tool.log).
 
@@ -180,7 +180,7 @@ The following counts are direct instances inside the top module, excluding cells
 
 - Each tool log records one `VER-318` unsigned-to-signed assignment warning at RTL line 24, a `VER-1065` notice recommending `analyze`/`elaborate` for RTL ingestion, and a `VO-4` notice that the netlist contains `assign` or `tran` statements. The synthesis flow does not perform functional equivalence checking.
 
-## Conclusion
+## 8. Conclusion
 
 Both clock targets produce the same cell inventory and total cell area of 4187.937630 library area units. DC implements the FIR arithmetic with two generated adder modules containing ripple-carry logic and uses 31 resettable flip-flops for sample history and `valid_out`. The adder definitions are identical between runs, although some control-net connections and instance names differ. Tightening the period from 10 ns to 8 ns reduces the worst reported setup slack from +4.99 ns to +2.99 ns without changing the reported setup-path arrival time of 2.51 ns.
 
