@@ -1,0 +1,52 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Sat Nov 14 14:01:56 2026
+[*]
+[dumpfile] "/home/kaiden/EDA/w8/evidence/ila_capture_plus5.vcd"
+[dumpfile_mtime] "Mon Nov  2 12:00:17 2026"
+[dumpfile_size] 660
+[savefile] "/home/kaiden/EDA/w8/evidence/wf.gtkw"
+[timestart] 0
+[size] 1741 712
+[pos] -1 -1
+*-2.374867 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 276
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 196
+@28
+dut._GAP
+dut._TRIGGER
+dut._WINDOW
+@200
+-
+@28
+[color] 3
+dut.rst_n_1
+@200
+-
+@28
+[color] 2
+dut.sample_req_1
+[color] 2
+dut.valid_in
+@22
+dut.x_in_1[7:0]
+@200
+-
+@28
+[color] 2
+dut.valid_s1
+@22
+dut.d0[9:0]
+dut.d1[9:0]
+dut.d2[9:0]
+@200
+-
+@28
+[color] 2
+dut.valid_out_1
+@22
+dut.y_out_1[9:0]
+[pattern_trace] 1
+[pattern_trace] 0

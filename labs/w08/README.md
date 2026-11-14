@@ -1,4 +1,4 @@
-# Week 8. FIR Filter: PYNQ-Z2 FPGA Bring-up
+# Week 8. FIR Filter: PYNQ-Z2 FPGA Bring-up with VIO and ILA
 
 ## 1. Introduction
 
@@ -50,24 +50,9 @@ Week 8 takes the pipelined three-tap FIR filter developed in the earlier weeks a
   <img src="./images/board_xdc_check_clock.png" alt="Week 8 slide 10: board XDC clock check" width="49%" height="300">
 </p>
 
-VIO and ILA are Vivado debug cores used together during physical FPGA bring-up. VIO provides interactive control and observation through the JTAG connection: it drives the FIR reset, sample request, and signed input sample, while also reporting the output-valid signal and FIR result. ILA captures clocked signal activity inside the FPGA so the request, input, pipeline-valid signals, internal sample history, and output can be inspected over time.
-
-Their roles are complementary. VIO supplies controlled stimulus to the design, and ILA records the resulting hardware behavior. Both cores use the same board clock and are connected in `rtl/fir3_pynqz2_top.v`; the matching `.ltx` file allows Vivado Hardware Manager to identify and interpret their probes after the `.bit` file is programmed.
+VIO and ILA are Vivado debug cores used together during physical FPGA bring-up. VIO provides interactive control and observation through the JTAG connection: it drives the FIR reset, sample request, and signed input sample, while also reporting the output-valid signal and FIR result. ILA captures clocked signal activity inside the FPGA so the request, input, pipeline-valid signals, internal sample history, and output can be inspected over time.  Their roles are complementary. VIO supplies controlled stimulus to the design, and ILA records the resulting hardware behavior. Both cores use the same board clock and are connected in `rtl/fir3_pynqz2_top.v`; the matching `.ltx` file allows Vivado Hardware Manager to identify and interpret their probes after the `.bit` file is programmed.
 
 The relationship between the build script and the board-level RTL enables the generated debug IP. [vivado/build.tcl](./vivado/build.tcl) creates the `vio_fir3` and `ila_fir3` IP cores, assigns their probe counts and widths, generates their output products, and adds them to the Vivado project. `rtl/fir3_pynqz2_top.v` then instantiates those generated modules by name and connects their probes to the FIR reset, sample request, input sample, output, valid signals, and internal history registers. The top-level RTL provides the connections, while [build.tcl](./vivado/build.tcl) provides the IP definitions and generated implementation files needed for Vivado to compile the design.
-
-The ILA is configured to capture the following signals. These probes provide visibility into the complete transaction, from the VIO-generated request and input sample through the FIR pipeline and final result:
-
-| probe | signal | width |
-|---|---|---|
-| 0 | `rst_n` | 1 |
-| 1 | `sample_req` | 1 |
-| 2 | `x_in` | 8 signed |
-| 3 | `valid_in` | 1 |
-| 4 | `valid_out` | 1 |
-| 5 | `y_out` | 10 signed |
-| 6 | `valid_s1` | 1 |
-| 7–9 | **actual** `d0`, `d1`, `d2` registers from the original Week 6 core | **10 signed bits each** |
 
 ### 3.3 Clock Configuration
 
@@ -122,13 +107,25 @@ The XDC does not create an Ethernet clock; it maps the RTL clock port to the boa
 
 The timing, utilization, and power results in this section are heavily influenced by the generated VIO and ILA IP cores, their debug hub, and associated JTAG infrastructure. The FIR filter itself is a small three-tap datapath, so the reported implementation cost and timing behavior represent the complete debug-enabled Week 8 design rather than the FIR arithmetic alone.
 
-### 6.1 VIO-Driven Debug Waveform
+### 6.1 Hardware Verification Results
 
 <p>
-  <img src="./images/waveform.png" alt="FIR waveform showing the request, pipeline valid signals, sample history, and output">
+  <img src="./images/debug_waveform.png" alt="FIR waveform showing the request, pipeline valid signals, sample history, and output">
 </p>
 
-The waveform shows one controlled FIR transaction. The input `x_in` is set to `05` while reset is inactive, and a rising edge on `sample_req` produces a single-cycle `valid_in` pulse. The pipeline then asserts `valid_s1`, updates the first delay register `d0` to `005`, and later asserts `valid_out` with `y_out` equal to `005`. The remaining delay registers stay at zero for this first sample, which matches the expected two-stage FIR pipeline behavior and confirms that the request, internal state, valid signals, and result are aligned.
+The waveform shows one controlled FIR transaction. The input `x_in` is set to `05` while reset is inactive, and a rising edge on `sample_req` produces a single-cycle `valid_in` pulse. The pipeline then asserts `valid_s1`, updates the first delay register `d0` to `005`, and later asserts `valid_out` with `y_out` equal to `005`. The remaining delay registers stay at zero for this first sample, which matches the Week 6 two-stage FIR pipeline simulation behavior.
+
+The [saved ILA capture](./evidence/ila_capture_plus5.csv) supports the following expected-versus-observed comparison for the five assigned hardware checks:
+
+| Hardware check | Expected result | Observed result / evidence | Status |
+|---|---|---|---|
+| Reset | History registers, output, and valid flags clear to zero. | Capture begins after reset release with these signals zero; reset assertion is not captured. | Partial evidence |
+| Positive input | First accepted `+5` after reset produces `+5`. | At sample 32, `valid_out=1` and `y_out=005` following input `05`. | Pass |
+| Negative input | First accepted `−5` after reset produces `−5` (`3FB` in 10-bit hexadecimal). | No hardware capture available. | Not completed |
+| Separated requests | Two request rising edges separated by a low interval produce two accepted samples and corresponding results. | Existing capture contains only one request. | Not completed |
+| Input change without a new request | Changing `x_in` while no new request occurs leaves history/output unchanged and produces no valid pulse, once the pipeline is idle. | Existing stimulus keeps `x_in=05`; this condition was not tested. | Not completed |
+
+The positive-input capture matches the expected result. Reset is supported indirectly by the cleared initial state. For more thorough verification, apply a negative input after reset, issue two requests separated by a low interval, and change the input without issuing a new request. Capture each case with ILA and compare the output, valid pulses, and history registers against the expected behavior.
 
 ### 6.2 DRC, Methodology, and Route-Status Reports
 

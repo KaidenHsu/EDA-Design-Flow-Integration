@@ -4,14 +4,14 @@
 
 Labs | Description
 --------|:-----
-[W2 Lab][1] | Warmup: RTL and Verification Fundamentals
-[W3 Lab][2] | Combinational 3-tap FIR Filter
-[W4 Lab][3] | Sequential 3-tap FIR Filter
-[W5 Lab][4] | FIR Filter: Parallelism and Pipelining
-[W6 Lab][5] | FIR Filter: FPGA Synthesis Options, Phases, and Reports
-[W7 Lab][6] | FIR Filter: FPGA Implementation Phases and Reports
-[W8 Lab][7] | FIR Filter: PYNQ-Z2 FPGA Bring-up
-[W10 Lab][8] | FIR Filter: Cell-based Synthesis Phases and Reports
+[Week 2 Lab][1] | Warmup: RTL and Verification Fundamentals
+[Week 3 Lab][2] | Combinational 3-tap FIR Filter
+[Week 4 Lab][3] | Sequential 3-tap FIR Filter
+[Week 5 Lab][4] | FIR Filter: Parallelism and Pipelining
+[Week 6 Lab][5] | FIR Filter: FPGA Synthesis Options, Phases, and Reports
+[Week 7 Lab][6] | FIR Filter: FPGA Implementation Phases and Reports
+[Week 8 Lab][7] | FIR Filter: PYNQ-Z2 FPGA Bring-up with VIO and ILA
+[Week 10 Lab][8] | FIR Filter: Cell-based Synthesis Phases and Reports
 
 [1]: labs/w02/
 [2]: labs/w03/
