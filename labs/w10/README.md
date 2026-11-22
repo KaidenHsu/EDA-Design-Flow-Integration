@@ -4,8 +4,6 @@
 
 This project takes the Week 4 three-tap FIR filter through logic synthesis using Synopsys Design Compiler and the ARM/TSMC T18 standard-cell library. The filter computes `y_out = d0 + 2*d1 + d2` from registered sample history. The synthesis flow translates this RTL into a mapped netlist containing flip-flops, arithmetic cells, and register-enable logic.
 
-![Design Compiler's role in the overall design flow](images/DC_usage.png)
-
 The experiment compares clock periods of 10 ns and 8 ns while keeping the RTL, library corner, I/O delays, and compile command fixed. Tool logs show the mapping and optimization phases, while the generated netlists and reports show the resulting circuit structure, cell area, and setup and hold timing. The comparison examines whether the tighter clock target changes the implementation and how it affects the reported timing margins.
 
 ## 2. Reproduction Flow
@@ -32,7 +30,10 @@ Three 10-bit registers store the sample history and update when `valid_in` is as
 
 ## 4. Synthesis Constraints
 
-![Major Design Compiler design-rule and optimization constraints](images/major_design_constraints.jpg)
+<p>
+  <img src="./images/DesignCompilerFlow.png" alt="Design Compiler synthesis workflow from HDL input to saved design database" width="49%" height="600">
+  <img src="./images/major_design_constraints.jpg" alt="Major Design Compiler design-rule and optimization constraints" width="49%" height="600">
+</p>
 
 This project does not use a separate `.sdc` file. The synthesis constraints are included directly in [run_dc.tcl](scripts/run_dc.tcl), which applies `create_clock`, `set_input_delay`, and `set_output_delay` using the settings in [lab_config.json](config/lab_config.json).
 
@@ -59,7 +60,7 @@ Input/output delays specify external timing budgets, not input slew or output ca
 
 ## 5. Synthesis Phases
 
-![Design Compiler synthesis workflow from HDL input to saved design database](images/DesignCompilerFlow.png)
+![Design Compiler's role in the overall design flow](images/DC_usage.png)
 
 10ns: [tool.log](results/10ns_period/tool.log), 8ns: [tool.log](results/8ns_period/tool.log).
 
