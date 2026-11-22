@@ -1,4 +1,4 @@
-# Week 6. FIR Filter: FPGA Synthesis Options, Phases, and Reports
+# Week 6. FIR Filter: FPGA Synthesis with `synth_design`
 
 ## 1. Introduction
 

@@ -1,8 +1,10 @@
-# Week 10: FIR Filter: Cell-based Synthesis Phases and Reports
+# Week 10: FIR Filter: Cell-based Synthesis with Design Compiler
 
 ## 1. Introduction
 
 This project takes the Week 4 three-tap FIR filter through logic synthesis using Synopsys Design Compiler and the ARM/TSMC T18 standard-cell library. The filter computes `y_out = d0 + 2*d1 + d2` from registered sample history. The synthesis flow translates this RTL into a mapped netlist containing flip-flops, arithmetic cells, and register-enable logic.
+
+![Design Compiler's role in the overall design flow](images/DC_usage.png)
 
 The experiment compares clock periods of 10 ns and 8 ns while keeping the RTL, library corner, I/O delays, and compile command fixed. Tool logs show the mapping and optimization phases, while the generated netlists and reports show the resulting circuit structure, cell area, and setup and hold timing. The comparison examines whether the tighter clock target changes the implementation and how it affects the reported timing margins.
 
@@ -30,6 +32,8 @@ Three 10-bit registers store the sample history and update when `valid_in` is as
 
 ## 4. Synthesis Constraints
 
+![Major Design Compiler design-rule and optimization constraints](images/major_design_constraints.jpg)
+
 This project does not use a separate `.sdc` file. The synthesis constraints are included directly in [run_dc.tcl](scripts/run_dc.tcl), which applies `create_clock`, `set_input_delay`, and `set_output_delay` using the settings in [lab_config.json](config/lab_config.json).
 
 [run_lab.py](run_lab.py) loads [config/lab_config.json](config/lab_config.json) and uses `export_env()` with `subprocess.run(..., env=...)` to pass `W10_*` variables to DC without changing the calling shell. Numbers and paths become strings; file and port lists are joined with `|`. In Tcl, `must_env` reads and validates each value from `::env`, and lists are split on `|`. For example, `set period [must_env W10_PERIOD_NS]` supplies the period used by `create_clock -name core_clk -period $period $clk`.
@@ -54,6 +58,8 @@ The input delays apply to `x_in` and `valid_in`, excluding `rst_n`. No `set_fals
 Input/output delays specify external timing budgets, not input slew or output capacitance. Results depend on DC's applicable defaults and library settings for unspecified quantities; the area reports confirm that no wire-load model was active.
 
 ## 5. Synthesis Phases
+
+![Design Compiler synthesis workflow from HDL input to saved design database](images/DesignCompilerFlow.png)
 
 10ns: [tool.log](results/10ns_period/tool.log), 8ns: [tool.log](results/8ns_period/tool.log).
 
