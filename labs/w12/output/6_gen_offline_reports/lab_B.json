@@ -1,0 +1,38 @@
+{
+  "evidence": "MODEL_ONLY",
+  "initial": {
+    "disconnected_pins": [
+      "VDD.P2"
+    ],
+    "cross_supply_edges": [],
+    "connected_without_cross_supply_edges": false
+  },
+  "student_candidate": {
+    "disconnected_pins": [],
+    "cross_supply_edges": [],
+    "connected_without_cross_supply_edges": true
+  },
+  "stripe_evidence": "ILLUSTRATIVE",
+  "stripes": [
+    {
+      "width_um": 2,
+      "pitch_um": 10,
+      "spacing_um": 8,
+      "metal_fraction_pct": 20.0,
+      "meets_model_spacing": true
+    },
+    {
+      "width_um": 3,
+      "pitch_um": 10,
+      "spacing_um": 7,
+      "metal_fraction_pct": 30.0,
+      "meets_model_spacing": false
+    }
+  ],
+  "resistance_ratio_B_over_A": 0.6666666666666666,
+  "simple_path_drop_mV": [
+    10.0,
+    5.0
+  ],
+  "IR_EM_status": "UNAVAILABLE"
+}

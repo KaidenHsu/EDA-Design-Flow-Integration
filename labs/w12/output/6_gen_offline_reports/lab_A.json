@@ -1,0 +1,23 @@
+{
+  "evidence": "ILLUSTRATIVE",
+  "preclass": {
+    "core_area_um2": 20000,
+    "excluded_area_um2": 2000,
+    "eligible_area_um2": 18000,
+    "utilization_pct": 60.0,
+    "target_pct": 65
+  },
+  "growth_budget_um2": 17600.0,
+  "candidates": {
+    "A": {
+      "core_area_um2": 16000,
+      "utilization_pct": 60.0,
+      "after_growth_pct": 66.0
+    },
+    "B": {
+      "core_area_um2": 19200,
+      "utilization_pct": 50.0,
+      "after_growth_pct": 55.0
+    }
+  }
+}

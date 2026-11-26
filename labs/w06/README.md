@@ -1,4 +1,4 @@
-# Week 6. FIR Filter: FPGA Synthesis with `synth_design`
+# Week 6. FPGA Synthesis with `synth_design`
 
 ## 1. Introduction
 

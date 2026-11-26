@@ -1,0 +1,11 @@
+{
+  "netlist": "/home/kaiden/EDA/w12/input/mapped.v",
+  "netlist_sha256": "2708b81c7da6322d80766e4661b84c57ee6b3c8337d5134b22ce2d6a769a6cdf",
+  "sdc": "/home/kaiden/EDA/w12/input/week11_10ns_io_fixed.sdc",
+  "sdc_sha256": "9ed792c5214cd52998de0eec8322efd0428caa2bb43eb0547cd2dfc427623aed",
+  "db_sha256": "06e2cdcdd52458ae9037eb3ac6cd5bb8f1d880444f2104f71965fb79ed522947",
+  "tech_sha256": "ed27a768816b7d129506790a9c81955ce7f98a74b46e0887d5abfcf959297332",
+  "lef_sha256": "c516db01dc0b16a60b9d3ace6ea26d00dc4b383990d106173dfd39cd698c06b5",
+  "ndm": "/home/kaiden/EDA/w12/input/t18_typical.dnm",
+  "mode": "TEACHING; NO VALIDATED RC MODEL"
+}

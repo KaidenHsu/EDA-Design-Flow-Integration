@@ -1,0 +1,2082 @@
+<Database>
+versionNumber:2
+Name/home/kaiden/EDA/w12/output/0_build_reference_library/check_workspace.ems
+Creation TimeFri Nov 27 02:00:33 2026
+Modified TimeFri Nov 27 02:00:33 2026
+Design Name
+Library Name
+</Database>
+<RuleCount>
+LM-0051
+LM-0341
+LM-0521
+LM-054470
+LM-109940
+LM-114178
+LM-175470
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+LM-005Information
+LM-109Warningpara1t18_typical/ADDFHX1/VSS10
+LM-109Warningpara1t18_typical/ADDFHX1/VDD10
+LM-175Informationpara1related power/ground10para2ADDFHX110
+LM-054Informationpara1ADDFHX110
+LM-109Warningpara1t18_typical/ADDFHX2/VSS10
+LM-109Warningpara1t18_typical/ADDFHX2/VDD10
+LM-175Informationpara1related power/ground10para2ADDFHX210
+LM-054Informationpara1ADDFHX210
+LM-109Warningpara1t18_typical/ADDFHX4/VSS10
+LM-109Warningpara1t18_typical/ADDFHX4/VDD10
+LM-175Informationpara1related power/ground10para2ADDFHX410
+LM-054Informationpara1ADDFHX410
+LM-109Warningpara1t18_typical/ADDFHXL/VSS10
+LM-109Warningpara1t18_typical/ADDFHXL/VDD10
+LM-175Informationpara1related power/ground10para2ADDFHXL10
+LM-054Informationpara1ADDFHXL10
+LM-109Warningpara1t18_typical/ADDFX1/VSS10
+LM-109Warningpara1t18_typical/ADDFX1/VDD10
+LM-175Informationpara1related power/ground10para2ADDFX110
+LM-054Informationpara1ADDFX110
+LM-109Warningpara1t18_typical/ADDFX2/VSS10
+LM-109Warningpara1t18_typical/ADDFX2/VDD10
+LM-175Informationpara1related power/ground10para2ADDFX210
+LM-054Informationpara1ADDFX210
+LM-109Warningpara1t18_typical/ADDFX4/VSS10
+LM-109Warningpara1t18_typical/ADDFX4/VDD10
+LM-175Informationpara1related power/ground10para2ADDFX410
+LM-054Informationpara1ADDFX410
+LM-109Warningpara1t18_typical/ADDFXL/VSS10
+LM-109Warningpara1t18_typical/ADDFXL/VDD10
+LM-175Informationpara1related power/ground10para2ADDFXL10
+LM-054Informationpara1ADDFXL10
+LM-109Warningpara1t18_typical/ADDHX1/VSS10
+LM-109Warningpara1t18_typical/ADDHX1/VDD10
+LM-175Informationpara1related power/ground10para2ADDHX110
+LM-054Informationpara1ADDHX110
+LM-109Warningpara1t18_typical/ADDHX2/VSS10
+LM-109Warningpara1t18_typical/ADDHX2/VDD10
+LM-175Informationpara1related power/ground10para2ADDHX210
+LM-054Informationpara1ADDHX210
+LM-109Warningpara1t18_typical/ADDHX4/VSS10
+LM-109Warningpara1t18_typical/ADDHX4/VDD10
+LM-175Informationpara1related power/ground10para2ADDHX410
+LM-054Informationpara1ADDHX410
+LM-109Warningpara1t18_typical/ADDHXL/VSS10
+LM-109Warningpara1t18_typical/ADDHXL/VDD10
+LM-175Informationpara1related power/ground10para2ADDHXL10
+LM-054Informationpara1ADDHXL10
+LM-109Warningpara1t18_typical/AFCSHCINX2/VSS10
+LM-109Warningpara1t18_typical/AFCSHCINX2/VDD10
+LM-175Informationpara1related power/ground10para2AFCSHCINX210
+LM-054Informationpara1AFCSHCINX210
+LM-109Warningpara1t18_typical/AFCSHCINX4/VSS10
+LM-109Warningpara1t18_typical/AFCSHCINX4/VDD10
+LM-175Informationpara1related power/ground10para2AFCSHCINX410
+LM-054Informationpara1AFCSHCINX410
+LM-109Warningpara1t18_typical/AFCSHCONX2/VSS10
+LM-109Warningpara1t18_typical/AFCSHCONX2/VDD10
+LM-175Informationpara1related power/ground10para2AFCSHCONX210
+LM-054Informationpara1AFCSHCONX210
+LM-109Warningpara1t18_typical/AFCSHCONX4/VSS10
+LM-109Warningpara1t18_typical/AFCSHCONX4/VDD10
+LM-175Informationpara1related power/ground10para2AFCSHCONX410
+LM-054Informationpara1AFCSHCONX410
+LM-109Warningpara1t18_typical/AFHCINX2/VSS10
+LM-109Warningpara1t18_typical/AFHCINX2/VDD10
+LM-175Informationpara1related power/ground10para2AFHCINX210
+LM-054Informationpara1AFHCINX210
+LM-109Warningpara1t18_typical/AFHCINX4/VSS10
+LM-109Warningpara1t18_typical/AFHCINX4/VDD10
+LM-175Informationpara1related power/ground10para2AFHCINX410
+LM-054Informationpara1AFHCINX410
+LM-109Warningpara1t18_typical/AFHCONX2/VSS10
+LM-109Warningpara1t18_typical/AFHCONX2/VDD10
+LM-175Informationpara1related power/ground10para2AFHCONX210
+LM-054Informationpara1AFHCONX210
+LM-109Warningpara1t18_typical/AFHCONX4/VSS10
+LM-109Warningpara1t18_typical/AFHCONX4/VDD10
+LM-175Informationpara1related power/ground10para2AFHCONX410
+LM-054Informationpara1AFHCONX410
+LM-109Warningpara1t18_typical/AHHCINX2/VSS10
+LM-109Warningpara1t18_typical/AHHCINX2/VDD10
+LM-175Informationpara1related power/ground10para2AHHCINX210
+LM-054Informationpara1AHHCINX210
+LM-109Warningpara1t18_typical/AHHCINX4/VSS10
+LM-109Warningpara1t18_typical/AHHCINX4/VDD10
+LM-175Informationpara1related power/ground10para2AHHCINX410
+LM-054Informationpara1AHHCINX410
+LM-109Warningpara1t18_typical/AHHCONX2/VSS10
+LM-109Warningpara1t18_typical/AHHCONX2/VDD10
+LM-175Informationpara1related power/ground10para2AHHCONX210
+LM-054Informationpara1AHHCONX210
+LM-109Warningpara1t18_typical/AHHCONX4/VSS10
+LM-109Warningpara1t18_typical/AHHCONX4/VDD10
+LM-175Informationpara1related power/ground10para2AHHCONX410
+LM-054Informationpara1AHHCONX410
+LM-109Warningpara1t18_typical/AND2X1/VSS10
+LM-109Warningpara1t18_typical/AND2X1/VDD10
+LM-175Informationpara1related power/ground10para2AND2X110
+LM-054Informationpara1AND2X110
+LM-109Warningpara1t18_typical/AND2X2/VSS10
+LM-109Warningpara1t18_typical/AND2X2/VDD10
+LM-175Informationpara1related power/ground10para2AND2X210
+LM-054Informationpara1AND2X210
+LM-109Warningpara1t18_typical/AND2X4/VSS10
+LM-109Warningpara1t18_typical/AND2X4/VDD10
+LM-175Informationpara1related power/ground10para2AND2X410
+LM-054Informationpara1AND2X410
+LM-109Warningpara1t18_typical/AND2XL/VSS10
+LM-109Warningpara1t18_typical/AND2XL/VDD10
+LM-175Informationpara1related power/ground10para2AND2XL10
+LM-054Informationpara1AND2XL10
+LM-109Warningpara1t18_typical/AND3X1/VSS10
+LM-109Warningpara1t18_typical/AND3X1/VDD10
+LM-175Informationpara1related power/ground10para2AND3X110
+LM-054Informationpara1AND3X110
+LM-109Warningpara1t18_typical/AND3X2/VSS10
+LM-109Warningpara1t18_typical/AND3X2/VDD10
+LM-175Informationpara1related power/ground10para2AND3X210
+LM-054Informationpara1AND3X210
+LM-109Warningpara1t18_typical/AND3X4/VSS10
+LM-109Warningpara1t18_typical/AND3X4/VDD10
+LM-175Informationpara1related power/ground10para2AND3X410
+LM-054Informationpara1AND3X410
+LM-109Warningpara1t18_typical/AND3XL/VSS10
+LM-109Warningpara1t18_typical/AND3XL/VDD10
+LM-175Informationpara1related power/ground10para2AND3XL10
+LM-054Informationpara1AND3XL10
+LM-109Warningpara1t18_typical/AND4X1/VSS10
+LM-109Warningpara1t18_typical/AND4X1/VDD10
+LM-175Informationpara1related power/ground10para2AND4X110
+LM-054Informationpara1AND4X110
+LM-109Warningpara1t18_typical/AND4X2/VSS10
+LM-109Warningpara1t18_typical/AND4X2/VDD10
+LM-175Informationpara1related power/ground10para2AND4X210
+LM-054Informationpara1AND4X210
+LM-109Warningpara1t18_typical/AND4X4/VSS10
+LM-109Warningpara1t18_typical/AND4X4/VDD10
+LM-175Informationpara1related power/ground10para2AND4X410
+LM-054Informationpara1AND4X410
+LM-109Warningpara1t18_typical/AND4XL/VSS10
+LM-109Warningpara1t18_typical/AND4XL/VDD10
+LM-175Informationpara1related power/ground10para2AND4XL10
+LM-054Informationpara1AND4XL10
+LM-109Warningpara1t18_typical/AOI211X1/VSS10
+LM-109Warningpara1t18_typical/AOI211X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI211X110
+LM-054Informationpara1AOI211X110
+LM-109Warningpara1t18_typical/AOI211X2/VSS10
+LM-109Warningpara1t18_typical/AOI211X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI211X210
+LM-054Informationpara1AOI211X210
+LM-109Warningpara1t18_typical/AOI211X4/VSS10
+LM-109Warningpara1t18_typical/AOI211X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI211X410
+LM-054Informationpara1AOI211X410
+LM-109Warningpara1t18_typical/AOI211XL/VSS10
+LM-109Warningpara1t18_typical/AOI211XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI211XL10
+LM-054Informationpara1AOI211XL10
+LM-109Warningpara1t18_typical/AOI21X1/VSS10
+LM-109Warningpara1t18_typical/AOI21X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI21X110
+LM-054Informationpara1AOI21X110
+LM-109Warningpara1t18_typical/AOI21X2/VSS10
+LM-109Warningpara1t18_typical/AOI21X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI21X210
+LM-054Informationpara1AOI21X210
+LM-109Warningpara1t18_typical/AOI21X4/VSS10
+LM-109Warningpara1t18_typical/AOI21X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI21X410
+LM-054Informationpara1AOI21X410
+LM-109Warningpara1t18_typical/AOI21XL/VSS10
+LM-109Warningpara1t18_typical/AOI21XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI21XL10
+LM-054Informationpara1AOI21XL10
+LM-109Warningpara1t18_typical/AOI221X1/VSS10
+LM-109Warningpara1t18_typical/AOI221X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI221X110
+LM-054Informationpara1AOI221X110
+LM-109Warningpara1t18_typical/AOI221X2/VSS10
+LM-109Warningpara1t18_typical/AOI221X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI221X210
+LM-054Informationpara1AOI221X210
+LM-109Warningpara1t18_typical/AOI221X4/VSS10
+LM-109Warningpara1t18_typical/AOI221X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI221X410
+LM-054Informationpara1AOI221X410
+LM-109Warningpara1t18_typical/AOI221XL/VSS10
+LM-109Warningpara1t18_typical/AOI221XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI221XL10
+LM-054Informationpara1AOI221XL10
+LM-109Warningpara1t18_typical/AOI222X1/VSS10
+LM-109Warningpara1t18_typical/AOI222X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI222X110
+LM-054Informationpara1AOI222X110
+LM-109Warningpara1t18_typical/AOI222X2/VSS10
+LM-109Warningpara1t18_typical/AOI222X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI222X210
+LM-054Informationpara1AOI222X210
+LM-109Warningpara1t18_typical/AOI222X4/VSS10
+LM-109Warningpara1t18_typical/AOI222X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI222X410
+LM-054Informationpara1AOI222X410
+LM-109Warningpara1t18_typical/AOI222XL/VSS10
+LM-109Warningpara1t18_typical/AOI222XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI222XL10
+LM-054Informationpara1AOI222XL10
+LM-109Warningpara1t18_typical/AOI22X1/VSS10
+LM-109Warningpara1t18_typical/AOI22X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI22X110
+LM-054Informationpara1AOI22X110
+LM-109Warningpara1t18_typical/AOI22X2/VSS10
+LM-109Warningpara1t18_typical/AOI22X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI22X210
+LM-054Informationpara1AOI22X210
+LM-109Warningpara1t18_typical/AOI22X4/VSS10
+LM-109Warningpara1t18_typical/AOI22X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI22X410
+LM-054Informationpara1AOI22X410
+LM-109Warningpara1t18_typical/AOI22XL/VSS10
+LM-109Warningpara1t18_typical/AOI22XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI22XL10
+LM-054Informationpara1AOI22XL10
+LM-109Warningpara1t18_typical/AOI2BB1X1/VSS10
+LM-109Warningpara1t18_typical/AOI2BB1X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB1X110
+LM-054Informationpara1AOI2BB1X110
+LM-109Warningpara1t18_typical/AOI2BB1X2/VSS10
+LM-109Warningpara1t18_typical/AOI2BB1X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB1X210
+LM-054Informationpara1AOI2BB1X210
+LM-109Warningpara1t18_typical/AOI2BB1X4/VSS10
+LM-109Warningpara1t18_typical/AOI2BB1X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB1X410
+LM-054Informationpara1AOI2BB1X410
+LM-109Warningpara1t18_typical/AOI2BB1XL/VSS10
+LM-109Warningpara1t18_typical/AOI2BB1XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB1XL10
+LM-054Informationpara1AOI2BB1XL10
+LM-109Warningpara1t18_typical/AOI2BB2X1/VSS10
+LM-109Warningpara1t18_typical/AOI2BB2X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB2X110
+LM-054Informationpara1AOI2BB2X110
+LM-109Warningpara1t18_typical/AOI2BB2X2/VSS10
+LM-109Warningpara1t18_typical/AOI2BB2X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB2X210
+LM-054Informationpara1AOI2BB2X210
+LM-109Warningpara1t18_typical/AOI2BB2X4/VSS10
+LM-109Warningpara1t18_typical/AOI2BB2X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB2X410
+LM-054Informationpara1AOI2BB2X410
+LM-109Warningpara1t18_typical/AOI2BB2XL/VSS10
+LM-109Warningpara1t18_typical/AOI2BB2XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI2BB2XL10
+LM-054Informationpara1AOI2BB2XL10
+LM-109Warningpara1t18_typical/AOI31X1/VSS10
+LM-109Warningpara1t18_typical/AOI31X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI31X110
+LM-054Informationpara1AOI31X110
+LM-109Warningpara1t18_typical/AOI31X2/VSS10
+LM-109Warningpara1t18_typical/AOI31X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI31X210
+LM-054Informationpara1AOI31X210
+LM-109Warningpara1t18_typical/AOI31X4/VSS10
+LM-109Warningpara1t18_typical/AOI31X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI31X410
+LM-054Informationpara1AOI31X410
+LM-109Warningpara1t18_typical/AOI31XL/VSS10
+LM-109Warningpara1t18_typical/AOI31XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI31XL10
+LM-054Informationpara1AOI31XL10
+LM-109Warningpara1t18_typical/AOI32X1/VSS10
+LM-109Warningpara1t18_typical/AOI32X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI32X110
+LM-054Informationpara1AOI32X110
+LM-109Warningpara1t18_typical/AOI32X2/VSS10
+LM-109Warningpara1t18_typical/AOI32X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI32X210
+LM-054Informationpara1AOI32X210
+LM-109Warningpara1t18_typical/AOI32X4/VSS10
+LM-109Warningpara1t18_typical/AOI32X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI32X410
+LM-054Informationpara1AOI32X410
+LM-109Warningpara1t18_typical/AOI32XL/VSS10
+LM-109Warningpara1t18_typical/AOI32XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI32XL10
+LM-054Informationpara1AOI32XL10
+LM-109Warningpara1t18_typical/AOI33X1/VSS10
+LM-109Warningpara1t18_typical/AOI33X1/VDD10
+LM-175Informationpara1related power/ground10para2AOI33X110
+LM-054Informationpara1AOI33X110
+LM-109Warningpara1t18_typical/AOI33X2/VSS10
+LM-109Warningpara1t18_typical/AOI33X2/VDD10
+LM-175Informationpara1related power/ground10para2AOI33X210
+LM-054Informationpara1AOI33X210
+LM-109Warningpara1t18_typical/AOI33X4/VSS10
+LM-109Warningpara1t18_typical/AOI33X4/VDD10
+LM-175Informationpara1related power/ground10para2AOI33X410
+LM-054Informationpara1AOI33X410
+LM-109Warningpara1t18_typical/AOI33XL/VSS10
+LM-109Warningpara1t18_typical/AOI33XL/VDD10
+LM-175Informationpara1related power/ground10para2AOI33XL10
+LM-054Informationpara1AOI33XL10
+LM-109Warningpara1t18_typical/BENCX1/VSS10
+LM-109Warningpara1t18_typical/BENCX1/VDD10
+LM-175Informationpara1related power/ground10para2BENCX110
+LM-054Informationpara1BENCX110
+LM-109Warningpara1t18_typical/BENCX2/VSS10
+LM-109Warningpara1t18_typical/BENCX2/VDD10
+LM-175Informationpara1related power/ground10para2BENCX210
+LM-054Informationpara1BENCX210
+LM-109Warningpara1t18_typical/BENCX4/VSS10
+LM-109Warningpara1t18_typical/BENCX4/VDD10
+LM-175Informationpara1related power/ground10para2BENCX410
+LM-054Informationpara1BENCX410
+LM-109Warningpara1t18_typical/BMXX1/VSS10
+LM-109Warningpara1t18_typical/BMXX1/VDD10
+LM-175Informationpara1related power/ground10para2BMXX110
+LM-054Informationpara1BMXX110
+LM-109Warningpara1t18_typical/BUFX1/VSS10
+LM-109Warningpara1t18_typical/BUFX1/VDD10
+LM-175Informationpara1related power/ground10para2BUFX110
+LM-054Informationpara1BUFX110
+LM-109Warningpara1t18_typical/BUFX12/VSS10
+LM-109Warningpara1t18_typical/BUFX12/VDD10
+LM-175Informationpara1related power/ground10para2BUFX1210
+LM-054Informationpara1BUFX1210
+LM-109Warningpara1t18_typical/BUFX16/VSS10
+LM-109Warningpara1t18_typical/BUFX16/VDD10
+LM-175Informationpara1related power/ground10para2BUFX1610
+LM-054Informationpara1BUFX1610
+LM-109Warningpara1t18_typical/BUFX2/VSS10
+LM-109Warningpara1t18_typical/BUFX2/VDD10
+LM-175Informationpara1related power/ground10para2BUFX210
+LM-054Informationpara1BUFX210
+LM-109Warningpara1t18_typical/BUFX20/VSS10
+LM-109Warningpara1t18_typical/BUFX20/VDD10
+LM-175Informationpara1related power/ground10para2BUFX2010
+LM-054Informationpara1BUFX2010
+LM-109Warningpara1t18_typical/BUFX3/VSS10
+LM-109Warningpara1t18_typical/BUFX3/VDD10
+LM-175Informationpara1related power/ground10para2BUFX310
+LM-054Informationpara1BUFX310
+LM-109Warningpara1t18_typical/BUFX4/VSS10
+LM-109Warningpara1t18_typical/BUFX4/VDD10
+LM-175Informationpara1related power/ground10para2BUFX410
+LM-054Informationpara1BUFX410
+LM-109Warningpara1t18_typical/BUFX8/VSS10
+LM-109Warningpara1t18_typical/BUFX8/VDD10
+LM-175Informationpara1related power/ground10para2BUFX810
+LM-054Informationpara1BUFX810
+LM-109Warningpara1t18_typical/BUFXL/VSS10
+LM-109Warningpara1t18_typical/BUFXL/VDD10
+LM-175Informationpara1related power/ground10para2BUFXL10
+LM-054Informationpara1BUFXL10
+LM-109Warningpara1t18_typical/CLKBUFX1/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX1/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX110
+LM-054Informationpara1CLKBUFX110
+LM-109Warningpara1t18_typical/CLKBUFX12/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX12/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX1210
+LM-054Informationpara1CLKBUFX1210
+LM-109Warningpara1t18_typical/CLKBUFX16/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX16/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX1610
+LM-054Informationpara1CLKBUFX1610
+LM-109Warningpara1t18_typical/CLKBUFX2/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX2/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX210
+LM-054Informationpara1CLKBUFX210
+LM-109Warningpara1t18_typical/CLKBUFX20/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX20/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX2010
+LM-054Informationpara1CLKBUFX2010
+LM-109Warningpara1t18_typical/CLKBUFX3/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX3/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX310
+LM-054Informationpara1CLKBUFX310
+LM-109Warningpara1t18_typical/CLKBUFX4/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX4/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX410
+LM-054Informationpara1CLKBUFX410
+LM-109Warningpara1t18_typical/CLKBUFX8/VSS10
+LM-109Warningpara1t18_typical/CLKBUFX8/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFX810
+LM-054Informationpara1CLKBUFX810
+LM-109Warningpara1t18_typical/CLKBUFXL/VSS10
+LM-109Warningpara1t18_typical/CLKBUFXL/VDD10
+LM-175Informationpara1related power/ground10para2CLKBUFXL10
+LM-054Informationpara1CLKBUFXL10
+LM-109Warningpara1t18_typical/CLKINVX1/VSS10
+LM-109Warningpara1t18_typical/CLKINVX1/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX110
+LM-054Informationpara1CLKINVX110
+LM-109Warningpara1t18_typical/CLKINVX12/VSS10
+LM-109Warningpara1t18_typical/CLKINVX12/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX1210
+LM-054Informationpara1CLKINVX1210
+LM-109Warningpara1t18_typical/CLKINVX16/VSS10
+LM-109Warningpara1t18_typical/CLKINVX16/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX1610
+LM-054Informationpara1CLKINVX1610
+LM-109Warningpara1t18_typical/CLKINVX2/VSS10
+LM-109Warningpara1t18_typical/CLKINVX2/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX210
+LM-054Informationpara1CLKINVX210
+LM-109Warningpara1t18_typical/CLKINVX20/VSS10
+LM-109Warningpara1t18_typical/CLKINVX20/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX2010
+LM-054Informationpara1CLKINVX2010
+LM-109Warningpara1t18_typical/CLKINVX3/VSS10
+LM-109Warningpara1t18_typical/CLKINVX3/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX310
+LM-054Informationpara1CLKINVX310
+LM-109Warningpara1t18_typical/CLKINVX4/VSS10
+LM-109Warningpara1t18_typical/CLKINVX4/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX410
+LM-054Informationpara1CLKINVX410
+LM-109Warningpara1t18_typical/CLKINVX8/VSS10
+LM-109Warningpara1t18_typical/CLKINVX8/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVX810
+LM-054Informationpara1CLKINVX810
+LM-109Warningpara1t18_typical/CLKINVXL/VSS10
+LM-109Warningpara1t18_typical/CLKINVXL/VDD10
+LM-175Informationpara1related power/ground10para2CLKINVXL10
+LM-054Informationpara1CLKINVXL10
+LM-109Warningpara1t18_typical/CMPR22X1/VSS10
+LM-109Warningpara1t18_typical/CMPR22X1/VDD10
+LM-175Informationpara1related power/ground10para2CMPR22X110
+LM-054Informationpara1CMPR22X110
+LM-109Warningpara1t18_typical/CMPR32X1/VSS10
+LM-109Warningpara1t18_typical/CMPR32X1/VDD10
+LM-175Informationpara1related power/ground10para2CMPR32X110
+LM-054Informationpara1CMPR32X110
+LM-109Warningpara1t18_typical/CMPR42X1/VSS10
+LM-109Warningpara1t18_typical/CMPR42X1/VDD10
+LM-175Informationpara1related power/ground10para2CMPR42X110
+LM-054Informationpara1CMPR42X110
+LM-109Warningpara1t18_typical/CMPR42X2/VSS10
+LM-109Warningpara1t18_typical/CMPR42X2/VDD10
+LM-175Informationpara1related power/ground10para2CMPR42X210
+LM-054Informationpara1CMPR42X210
+LM-109Warningpara1t18_typical/DFFHQX1/VSS10
+LM-109Warningpara1t18_typical/DFFHQX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFHQX110
+LM-054Informationpara1DFFHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFHQX2/VSS10
+LM-109Warningpara1t18_typical/DFFHQX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFHQX210
+LM-054Informationpara1DFFHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFHQX4/VSS10
+LM-109Warningpara1t18_typical/DFFHQX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFHQX410
+LM-054Informationpara1DFFHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFHQXL/VSS10
+LM-109Warningpara1t18_typical/DFFHQXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFHQXL10
+LM-054Informationpara1DFFHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFNRX1/VSS10
+LM-109Warningpara1t18_typical/DFFNRX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFNRX110
+LM-054Informationpara1DFFNRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNRX1/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNRX2/VSS10
+LM-109Warningpara1t18_typical/DFFNRX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFNRX210
+LM-054Informationpara1DFFNRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNRX2/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNRX4/VSS10
+LM-109Warningpara1t18_typical/DFFNRX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFNRX410
+LM-054Informationpara1DFFNRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNRX4/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNRXL/VSS10
+LM-109Warningpara1t18_typical/DFFNRXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFNRXL10
+LM-054Informationpara1DFFNRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNRXL/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSRX1/VSS10
+LM-109Warningpara1t18_typical/DFFNSRX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSRX110
+LM-054Informationpara1DFFNSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSRX1/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSRX2/VSS10
+LM-109Warningpara1t18_typical/DFFNSRX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSRX210
+LM-054Informationpara1DFFNSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSRX2/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSRX4/VSS10
+LM-109Warningpara1t18_typical/DFFNSRX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSRX410
+LM-054Informationpara1DFFNSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSRX4/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSRXL/VSS10
+LM-109Warningpara1t18_typical/DFFNSRXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSRXL10
+LM-054Informationpara1DFFNSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSRXL/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSX1/VSS10
+LM-109Warningpara1t18_typical/DFFNSX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSX110
+LM-054Informationpara1DFFNSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSX1/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSX2/VSS10
+LM-109Warningpara1t18_typical/DFFNSX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSX210
+LM-054Informationpara1DFFNSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSX2/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSX4/VSS10
+LM-109Warningpara1t18_typical/DFFNSX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSX410
+LM-054Informationpara1DFFNSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSX4/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNSXL/VSS10
+LM-109Warningpara1t18_typical/DFFNSXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFNSXL10
+LM-054Informationpara1DFFNSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNSXL/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNX1/VSS10
+LM-109Warningpara1t18_typical/DFFNX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFNX110
+LM-054Informationpara1DFFNX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNX1/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNX2/VSS10
+LM-109Warningpara1t18_typical/DFFNX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFNX210
+LM-054Informationpara1DFFNX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNX2/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNX4/VSS10
+LM-109Warningpara1t18_typical/DFFNX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFNX410
+LM-054Informationpara1DFFNX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNX4/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFNXL/VSS10
+LM-109Warningpara1t18_typical/DFFNXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFNXL10
+LM-054Informationpara1DFFNXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFNXL/design10para4CKN10
+LM-109Warningpara1t18_typical/DFFRHQX1/VSS10
+LM-109Warningpara1t18_typical/DFFRHQX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFRHQX110
+LM-054Informationpara1DFFRHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRHQX2/VSS10
+LM-109Warningpara1t18_typical/DFFRHQX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFRHQX210
+LM-054Informationpara1DFFRHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRHQX4/VSS10
+LM-109Warningpara1t18_typical/DFFRHQX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFRHQX410
+LM-054Informationpara1DFFRHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRHQXL/VSS10
+LM-109Warningpara1t18_typical/DFFRHQXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFRHQXL10
+LM-054Informationpara1DFFRHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRX1/VSS10
+LM-109Warningpara1t18_typical/DFFRX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFRX110
+LM-054Informationpara1DFFRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRX2/VSS10
+LM-109Warningpara1t18_typical/DFFRX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFRX210
+LM-054Informationpara1DFFRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRX4/VSS10
+LM-109Warningpara1t18_typical/DFFRX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFRX410
+LM-054Informationpara1DFFRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFRXL/VSS10
+LM-109Warningpara1t18_typical/DFFRXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFRXL10
+LM-054Informationpara1DFFRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFRXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSHQX1/VSS10
+LM-109Warningpara1t18_typical/DFFSHQX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFSHQX110
+LM-054Informationpara1DFFSHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSHQX2/VSS10
+LM-109Warningpara1t18_typical/DFFSHQX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFSHQX210
+LM-054Informationpara1DFFSHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSHQX4/VSS10
+LM-109Warningpara1t18_typical/DFFSHQX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFSHQX410
+LM-054Informationpara1DFFSHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSHQXL/VSS10
+LM-109Warningpara1t18_typical/DFFSHQXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFSHQXL10
+LM-054Informationpara1DFFSHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRHQX1/VSS10
+LM-109Warningpara1t18_typical/DFFSRHQX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRHQX110
+LM-054Informationpara1DFFSRHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRHQX2/VSS10
+LM-109Warningpara1t18_typical/DFFSRHQX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRHQX210
+LM-054Informationpara1DFFSRHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRHQX4/VSS10
+LM-109Warningpara1t18_typical/DFFSRHQX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRHQX410
+LM-054Informationpara1DFFSRHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRHQXL/VSS10
+LM-109Warningpara1t18_typical/DFFSRHQXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRHQXL10
+LM-054Informationpara1DFFSRHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRX1/VSS10
+LM-109Warningpara1t18_typical/DFFSRX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRX110
+LM-054Informationpara1DFFSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRX2/VSS10
+LM-109Warningpara1t18_typical/DFFSRX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRX210
+LM-054Informationpara1DFFSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRX4/VSS10
+LM-109Warningpara1t18_typical/DFFSRX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRX410
+LM-054Informationpara1DFFSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSRXL/VSS10
+LM-109Warningpara1t18_typical/DFFSRXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFSRXL10
+LM-054Informationpara1DFFSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSRXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSX1/VSS10
+LM-109Warningpara1t18_typical/DFFSX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFSX110
+LM-054Informationpara1DFFSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSX2/VSS10
+LM-109Warningpara1t18_typical/DFFSX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFSX210
+LM-054Informationpara1DFFSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSX4/VSS10
+LM-109Warningpara1t18_typical/DFFSX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFSX410
+LM-054Informationpara1DFFSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFSXL/VSS10
+LM-109Warningpara1t18_typical/DFFSXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFSXL10
+LM-054Informationpara1DFFSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFSXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFTRX1/VSS10
+LM-109Warningpara1t18_typical/DFFTRX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFTRX110
+LM-054Informationpara1DFFTRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFTRX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFTRX2/VSS10
+LM-109Warningpara1t18_typical/DFFTRX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFTRX210
+LM-054Informationpara1DFFTRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFTRX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFTRX4/VSS10
+LM-109Warningpara1t18_typical/DFFTRX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFTRX410
+LM-054Informationpara1DFFTRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFTRX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFTRXL/VSS10
+LM-109Warningpara1t18_typical/DFFTRXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFTRXL10
+LM-054Informationpara1DFFTRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFTRXL/design10para4CK10
+LM-109Warningpara1t18_typical/DFFX1/VSS10
+LM-109Warningpara1t18_typical/DFFX1/VDD10
+LM-175Informationpara1related power/ground10para2DFFX110
+LM-054Informationpara1DFFX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFX1/design10para4CK10
+LM-109Warningpara1t18_typical/DFFX2/VSS10
+LM-109Warningpara1t18_typical/DFFX2/VDD10
+LM-175Informationpara1related power/ground10para2DFFX210
+LM-054Informationpara1DFFX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFX2/design10para4CK10
+LM-109Warningpara1t18_typical/DFFX4/VSS10
+LM-109Warningpara1t18_typical/DFFX4/VDD10
+LM-175Informationpara1related power/ground10para2DFFX410
+LM-054Informationpara1DFFX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFX4/design10para4CK10
+LM-109Warningpara1t18_typical/DFFXL/VSS10
+LM-109Warningpara1t18_typical/DFFXL/VDD10
+LM-175Informationpara1related power/ground10para2DFFXL10
+LM-054Informationpara1DFFXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/DFFXL/design10para4CK10
+LM-109Warningpara1t18_typical/DLY1X1/VSS10
+LM-109Warningpara1t18_typical/DLY1X1/VDD10
+LM-175Informationpara1related power/ground10para2DLY1X110
+LM-054Informationpara1DLY1X110
+LM-109Warningpara1t18_typical/DLY2X1/VSS10
+LM-109Warningpara1t18_typical/DLY2X1/VDD10
+LM-175Informationpara1related power/ground10para2DLY2X110
+LM-054Informationpara1DLY2X110
+LM-109Warningpara1t18_typical/DLY3X1/VSS10
+LM-109Warningpara1t18_typical/DLY3X1/VDD10
+LM-175Informationpara1related power/ground10para2DLY3X110
+LM-054Informationpara1DLY3X110
+LM-109Warningpara1t18_typical/DLY4X1/VSS10
+LM-109Warningpara1t18_typical/DLY4X1/VDD10
+LM-175Informationpara1related power/ground10para2DLY4X110
+LM-054Informationpara1DLY4X110
+LM-109Warningpara1t18_typical/EDFFTRX1/VSS10
+LM-109Warningpara1t18_typical/EDFFTRX1/VDD10
+LM-175Informationpara1related power/ground10para2EDFFTRX110
+LM-054Informationpara1EDFFTRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFTRX1/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFTRX2/VSS10
+LM-109Warningpara1t18_typical/EDFFTRX2/VDD10
+LM-175Informationpara1related power/ground10para2EDFFTRX210
+LM-054Informationpara1EDFFTRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFTRX2/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFTRX4/VSS10
+LM-109Warningpara1t18_typical/EDFFTRX4/VDD10
+LM-175Informationpara1related power/ground10para2EDFFTRX410
+LM-054Informationpara1EDFFTRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFTRX4/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFTRXL/VSS10
+LM-109Warningpara1t18_typical/EDFFTRXL/VDD10
+LM-175Informationpara1related power/ground10para2EDFFTRXL10
+LM-054Informationpara1EDFFTRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFTRXL/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFX1/VSS10
+LM-109Warningpara1t18_typical/EDFFX1/VDD10
+LM-175Informationpara1related power/ground10para2EDFFX110
+LM-054Informationpara1EDFFX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFX1/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFX2/VSS10
+LM-109Warningpara1t18_typical/EDFFX2/VDD10
+LM-175Informationpara1related power/ground10para2EDFFX210
+LM-054Informationpara1EDFFX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFX2/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFX4/VSS10
+LM-109Warningpara1t18_typical/EDFFX4/VDD10
+LM-175Informationpara1related power/ground10para2EDFFX410
+LM-054Informationpara1EDFFX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFX4/design10para4CK10
+LM-109Warningpara1t18_typical/EDFFXL/VSS10
+LM-109Warningpara1t18_typical/EDFFXL/VDD10
+LM-175Informationpara1related power/ground10para2EDFFXL10
+LM-054Informationpara1EDFFXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/EDFFXL/design10para4CK10
+LM-109Warningpara1t18_typical/HOLDX1/VSS10
+LM-109Warningpara1t18_typical/HOLDX1/VDD10
+LM-175Informationpara1related power/ground10para2HOLDX110
+LM-054Informationpara1HOLDX110
+LM-109Warningpara1t18_typical/INVX1/VSS10
+LM-109Warningpara1t18_typical/INVX1/VDD10
+LM-175Informationpara1related power/ground10para2INVX110
+LM-054Informationpara1INVX110
+LM-109Warningpara1t18_typical/INVX12/VSS10
+LM-109Warningpara1t18_typical/INVX12/VDD10
+LM-175Informationpara1related power/ground10para2INVX1210
+LM-054Informationpara1INVX1210
+LM-109Warningpara1t18_typical/INVX16/VSS10
+LM-109Warningpara1t18_typical/INVX16/VDD10
+LM-175Informationpara1related power/ground10para2INVX1610
+LM-054Informationpara1INVX1610
+LM-109Warningpara1t18_typical/INVX2/VSS10
+LM-109Warningpara1t18_typical/INVX2/VDD10
+LM-175Informationpara1related power/ground10para2INVX210
+LM-054Informationpara1INVX210
+LM-109Warningpara1t18_typical/INVX20/VSS10
+LM-109Warningpara1t18_typical/INVX20/VDD10
+LM-175Informationpara1related power/ground10para2INVX2010
+LM-054Informationpara1INVX2010
+LM-109Warningpara1t18_typical/INVX3/VSS10
+LM-109Warningpara1t18_typical/INVX3/VDD10
+LM-175Informationpara1related power/ground10para2INVX310
+LM-054Informationpara1INVX310
+LM-109Warningpara1t18_typical/INVX4/VSS10
+LM-109Warningpara1t18_typical/INVX4/VDD10
+LM-175Informationpara1related power/ground10para2INVX410
+LM-054Informationpara1INVX410
+LM-109Warningpara1t18_typical/INVX8/VSS10
+LM-109Warningpara1t18_typical/INVX8/VDD10
+LM-175Informationpara1related power/ground10para2INVX810
+LM-054Informationpara1INVX810
+LM-109Warningpara1t18_typical/INVXL/VSS10
+LM-109Warningpara1t18_typical/INVXL/VDD10
+LM-175Informationpara1related power/ground10para2INVXL10
+LM-054Informationpara1INVXL10
+LM-109Warningpara1t18_typical/JKFFRX1/VSS10
+LM-109Warningpara1t18_typical/JKFFRX1/VDD10
+LM-175Informationpara1related power/ground10para2JKFFRX110
+LM-054Informationpara1JKFFRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFRX1/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFRX2/VSS10
+LM-109Warningpara1t18_typical/JKFFRX2/VDD10
+LM-175Informationpara1related power/ground10para2JKFFRX210
+LM-054Informationpara1JKFFRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFRX2/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFRX4/VSS10
+LM-109Warningpara1t18_typical/JKFFRX4/VDD10
+LM-175Informationpara1related power/ground10para2JKFFRX410
+LM-054Informationpara1JKFFRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFRX4/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFRXL/VSS10
+LM-109Warningpara1t18_typical/JKFFRXL/VDD10
+LM-175Informationpara1related power/ground10para2JKFFRXL10
+LM-054Informationpara1JKFFRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFRXL/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSRX1/VSS10
+LM-109Warningpara1t18_typical/JKFFSRX1/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSRX110
+LM-054Informationpara1JKFFSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSRX1/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSRX2/VSS10
+LM-109Warningpara1t18_typical/JKFFSRX2/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSRX210
+LM-054Informationpara1JKFFSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSRX2/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSRX4/VSS10
+LM-109Warningpara1t18_typical/JKFFSRX4/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSRX410
+LM-054Informationpara1JKFFSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSRX4/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSRXL/VSS10
+LM-109Warningpara1t18_typical/JKFFSRXL/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSRXL10
+LM-054Informationpara1JKFFSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSRXL/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSX1/VSS10
+LM-109Warningpara1t18_typical/JKFFSX1/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSX110
+LM-054Informationpara1JKFFSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSX1/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSX2/VSS10
+LM-109Warningpara1t18_typical/JKFFSX2/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSX210
+LM-054Informationpara1JKFFSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSX2/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSX4/VSS10
+LM-109Warningpara1t18_typical/JKFFSX4/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSX410
+LM-054Informationpara1JKFFSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSX4/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFSXL/VSS10
+LM-109Warningpara1t18_typical/JKFFSXL/VDD10
+LM-175Informationpara1related power/ground10para2JKFFSXL10
+LM-054Informationpara1JKFFSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFSXL/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFX1/VSS10
+LM-109Warningpara1t18_typical/JKFFX1/VDD10
+LM-175Informationpara1related power/ground10para2JKFFX110
+LM-054Informationpara1JKFFX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFX1/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFX2/VSS10
+LM-109Warningpara1t18_typical/JKFFX2/VDD10
+LM-175Informationpara1related power/ground10para2JKFFX210
+LM-054Informationpara1JKFFX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFX2/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFX4/VSS10
+LM-109Warningpara1t18_typical/JKFFX4/VDD10
+LM-175Informationpara1related power/ground10para2JKFFX410
+LM-054Informationpara1JKFFX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFX4/design10para4CK10
+LM-109Warningpara1t18_typical/JKFFXL/VSS10
+LM-109Warningpara1t18_typical/JKFFXL/VDD10
+LM-175Informationpara1related power/ground10para2JKFFXL10
+LM-054Informationpara1JKFFXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/JKFFXL/design10para4CK10
+LM-109Warningpara1t18_typical/MX2X1/VSS10
+LM-109Warningpara1t18_typical/MX2X1/VDD10
+LM-175Informationpara1related power/ground10para2MX2X110
+LM-054Informationpara1MX2X110
+LM-109Warningpara1t18_typical/MX2X2/VSS10
+LM-109Warningpara1t18_typical/MX2X2/VDD10
+LM-175Informationpara1related power/ground10para2MX2X210
+LM-054Informationpara1MX2X210
+LM-109Warningpara1t18_typical/MX2X4/VSS10
+LM-109Warningpara1t18_typical/MX2X4/VDD10
+LM-175Informationpara1related power/ground10para2MX2X410
+LM-054Informationpara1MX2X410
+LM-109Warningpara1t18_typical/MX2XL/VSS10
+LM-109Warningpara1t18_typical/MX2XL/VDD10
+LM-175Informationpara1related power/ground10para2MX2XL10
+LM-054Informationpara1MX2XL10
+LM-109Warningpara1t18_typical/MX4X1/VSS10
+LM-109Warningpara1t18_typical/MX4X1/VDD10
+LM-175Informationpara1related power/ground10para2MX4X110
+LM-054Informationpara1MX4X110
+LM-109Warningpara1t18_typical/MX4X2/VSS10
+LM-109Warningpara1t18_typical/MX4X2/VDD10
+LM-175Informationpara1related power/ground10para2MX4X210
+LM-054Informationpara1MX4X210
+LM-109Warningpara1t18_typical/MX4X4/VSS10
+LM-109Warningpara1t18_typical/MX4X4/VDD10
+LM-175Informationpara1related power/ground10para2MX4X410
+LM-054Informationpara1MX4X410
+LM-109Warningpara1t18_typical/MX4XL/VSS10
+LM-109Warningpara1t18_typical/MX4XL/VDD10
+LM-175Informationpara1related power/ground10para2MX4XL10
+LM-054Informationpara1MX4XL10
+LM-109Warningpara1t18_typical/MXI2X1/VSS10
+LM-109Warningpara1t18_typical/MXI2X1/VDD10
+LM-175Informationpara1related power/ground10para2MXI2X110
+LM-054Informationpara1MXI2X110
+LM-109Warningpara1t18_typical/MXI2X2/VSS10
+LM-109Warningpara1t18_typical/MXI2X2/VDD10
+LM-175Informationpara1related power/ground10para2MXI2X210
+LM-054Informationpara1MXI2X210
+LM-109Warningpara1t18_typical/MXI2X4/VSS10
+LM-109Warningpara1t18_typical/MXI2X4/VDD10
+LM-175Informationpara1related power/ground10para2MXI2X410
+LM-054Informationpara1MXI2X410
+LM-109Warningpara1t18_typical/MXI2XL/VSS10
+LM-109Warningpara1t18_typical/MXI2XL/VDD10
+LM-175Informationpara1related power/ground10para2MXI2XL10
+LM-054Informationpara1MXI2XL10
+LM-109Warningpara1t18_typical/MXI4X1/VSS10
+LM-109Warningpara1t18_typical/MXI4X1/VDD10
+LM-175Informationpara1related power/ground10para2MXI4X110
+LM-054Informationpara1MXI4X110
+LM-109Warningpara1t18_typical/MXI4X2/VSS10
+LM-109Warningpara1t18_typical/MXI4X2/VDD10
+LM-175Informationpara1related power/ground10para2MXI4X210
+LM-054Informationpara1MXI4X210
+LM-109Warningpara1t18_typical/MXI4X4/VSS10
+LM-109Warningpara1t18_typical/MXI4X4/VDD10
+LM-175Informationpara1related power/ground10para2MXI4X410
+LM-054Informationpara1MXI4X410
+LM-109Warningpara1t18_typical/MXI4XL/VSS10
+LM-109Warningpara1t18_typical/MXI4XL/VDD10
+LM-175Informationpara1related power/ground10para2MXI4XL10
+LM-054Informationpara1MXI4XL10
+LM-109Warningpara1t18_typical/NAND2BX1/VSS10
+LM-109Warningpara1t18_typical/NAND2BX1/VDD10
+LM-175Informationpara1related power/ground10para2NAND2BX110
+LM-054Informationpara1NAND2BX110
+LM-109Warningpara1t18_typical/NAND2BX2/VSS10
+LM-109Warningpara1t18_typical/NAND2BX2/VDD10
+LM-175Informationpara1related power/ground10para2NAND2BX210
+LM-054Informationpara1NAND2BX210
+LM-109Warningpara1t18_typical/NAND2BX4/VSS10
+LM-109Warningpara1t18_typical/NAND2BX4/VDD10
+LM-175Informationpara1related power/ground10para2NAND2BX410
+LM-054Informationpara1NAND2BX410
+LM-109Warningpara1t18_typical/NAND2BXL/VSS10
+LM-109Warningpara1t18_typical/NAND2BXL/VDD10
+LM-175Informationpara1related power/ground10para2NAND2BXL10
+LM-054Informationpara1NAND2BXL10
+LM-109Warningpara1t18_typical/NAND2X1/VSS10
+LM-109Warningpara1t18_typical/NAND2X1/VDD10
+LM-175Informationpara1related power/ground10para2NAND2X110
+LM-054Informationpara1NAND2X110
+LM-109Warningpara1t18_typical/NAND2X2/VSS10
+LM-109Warningpara1t18_typical/NAND2X2/VDD10
+LM-175Informationpara1related power/ground10para2NAND2X210
+LM-054Informationpara1NAND2X210
+LM-109Warningpara1t18_typical/NAND2X4/VSS10
+LM-109Warningpara1t18_typical/NAND2X4/VDD10
+LM-175Informationpara1related power/ground10para2NAND2X410
+LM-054Informationpara1NAND2X410
+LM-109Warningpara1t18_typical/NAND2XL/VSS10
+LM-109Warningpara1t18_typical/NAND2XL/VDD10
+LM-175Informationpara1related power/ground10para2NAND2XL10
+LM-054Informationpara1NAND2XL10
+LM-109Warningpara1t18_typical/NAND3BX1/VSS10
+LM-109Warningpara1t18_typical/NAND3BX1/VDD10
+LM-175Informationpara1related power/ground10para2NAND3BX110
+LM-054Informationpara1NAND3BX110
+LM-109Warningpara1t18_typical/NAND3BX2/VSS10
+LM-109Warningpara1t18_typical/NAND3BX2/VDD10
+LM-175Informationpara1related power/ground10para2NAND3BX210
+LM-054Informationpara1NAND3BX210
+LM-109Warningpara1t18_typical/NAND3BX4/VSS10
+LM-109Warningpara1t18_typical/NAND3BX4/VDD10
+LM-175Informationpara1related power/ground10para2NAND3BX410
+LM-054Informationpara1NAND3BX410
+LM-109Warningpara1t18_typical/NAND3BXL/VSS10
+LM-109Warningpara1t18_typical/NAND3BXL/VDD10
+LM-175Informationpara1related power/ground10para2NAND3BXL10
+LM-054Informationpara1NAND3BXL10
+LM-109Warningpara1t18_typical/NAND3X1/VSS10
+LM-109Warningpara1t18_typical/NAND3X1/VDD10
+LM-175Informationpara1related power/ground10para2NAND3X110
+LM-054Informationpara1NAND3X110
+LM-109Warningpara1t18_typical/NAND3X2/VSS10
+LM-109Warningpara1t18_typical/NAND3X2/VDD10
+LM-175Informationpara1related power/ground10para2NAND3X210
+LM-054Informationpara1NAND3X210
+LM-109Warningpara1t18_typical/NAND3X4/VSS10
+LM-109Warningpara1t18_typical/NAND3X4/VDD10
+LM-175Informationpara1related power/ground10para2NAND3X410
+LM-054Informationpara1NAND3X410
+LM-109Warningpara1t18_typical/NAND3XL/VSS10
+LM-109Warningpara1t18_typical/NAND3XL/VDD10
+LM-175Informationpara1related power/ground10para2NAND3XL10
+LM-054Informationpara1NAND3XL10
+LM-109Warningpara1t18_typical/NAND4BBX1/VSS10
+LM-109Warningpara1t18_typical/NAND4BBX1/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BBX110
+LM-054Informationpara1NAND4BBX110
+LM-109Warningpara1t18_typical/NAND4BBX2/VSS10
+LM-109Warningpara1t18_typical/NAND4BBX2/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BBX210
+LM-054Informationpara1NAND4BBX210
+LM-109Warningpara1t18_typical/NAND4BBX4/VSS10
+LM-109Warningpara1t18_typical/NAND4BBX4/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BBX410
+LM-054Informationpara1NAND4BBX410
+LM-109Warningpara1t18_typical/NAND4BBXL/VSS10
+LM-109Warningpara1t18_typical/NAND4BBXL/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BBXL10
+LM-054Informationpara1NAND4BBXL10
+LM-109Warningpara1t18_typical/NAND4BX1/VSS10
+LM-109Warningpara1t18_typical/NAND4BX1/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BX110
+LM-054Informationpara1NAND4BX110
+LM-109Warningpara1t18_typical/NAND4BX2/VSS10
+LM-109Warningpara1t18_typical/NAND4BX2/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BX210
+LM-054Informationpara1NAND4BX210
+LM-109Warningpara1t18_typical/NAND4BX4/VSS10
+LM-109Warningpara1t18_typical/NAND4BX4/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BX410
+LM-054Informationpara1NAND4BX410
+LM-109Warningpara1t18_typical/NAND4BXL/VSS10
+LM-109Warningpara1t18_typical/NAND4BXL/VDD10
+LM-175Informationpara1related power/ground10para2NAND4BXL10
+LM-054Informationpara1NAND4BXL10
+LM-109Warningpara1t18_typical/NAND4X1/VSS10
+LM-109Warningpara1t18_typical/NAND4X1/VDD10
+LM-175Informationpara1related power/ground10para2NAND4X110
+LM-054Informationpara1NAND4X110
+LM-109Warningpara1t18_typical/NAND4X2/VSS10
+LM-109Warningpara1t18_typical/NAND4X2/VDD10
+LM-175Informationpara1related power/ground10para2NAND4X210
+LM-054Informationpara1NAND4X210
+LM-109Warningpara1t18_typical/NAND4X4/VSS10
+LM-109Warningpara1t18_typical/NAND4X4/VDD10
+LM-175Informationpara1related power/ground10para2NAND4X410
+LM-054Informationpara1NAND4X410
+LM-109Warningpara1t18_typical/NAND4XL/VSS10
+LM-109Warningpara1t18_typical/NAND4XL/VDD10
+LM-175Informationpara1related power/ground10para2NAND4XL10
+LM-054Informationpara1NAND4XL10
+LM-109Warningpara1t18_typical/NOR2BX1/VSS10
+LM-109Warningpara1t18_typical/NOR2BX1/VDD10
+LM-175Informationpara1related power/ground10para2NOR2BX110
+LM-054Informationpara1NOR2BX110
+LM-109Warningpara1t18_typical/NOR2BX2/VSS10
+LM-109Warningpara1t18_typical/NOR2BX2/VDD10
+LM-175Informationpara1related power/ground10para2NOR2BX210
+LM-054Informationpara1NOR2BX210
+LM-109Warningpara1t18_typical/NOR2BX4/VSS10
+LM-109Warningpara1t18_typical/NOR2BX4/VDD10
+LM-175Informationpara1related power/ground10para2NOR2BX410
+LM-054Informationpara1NOR2BX410
+LM-109Warningpara1t18_typical/NOR2BXL/VSS10
+LM-109Warningpara1t18_typical/NOR2BXL/VDD10
+LM-175Informationpara1related power/ground10para2NOR2BXL10
+LM-054Informationpara1NOR2BXL10
+LM-109Warningpara1t18_typical/NOR2X1/VSS10
+LM-109Warningpara1t18_typical/NOR2X1/VDD10
+LM-175Informationpara1related power/ground10para2NOR2X110
+LM-054Informationpara1NOR2X110
+LM-109Warningpara1t18_typical/NOR2X2/VSS10
+LM-109Warningpara1t18_typical/NOR2X2/VDD10
+LM-175Informationpara1related power/ground10para2NOR2X210
+LM-054Informationpara1NOR2X210
+LM-109Warningpara1t18_typical/NOR2X4/VSS10
+LM-109Warningpara1t18_typical/NOR2X4/VDD10
+LM-175Informationpara1related power/ground10para2NOR2X410
+LM-054Informationpara1NOR2X410
+LM-109Warningpara1t18_typical/NOR2XL/VSS10
+LM-109Warningpara1t18_typical/NOR2XL/VDD10
+LM-175Informationpara1related power/ground10para2NOR2XL10
+LM-054Informationpara1NOR2XL10
+LM-109Warningpara1t18_typical/NOR3BX1/VSS10
+LM-109Warningpara1t18_typical/NOR3BX1/VDD10
+LM-175Informationpara1related power/ground10para2NOR3BX110
+LM-054Informationpara1NOR3BX110
+LM-109Warningpara1t18_typical/NOR3BX2/VSS10
+LM-109Warningpara1t18_typical/NOR3BX2/VDD10
+LM-175Informationpara1related power/ground10para2NOR3BX210
+LM-054Informationpara1NOR3BX210
+LM-109Warningpara1t18_typical/NOR3BX4/VSS10
+LM-109Warningpara1t18_typical/NOR3BX4/VDD10
+LM-175Informationpara1related power/ground10para2NOR3BX410
+LM-054Informationpara1NOR3BX410
+LM-109Warningpara1t18_typical/NOR3BXL/VSS10
+LM-109Warningpara1t18_typical/NOR3BXL/VDD10
+LM-175Informationpara1related power/ground10para2NOR3BXL10
+LM-054Informationpara1NOR3BXL10
+LM-109Warningpara1t18_typical/NOR3X1/VSS10
+LM-109Warningpara1t18_typical/NOR3X1/VDD10
+LM-175Informationpara1related power/ground10para2NOR3X110
+LM-054Informationpara1NOR3X110
+LM-109Warningpara1t18_typical/NOR3X2/VSS10
+LM-109Warningpara1t18_typical/NOR3X2/VDD10
+LM-175Informationpara1related power/ground10para2NOR3X210
+LM-054Informationpara1NOR3X210
+LM-109Warningpara1t18_typical/NOR3X4/VSS10
+LM-109Warningpara1t18_typical/NOR3X4/VDD10
+LM-175Informationpara1related power/ground10para2NOR3X410
+LM-054Informationpara1NOR3X410
+LM-109Warningpara1t18_typical/NOR3XL/VSS10
+LM-109Warningpara1t18_typical/NOR3XL/VDD10
+LM-175Informationpara1related power/ground10para2NOR3XL10
+LM-054Informationpara1NOR3XL10
+LM-109Warningpara1t18_typical/NOR4BBX1/VSS10
+LM-109Warningpara1t18_typical/NOR4BBX1/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BBX110
+LM-054Informationpara1NOR4BBX110
+LM-109Warningpara1t18_typical/NOR4BBX2/VSS10
+LM-109Warningpara1t18_typical/NOR4BBX2/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BBX210
+LM-054Informationpara1NOR4BBX210
+LM-109Warningpara1t18_typical/NOR4BBX4/VSS10
+LM-109Warningpara1t18_typical/NOR4BBX4/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BBX410
+LM-054Informationpara1NOR4BBX410
+LM-109Warningpara1t18_typical/NOR4BBXL/VSS10
+LM-109Warningpara1t18_typical/NOR4BBXL/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BBXL10
+LM-054Informationpara1NOR4BBXL10
+LM-109Warningpara1t18_typical/NOR4BX1/VSS10
+LM-109Warningpara1t18_typical/NOR4BX1/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BX110
+LM-054Informationpara1NOR4BX110
+LM-109Warningpara1t18_typical/NOR4BX2/VSS10
+LM-109Warningpara1t18_typical/NOR4BX2/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BX210
+LM-054Informationpara1NOR4BX210
+LM-109Warningpara1t18_typical/NOR4BX4/VSS10
+LM-109Warningpara1t18_typical/NOR4BX4/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BX410
+LM-054Informationpara1NOR4BX410
+LM-109Warningpara1t18_typical/NOR4BXL/VSS10
+LM-109Warningpara1t18_typical/NOR4BXL/VDD10
+LM-175Informationpara1related power/ground10para2NOR4BXL10
+LM-054Informationpara1NOR4BXL10
+LM-109Warningpara1t18_typical/NOR4X1/VSS10
+LM-109Warningpara1t18_typical/NOR4X1/VDD10
+LM-175Informationpara1related power/ground10para2NOR4X110
+LM-054Informationpara1NOR4X110
+LM-109Warningpara1t18_typical/NOR4X2/VSS10
+LM-109Warningpara1t18_typical/NOR4X2/VDD10
+LM-175Informationpara1related power/ground10para2NOR4X210
+LM-054Informationpara1NOR4X210
+LM-109Warningpara1t18_typical/NOR4X4/VSS10
+LM-109Warningpara1t18_typical/NOR4X4/VDD10
+LM-175Informationpara1related power/ground10para2NOR4X410
+LM-054Informationpara1NOR4X410
+LM-109Warningpara1t18_typical/NOR4XL/VSS10
+LM-109Warningpara1t18_typical/NOR4XL/VDD10
+LM-175Informationpara1related power/ground10para2NOR4XL10
+LM-054Informationpara1NOR4XL10
+LM-109Warningpara1t18_typical/OAI211X1/VSS10
+LM-109Warningpara1t18_typical/OAI211X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI211X110
+LM-054Informationpara1OAI211X110
+LM-109Warningpara1t18_typical/OAI211X2/VSS10
+LM-109Warningpara1t18_typical/OAI211X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI211X210
+LM-054Informationpara1OAI211X210
+LM-109Warningpara1t18_typical/OAI211X4/VSS10
+LM-109Warningpara1t18_typical/OAI211X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI211X410
+LM-054Informationpara1OAI211X410
+LM-109Warningpara1t18_typical/OAI211XL/VSS10
+LM-109Warningpara1t18_typical/OAI211XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI211XL10
+LM-054Informationpara1OAI211XL10
+LM-109Warningpara1t18_typical/OAI21X1/VSS10
+LM-109Warningpara1t18_typical/OAI21X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI21X110
+LM-054Informationpara1OAI21X110
+LM-109Warningpara1t18_typical/OAI21X2/VSS10
+LM-109Warningpara1t18_typical/OAI21X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI21X210
+LM-054Informationpara1OAI21X210
+LM-109Warningpara1t18_typical/OAI21X4/VSS10
+LM-109Warningpara1t18_typical/OAI21X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI21X410
+LM-054Informationpara1OAI21X410
+LM-109Warningpara1t18_typical/OAI21XL/VSS10
+LM-109Warningpara1t18_typical/OAI21XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI21XL10
+LM-054Informationpara1OAI21XL10
+LM-109Warningpara1t18_typical/OAI221X1/VSS10
+LM-109Warningpara1t18_typical/OAI221X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI221X110
+LM-054Informationpara1OAI221X110
+LM-109Warningpara1t18_typical/OAI221X2/VSS10
+LM-109Warningpara1t18_typical/OAI221X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI221X210
+LM-054Informationpara1OAI221X210
+LM-109Warningpara1t18_typical/OAI221X4/VSS10
+LM-109Warningpara1t18_typical/OAI221X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI221X410
+LM-054Informationpara1OAI221X410
+LM-109Warningpara1t18_typical/OAI221XL/VSS10
+LM-109Warningpara1t18_typical/OAI221XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI221XL10
+LM-054Informationpara1OAI221XL10
+LM-109Warningpara1t18_typical/OAI222X1/VSS10
+LM-109Warningpara1t18_typical/OAI222X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI222X110
+LM-054Informationpara1OAI222X110
+LM-109Warningpara1t18_typical/OAI222X2/VSS10
+LM-109Warningpara1t18_typical/OAI222X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI222X210
+LM-054Informationpara1OAI222X210
+LM-109Warningpara1t18_typical/OAI222X4/VSS10
+LM-109Warningpara1t18_typical/OAI222X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI222X410
+LM-054Informationpara1OAI222X410
+LM-109Warningpara1t18_typical/OAI222XL/VSS10
+LM-109Warningpara1t18_typical/OAI222XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI222XL10
+LM-054Informationpara1OAI222XL10
+LM-109Warningpara1t18_typical/OAI22X1/VSS10
+LM-109Warningpara1t18_typical/OAI22X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI22X110
+LM-054Informationpara1OAI22X110
+LM-109Warningpara1t18_typical/OAI22X2/VSS10
+LM-109Warningpara1t18_typical/OAI22X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI22X210
+LM-054Informationpara1OAI22X210
+LM-109Warningpara1t18_typical/OAI22X4/VSS10
+LM-109Warningpara1t18_typical/OAI22X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI22X410
+LM-054Informationpara1OAI22X410
+LM-109Warningpara1t18_typical/OAI22XL/VSS10
+LM-109Warningpara1t18_typical/OAI22XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI22XL10
+LM-054Informationpara1OAI22XL10
+LM-109Warningpara1t18_typical/OAI2BB1X1/VSS10
+LM-109Warningpara1t18_typical/OAI2BB1X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB1X110
+LM-054Informationpara1OAI2BB1X110
+LM-109Warningpara1t18_typical/OAI2BB1X2/VSS10
+LM-109Warningpara1t18_typical/OAI2BB1X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB1X210
+LM-054Informationpara1OAI2BB1X210
+LM-109Warningpara1t18_typical/OAI2BB1X4/VSS10
+LM-109Warningpara1t18_typical/OAI2BB1X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB1X410
+LM-054Informationpara1OAI2BB1X410
+LM-109Warningpara1t18_typical/OAI2BB1XL/VSS10
+LM-109Warningpara1t18_typical/OAI2BB1XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB1XL10
+LM-054Informationpara1OAI2BB1XL10
+LM-109Warningpara1t18_typical/OAI2BB2X1/VSS10
+LM-109Warningpara1t18_typical/OAI2BB2X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB2X110
+LM-054Informationpara1OAI2BB2X110
+LM-109Warningpara1t18_typical/OAI2BB2X2/VSS10
+LM-109Warningpara1t18_typical/OAI2BB2X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB2X210
+LM-054Informationpara1OAI2BB2X210
+LM-109Warningpara1t18_typical/OAI2BB2X4/VSS10
+LM-109Warningpara1t18_typical/OAI2BB2X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB2X410
+LM-054Informationpara1OAI2BB2X410
+LM-109Warningpara1t18_typical/OAI2BB2XL/VSS10
+LM-109Warningpara1t18_typical/OAI2BB2XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI2BB2XL10
+LM-054Informationpara1OAI2BB2XL10
+LM-109Warningpara1t18_typical/OAI31X1/VSS10
+LM-109Warningpara1t18_typical/OAI31X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI31X110
+LM-054Informationpara1OAI31X110
+LM-109Warningpara1t18_typical/OAI31X2/VSS10
+LM-109Warningpara1t18_typical/OAI31X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI31X210
+LM-054Informationpara1OAI31X210
+LM-109Warningpara1t18_typical/OAI31X4/VSS10
+LM-109Warningpara1t18_typical/OAI31X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI31X410
+LM-054Informationpara1OAI31X410
+LM-109Warningpara1t18_typical/OAI31XL/VSS10
+LM-109Warningpara1t18_typical/OAI31XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI31XL10
+LM-054Informationpara1OAI31XL10
+LM-109Warningpara1t18_typical/OAI32X1/VSS10
+LM-109Warningpara1t18_typical/OAI32X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI32X110
+LM-054Informationpara1OAI32X110
+LM-109Warningpara1t18_typical/OAI32X2/VSS10
+LM-109Warningpara1t18_typical/OAI32X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI32X210
+LM-054Informationpara1OAI32X210
+LM-109Warningpara1t18_typical/OAI32X4/VSS10
+LM-109Warningpara1t18_typical/OAI32X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI32X410
+LM-054Informationpara1OAI32X410
+LM-109Warningpara1t18_typical/OAI32XL/VSS10
+LM-109Warningpara1t18_typical/OAI32XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI32XL10
+LM-054Informationpara1OAI32XL10
+LM-109Warningpara1t18_typical/OAI33X1/VSS10
+LM-109Warningpara1t18_typical/OAI33X1/VDD10
+LM-175Informationpara1related power/ground10para2OAI33X110
+LM-054Informationpara1OAI33X110
+LM-109Warningpara1t18_typical/OAI33X2/VSS10
+LM-109Warningpara1t18_typical/OAI33X2/VDD10
+LM-175Informationpara1related power/ground10para2OAI33X210
+LM-054Informationpara1OAI33X210
+LM-109Warningpara1t18_typical/OAI33X4/VSS10
+LM-109Warningpara1t18_typical/OAI33X4/VDD10
+LM-175Informationpara1related power/ground10para2OAI33X410
+LM-054Informationpara1OAI33X410
+LM-109Warningpara1t18_typical/OAI33XL/VSS10
+LM-109Warningpara1t18_typical/OAI33XL/VDD10
+LM-175Informationpara1related power/ground10para2OAI33XL10
+LM-054Informationpara1OAI33XL10
+LM-109Warningpara1t18_typical/OR2X1/VSS10
+LM-109Warningpara1t18_typical/OR2X1/VDD10
+LM-175Informationpara1related power/ground10para2OR2X110
+LM-054Informationpara1OR2X110
+LM-109Warningpara1t18_typical/OR2X2/VSS10
+LM-109Warningpara1t18_typical/OR2X2/VDD10
+LM-175Informationpara1related power/ground10para2OR2X210
+LM-054Informationpara1OR2X210
+LM-109Warningpara1t18_typical/OR2X4/VSS10
+LM-109Warningpara1t18_typical/OR2X4/VDD10
+LM-175Informationpara1related power/ground10para2OR2X410
+LM-054Informationpara1OR2X410
+LM-109Warningpara1t18_typical/OR2XL/VSS10
+LM-109Warningpara1t18_typical/OR2XL/VDD10
+LM-175Informationpara1related power/ground10para2OR2XL10
+LM-054Informationpara1OR2XL10
+LM-109Warningpara1t18_typical/OR3X1/VSS10
+LM-109Warningpara1t18_typical/OR3X1/VDD10
+LM-175Informationpara1related power/ground10para2OR3X110
+LM-054Informationpara1OR3X110
+LM-109Warningpara1t18_typical/OR3X2/VSS10
+LM-109Warningpara1t18_typical/OR3X2/VDD10
+LM-175Informationpara1related power/ground10para2OR3X210
+LM-054Informationpara1OR3X210
+LM-109Warningpara1t18_typical/OR3X4/VSS10
+LM-109Warningpara1t18_typical/OR3X4/VDD10
+LM-175Informationpara1related power/ground10para2OR3X410
+LM-054Informationpara1OR3X410
+LM-109Warningpara1t18_typical/OR3XL/VSS10
+LM-109Warningpara1t18_typical/OR3XL/VDD10
+LM-175Informationpara1related power/ground10para2OR3XL10
+LM-054Informationpara1OR3XL10
+LM-109Warningpara1t18_typical/OR4X1/VSS10
+LM-109Warningpara1t18_typical/OR4X1/VDD10
+LM-175Informationpara1related power/ground10para2OR4X110
+LM-054Informationpara1OR4X110
+LM-109Warningpara1t18_typical/OR4X2/VSS10
+LM-109Warningpara1t18_typical/OR4X2/VDD10
+LM-175Informationpara1related power/ground10para2OR4X210
+LM-054Informationpara1OR4X210
+LM-109Warningpara1t18_typical/OR4X4/VSS10
+LM-109Warningpara1t18_typical/OR4X4/VDD10
+LM-175Informationpara1related power/ground10para2OR4X410
+LM-054Informationpara1OR4X410
+LM-109Warningpara1t18_typical/OR4XL/VSS10
+LM-109Warningpara1t18_typical/OR4XL/VDD10
+LM-175Informationpara1related power/ground10para2OR4XL10
+LM-054Informationpara1OR4XL10
+LM-109Warningpara1t18_typical/RF1R1WX2/VSS10
+LM-109Warningpara1t18_typical/RF1R1WX2/VDD10
+LM-175Informationpara1related power/ground10para2RF1R1WX210
+LM-054Informationpara1RF1R1WX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/RF1R1WX2/design10para4WW10
+LM-109Warningpara1t18_typical/RF2R1WX2/VSS10
+LM-109Warningpara1t18_typical/RF2R1WX2/VDD10
+LM-175Informationpara1related power/ground10para2RF2R1WX210
+LM-054Informationpara1RF2R1WX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/RF2R1WX2/design10para4WW10
+LM-109Warningpara1t18_typical/RFRDX1/VSS10
+LM-109Warningpara1t18_typical/RFRDX1/VDD10
+LM-175Informationpara1related power/ground10para2RFRDX110
+LM-054Informationpara1RFRDX110
+LM-109Warningpara1t18_typical/RFRDX2/VSS10
+LM-109Warningpara1t18_typical/RFRDX2/VDD10
+LM-175Informationpara1related power/ground10para2RFRDX210
+LM-054Informationpara1RFRDX210
+LM-109Warningpara1t18_typical/RFRDX4/VSS10
+LM-109Warningpara1t18_typical/RFRDX4/VDD10
+LM-175Informationpara1related power/ground10para2RFRDX410
+LM-054Informationpara1RFRDX410
+LM-109Warningpara1t18_typical/RSLATNX1/VSS10
+LM-109Warningpara1t18_typical/RSLATNX1/VDD10
+LM-175Informationpara1related power/ground10para2RSLATNX110
+LM-054Informationpara1RSLATNX110
+LM-109Warningpara1t18_typical/RSLATNX2/VSS10
+LM-109Warningpara1t18_typical/RSLATNX2/VDD10
+LM-175Informationpara1related power/ground10para2RSLATNX210
+LM-054Informationpara1RSLATNX210
+LM-109Warningpara1t18_typical/RSLATNX4/VSS10
+LM-109Warningpara1t18_typical/RSLATNX4/VDD10
+LM-175Informationpara1related power/ground10para2RSLATNX410
+LM-054Informationpara1RSLATNX410
+LM-109Warningpara1t18_typical/RSLATNXL/VSS10
+LM-109Warningpara1t18_typical/RSLATNXL/VDD10
+LM-175Informationpara1related power/ground10para2RSLATNXL10
+LM-054Informationpara1RSLATNXL10
+LM-109Warningpara1t18_typical/RSLATX1/VSS10
+LM-109Warningpara1t18_typical/RSLATX1/VDD10
+LM-175Informationpara1related power/ground10para2RSLATX110
+LM-054Informationpara1RSLATX110
+LM-109Warningpara1t18_typical/RSLATX2/VSS10
+LM-109Warningpara1t18_typical/RSLATX2/VDD10
+LM-175Informationpara1related power/ground10para2RSLATX210
+LM-054Informationpara1RSLATX210
+LM-109Warningpara1t18_typical/RSLATX4/VSS10
+LM-109Warningpara1t18_typical/RSLATX4/VDD10
+LM-175Informationpara1related power/ground10para2RSLATX410
+LM-054Informationpara1RSLATX410
+LM-109Warningpara1t18_typical/RSLATXL/VSS10
+LM-109Warningpara1t18_typical/RSLATXL/VDD10
+LM-175Informationpara1related power/ground10para2RSLATXL10
+LM-054Informationpara1RSLATXL10
+LM-109Warningpara1t18_typical/SDFFHQX1/VSS10
+LM-109Warningpara1t18_typical/SDFFHQX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFHQX110
+LM-054Informationpara1SDFFHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFHQX2/VSS10
+LM-109Warningpara1t18_typical/SDFFHQX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFHQX210
+LM-054Informationpara1SDFFHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFHQX4/VSS10
+LM-109Warningpara1t18_typical/SDFFHQX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFHQX410
+LM-054Informationpara1SDFFHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFHQXL/VSS10
+LM-109Warningpara1t18_typical/SDFFHQXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFHQXL10
+LM-054Informationpara1SDFFHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFNRX1/VSS10
+LM-109Warningpara1t18_typical/SDFFNRX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNRX110
+LM-054Informationpara1SDFFNRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNRX1/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNRX2/VSS10
+LM-109Warningpara1t18_typical/SDFFNRX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNRX210
+LM-054Informationpara1SDFFNRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNRX2/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNRX4/VSS10
+LM-109Warningpara1t18_typical/SDFFNRX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNRX410
+LM-054Informationpara1SDFFNRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNRX4/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNRXL/VSS10
+LM-109Warningpara1t18_typical/SDFFNRXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNRXL10
+LM-054Informationpara1SDFFNRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNRXL/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSRX1/VSS10
+LM-109Warningpara1t18_typical/SDFFNSRX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSRX110
+LM-054Informationpara1SDFFNSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSRX1/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSRX2/VSS10
+LM-109Warningpara1t18_typical/SDFFNSRX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSRX210
+LM-054Informationpara1SDFFNSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSRX2/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSRX4/VSS10
+LM-109Warningpara1t18_typical/SDFFNSRX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSRX410
+LM-054Informationpara1SDFFNSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSRX4/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSRXL/VSS10
+LM-109Warningpara1t18_typical/SDFFNSRXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSRXL10
+LM-054Informationpara1SDFFNSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSRXL/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSX1/VSS10
+LM-109Warningpara1t18_typical/SDFFNSX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSX110
+LM-054Informationpara1SDFFNSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSX1/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSX2/VSS10
+LM-109Warningpara1t18_typical/SDFFNSX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSX210
+LM-054Informationpara1SDFFNSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSX2/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSX4/VSS10
+LM-109Warningpara1t18_typical/SDFFNSX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSX410
+LM-054Informationpara1SDFFNSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSX4/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNSXL/VSS10
+LM-109Warningpara1t18_typical/SDFFNSXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNSXL10
+LM-054Informationpara1SDFFNSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNSXL/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNX1/VSS10
+LM-109Warningpara1t18_typical/SDFFNX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNX110
+LM-054Informationpara1SDFFNX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNX1/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNX2/VSS10
+LM-109Warningpara1t18_typical/SDFFNX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNX210
+LM-054Informationpara1SDFFNX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNX2/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNX4/VSS10
+LM-109Warningpara1t18_typical/SDFFNX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNX410
+LM-054Informationpara1SDFFNX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNX4/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFNXL/VSS10
+LM-109Warningpara1t18_typical/SDFFNXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFNXL10
+LM-054Informationpara1SDFFNXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFNXL/design10para4CKN10
+LM-109Warningpara1t18_typical/SDFFRHQX1/VSS10
+LM-109Warningpara1t18_typical/SDFFRHQX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRHQX110
+LM-054Informationpara1SDFFRHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRHQX2/VSS10
+LM-109Warningpara1t18_typical/SDFFRHQX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRHQX210
+LM-054Informationpara1SDFFRHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRHQX4/VSS10
+LM-109Warningpara1t18_typical/SDFFRHQX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRHQX410
+LM-054Informationpara1SDFFRHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRHQXL/VSS10
+LM-109Warningpara1t18_typical/SDFFRHQXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRHQXL10
+LM-054Informationpara1SDFFRHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRX1/VSS10
+LM-109Warningpara1t18_typical/SDFFRX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRX110
+LM-054Informationpara1SDFFRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRX2/VSS10
+LM-109Warningpara1t18_typical/SDFFRX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRX210
+LM-054Informationpara1SDFFRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRX4/VSS10
+LM-109Warningpara1t18_typical/SDFFRX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRX410
+LM-054Informationpara1SDFFRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFRXL/VSS10
+LM-109Warningpara1t18_typical/SDFFRXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFRXL10
+LM-054Informationpara1SDFFRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFRXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSHQX1/VSS10
+LM-109Warningpara1t18_typical/SDFFSHQX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSHQX110
+LM-054Informationpara1SDFFSHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSHQX2/VSS10
+LM-109Warningpara1t18_typical/SDFFSHQX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSHQX210
+LM-054Informationpara1SDFFSHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSHQX4/VSS10
+LM-109Warningpara1t18_typical/SDFFSHQX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSHQX410
+LM-054Informationpara1SDFFSHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSHQXL/VSS10
+LM-109Warningpara1t18_typical/SDFFSHQXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSHQXL10
+LM-054Informationpara1SDFFSHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRHQX1/VSS10
+LM-109Warningpara1t18_typical/SDFFSRHQX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRHQX110
+LM-054Informationpara1SDFFSRHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRHQX2/VSS10
+LM-109Warningpara1t18_typical/SDFFSRHQX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRHQX210
+LM-054Informationpara1SDFFSRHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRHQX4/VSS10
+LM-109Warningpara1t18_typical/SDFFSRHQX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRHQX410
+LM-054Informationpara1SDFFSRHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRHQXL/VSS10
+LM-109Warningpara1t18_typical/SDFFSRHQXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRHQXL10
+LM-054Informationpara1SDFFSRHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRX1/VSS10
+LM-109Warningpara1t18_typical/SDFFSRX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRX110
+LM-054Informationpara1SDFFSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRX2/VSS10
+LM-109Warningpara1t18_typical/SDFFSRX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRX210
+LM-054Informationpara1SDFFSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRX4/VSS10
+LM-109Warningpara1t18_typical/SDFFSRX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRX410
+LM-054Informationpara1SDFFSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSRXL/VSS10
+LM-109Warningpara1t18_typical/SDFFSRXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSRXL10
+LM-054Informationpara1SDFFSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSRXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSX1/VSS10
+LM-109Warningpara1t18_typical/SDFFSX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSX110
+LM-054Informationpara1SDFFSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSX2/VSS10
+LM-109Warningpara1t18_typical/SDFFSX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSX210
+LM-054Informationpara1SDFFSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSX4/VSS10
+LM-109Warningpara1t18_typical/SDFFSX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSX410
+LM-054Informationpara1SDFFSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFSXL/VSS10
+LM-109Warningpara1t18_typical/SDFFSXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFSXL10
+LM-054Informationpara1SDFFSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFSXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFTRX1/VSS10
+LM-109Warningpara1t18_typical/SDFFTRX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFTRX110
+LM-054Informationpara1SDFFTRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFTRX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFTRX2/VSS10
+LM-109Warningpara1t18_typical/SDFFTRX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFTRX210
+LM-054Informationpara1SDFFTRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFTRX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFTRX4/VSS10
+LM-109Warningpara1t18_typical/SDFFTRX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFTRX410
+LM-054Informationpara1SDFFTRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFTRX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFTRXL/VSS10
+LM-109Warningpara1t18_typical/SDFFTRXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFTRXL10
+LM-054Informationpara1SDFFTRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFTRXL/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFX1/VSS10
+LM-109Warningpara1t18_typical/SDFFX1/VDD10
+LM-175Informationpara1related power/ground10para2SDFFX110
+LM-054Informationpara1SDFFX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFX1/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFX2/VSS10
+LM-109Warningpara1t18_typical/SDFFX2/VDD10
+LM-175Informationpara1related power/ground10para2SDFFX210
+LM-054Informationpara1SDFFX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFX2/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFX4/VSS10
+LM-109Warningpara1t18_typical/SDFFX4/VDD10
+LM-175Informationpara1related power/ground10para2SDFFX410
+LM-054Informationpara1SDFFX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFX4/design10para4CK10
+LM-109Warningpara1t18_typical/SDFFXL/VSS10
+LM-109Warningpara1t18_typical/SDFFXL/VDD10
+LM-175Informationpara1related power/ground10para2SDFFXL10
+LM-054Informationpara1SDFFXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SDFFXL/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFHQX1/VSS10
+LM-109Warningpara1t18_typical/SEDFFHQX1/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFHQX110
+LM-054Informationpara1SEDFFHQX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFHQX1/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFHQX2/VSS10
+LM-109Warningpara1t18_typical/SEDFFHQX2/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFHQX210
+LM-054Informationpara1SEDFFHQX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFHQX2/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFHQX4/VSS10
+LM-109Warningpara1t18_typical/SEDFFHQX4/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFHQX410
+LM-054Informationpara1SEDFFHQX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFHQX4/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFHQXL/VSS10
+LM-109Warningpara1t18_typical/SEDFFHQXL/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFHQXL10
+LM-054Informationpara1SEDFFHQXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFHQXL/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFTRX1/VSS10
+LM-109Warningpara1t18_typical/SEDFFTRX1/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFTRX110
+LM-054Informationpara1SEDFFTRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFTRX1/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFTRX2/VSS10
+LM-109Warningpara1t18_typical/SEDFFTRX2/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFTRX210
+LM-054Informationpara1SEDFFTRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFTRX2/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFTRX4/VSS10
+LM-109Warningpara1t18_typical/SEDFFTRX4/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFTRX410
+LM-054Informationpara1SEDFFTRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFTRX4/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFTRXL/VSS10
+LM-109Warningpara1t18_typical/SEDFFTRXL/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFTRXL10
+LM-054Informationpara1SEDFFTRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFTRXL/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFX1/VSS10
+LM-109Warningpara1t18_typical/SEDFFX1/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFX110
+LM-054Informationpara1SEDFFX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFX1/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFX2/VSS10
+LM-109Warningpara1t18_typical/SEDFFX2/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFX210
+LM-054Informationpara1SEDFFX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFX2/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFX4/VSS10
+LM-109Warningpara1t18_typical/SEDFFX4/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFX410
+LM-054Informationpara1SEDFFX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFX4/design10para4CK10
+LM-109Warningpara1t18_typical/SEDFFXL/VSS10
+LM-109Warningpara1t18_typical/SEDFFXL/VDD10
+LM-175Informationpara1related power/ground10para2SEDFFXL10
+LM-054Informationpara1SEDFFXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/SEDFFXL/design10para4CK10
+LM-109Warningpara1t18_typical/TBUFIX1/VSS10
+LM-109Warningpara1t18_typical/TBUFIX1/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX110
+LM-054Informationpara1TBUFIX110
+LM-109Warningpara1t18_typical/TBUFIX12/VSS10
+LM-109Warningpara1t18_typical/TBUFIX12/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX1210
+LM-054Informationpara1TBUFIX1210
+LM-109Warningpara1t18_typical/TBUFIX16/VSS10
+LM-109Warningpara1t18_typical/TBUFIX16/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX1610
+LM-054Informationpara1TBUFIX1610
+LM-109Warningpara1t18_typical/TBUFIX2/VSS10
+LM-109Warningpara1t18_typical/TBUFIX2/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX210
+LM-054Informationpara1TBUFIX210
+LM-109Warningpara1t18_typical/TBUFIX20/VSS10
+LM-109Warningpara1t18_typical/TBUFIX20/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX2010
+LM-054Informationpara1TBUFIX2010
+LM-109Warningpara1t18_typical/TBUFIX3/VSS10
+LM-109Warningpara1t18_typical/TBUFIX3/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX310
+LM-054Informationpara1TBUFIX310
+LM-109Warningpara1t18_typical/TBUFIX4/VSS10
+LM-109Warningpara1t18_typical/TBUFIX4/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX410
+LM-054Informationpara1TBUFIX410
+LM-109Warningpara1t18_typical/TBUFIX8/VSS10
+LM-109Warningpara1t18_typical/TBUFIX8/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIX810
+LM-054Informationpara1TBUFIX810
+LM-109Warningpara1t18_typical/TBUFIXL/VSS10
+LM-109Warningpara1t18_typical/TBUFIXL/VDD10
+LM-175Informationpara1related power/ground10para2TBUFIXL10
+LM-054Informationpara1TBUFIXL10
+LM-109Warningpara1t18_typical/TBUFX1/VSS10
+LM-109Warningpara1t18_typical/TBUFX1/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX110
+LM-054Informationpara1TBUFX110
+LM-109Warningpara1t18_typical/TBUFX12/VSS10
+LM-109Warningpara1t18_typical/TBUFX12/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX1210
+LM-054Informationpara1TBUFX1210
+LM-109Warningpara1t18_typical/TBUFX16/VSS10
+LM-109Warningpara1t18_typical/TBUFX16/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX1610
+LM-054Informationpara1TBUFX1610
+LM-109Warningpara1t18_typical/TBUFX2/VSS10
+LM-109Warningpara1t18_typical/TBUFX2/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX210
+LM-054Informationpara1TBUFX210
+LM-109Warningpara1t18_typical/TBUFX20/VSS10
+LM-109Warningpara1t18_typical/TBUFX20/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX2010
+LM-054Informationpara1TBUFX2010
+LM-109Warningpara1t18_typical/TBUFX3/VSS10
+LM-109Warningpara1t18_typical/TBUFX3/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX310
+LM-054Informationpara1TBUFX310
+LM-109Warningpara1t18_typical/TBUFX4/VSS10
+LM-109Warningpara1t18_typical/TBUFX4/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX410
+LM-054Informationpara1TBUFX410
+LM-109Warningpara1t18_typical/TBUFX8/VSS10
+LM-109Warningpara1t18_typical/TBUFX8/VDD10
+LM-175Informationpara1related power/ground10para2TBUFX810
+LM-054Informationpara1TBUFX810
+LM-109Warningpara1t18_typical/TBUFXL/VSS10
+LM-109Warningpara1t18_typical/TBUFXL/VDD10
+LM-175Informationpara1related power/ground10para2TBUFXL10
+LM-054Informationpara1TBUFXL10
+LM-109Warningpara1t18_typical/TIEHI/VSS10
+LM-109Warningpara1t18_typical/TIEHI/VDD10
+LM-175Informationpara1related power/ground10para2TIEHI10
+LM-054Informationpara1TIEHI10
+LM-109Warningpara1t18_typical/TIELO/VSS10
+LM-109Warningpara1t18_typical/TIELO/VDD10
+LM-175Informationpara1related power/ground10para2TIELO10
+LM-054Informationpara1TIELO10
+LM-109Warningpara1t18_typical/TLATNRX1/VSS10
+LM-109Warningpara1t18_typical/TLATNRX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATNRX110
+LM-054Informationpara1TLATNRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNRX1/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNRX2/VSS10
+LM-109Warningpara1t18_typical/TLATNRX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATNRX210
+LM-054Informationpara1TLATNRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNRX2/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNRX4/VSS10
+LM-109Warningpara1t18_typical/TLATNRX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATNRX410
+LM-054Informationpara1TLATNRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNRX4/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNRXL/VSS10
+LM-109Warningpara1t18_typical/TLATNRXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATNRXL10
+LM-054Informationpara1TLATNRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNRXL/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSRX1/VSS10
+LM-109Warningpara1t18_typical/TLATNSRX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSRX110
+LM-054Informationpara1TLATNSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSRX1/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSRX2/VSS10
+LM-109Warningpara1t18_typical/TLATNSRX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSRX210
+LM-054Informationpara1TLATNSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSRX2/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSRX4/VSS10
+LM-109Warningpara1t18_typical/TLATNSRX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSRX410
+LM-054Informationpara1TLATNSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSRX4/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSRXL/VSS10
+LM-109Warningpara1t18_typical/TLATNSRXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSRXL10
+LM-054Informationpara1TLATNSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSRXL/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSX1/VSS10
+LM-109Warningpara1t18_typical/TLATNSX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSX110
+LM-054Informationpara1TLATNSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSX1/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSX2/VSS10
+LM-109Warningpara1t18_typical/TLATNSX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSX210
+LM-054Informationpara1TLATNSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSX2/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSX4/VSS10
+LM-109Warningpara1t18_typical/TLATNSX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSX410
+LM-054Informationpara1TLATNSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSX4/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNSXL/VSS10
+LM-109Warningpara1t18_typical/TLATNSXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATNSXL10
+LM-054Informationpara1TLATNSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNSXL/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNX1/VSS10
+LM-109Warningpara1t18_typical/TLATNX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATNX110
+LM-054Informationpara1TLATNX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNX1/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNX2/VSS10
+LM-109Warningpara1t18_typical/TLATNX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATNX210
+LM-054Informationpara1TLATNX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNX2/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNX4/VSS10
+LM-109Warningpara1t18_typical/TLATNX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATNX410
+LM-054Informationpara1TLATNX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNX4/design10para4GN10
+LM-109Warningpara1t18_typical/TLATNXL/VSS10
+LM-109Warningpara1t18_typical/TLATNXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATNXL10
+LM-054Informationpara1TLATNXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATNXL/design10para4GN10
+LM-109Warningpara1t18_typical/TLATRX1/VSS10
+LM-109Warningpara1t18_typical/TLATRX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATRX110
+LM-054Informationpara1TLATRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATRX1/design10para4G10
+LM-109Warningpara1t18_typical/TLATRX2/VSS10
+LM-109Warningpara1t18_typical/TLATRX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATRX210
+LM-054Informationpara1TLATRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATRX2/design10para4G10
+LM-109Warningpara1t18_typical/TLATRX4/VSS10
+LM-109Warningpara1t18_typical/TLATRX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATRX410
+LM-054Informationpara1TLATRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATRX4/design10para4G10
+LM-109Warningpara1t18_typical/TLATRXL/VSS10
+LM-109Warningpara1t18_typical/TLATRXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATRXL10
+LM-054Informationpara1TLATRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATRXL/design10para4G10
+LM-109Warningpara1t18_typical/TLATSRX1/VSS10
+LM-109Warningpara1t18_typical/TLATSRX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATSRX110
+LM-054Informationpara1TLATSRX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSRX1/design10para4G10
+LM-109Warningpara1t18_typical/TLATSRX2/VSS10
+LM-109Warningpara1t18_typical/TLATSRX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATSRX210
+LM-054Informationpara1TLATSRX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSRX2/design10para4G10
+LM-109Warningpara1t18_typical/TLATSRX4/VSS10
+LM-109Warningpara1t18_typical/TLATSRX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATSRX410
+LM-054Informationpara1TLATSRX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSRX4/design10para4G10
+LM-109Warningpara1t18_typical/TLATSRXL/VSS10
+LM-109Warningpara1t18_typical/TLATSRXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATSRXL10
+LM-054Informationpara1TLATSRXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSRXL/design10para4G10
+LM-109Warningpara1t18_typical/TLATSX1/VSS10
+LM-109Warningpara1t18_typical/TLATSX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATSX110
+LM-054Informationpara1TLATSX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSX1/design10para4G10
+LM-109Warningpara1t18_typical/TLATSX2/VSS10
+LM-109Warningpara1t18_typical/TLATSX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATSX210
+LM-054Informationpara1TLATSX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSX2/design10para4G10
+LM-109Warningpara1t18_typical/TLATSX4/VSS10
+LM-109Warningpara1t18_typical/TLATSX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATSX410
+LM-054Informationpara1TLATSX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSX4/design10para4G10
+LM-109Warningpara1t18_typical/TLATSXL/VSS10
+LM-109Warningpara1t18_typical/TLATSXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATSXL10
+LM-054Informationpara1TLATSXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATSXL/design10para4G10
+LM-109Warningpara1t18_typical/TLATX1/VSS10
+LM-109Warningpara1t18_typical/TLATX1/VDD10
+LM-175Informationpara1related power/ground10para2TLATX110
+LM-054Informationpara1TLATX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATX1/design10para4G10
+LM-109Warningpara1t18_typical/TLATX2/VSS10
+LM-109Warningpara1t18_typical/TLATX2/VDD10
+LM-175Informationpara1related power/ground10para2TLATX210
+LM-054Informationpara1TLATX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATX2/design10para4G10
+LM-109Warningpara1t18_typical/TLATX4/VSS10
+LM-109Warningpara1t18_typical/TLATX4/VDD10
+LM-175Informationpara1related power/ground10para2TLATX410
+LM-054Informationpara1TLATX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATX4/design10para4G10
+LM-109Warningpara1t18_typical/TLATXL/VSS10
+LM-109Warningpara1t18_typical/TLATXL/VDD10
+LM-175Informationpara1related power/ground10para2TLATXL10
+LM-054Informationpara1TLATXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TLATXL/design10para4G10
+LM-109Warningpara1t18_typical/TTLATX1/VSS10
+LM-109Warningpara1t18_typical/TTLATX1/VDD10
+LM-175Informationpara1related power/ground10para2TTLATX110
+LM-054Informationpara1TTLATX110
+LM-114Informationpara1clock10para2signal10para3t18_typical/TTLATX1/design10para4G10
+LM-109Warningpara1t18_typical/TTLATX2/VSS10
+LM-109Warningpara1t18_typical/TTLATX2/VDD10
+LM-175Informationpara1related power/ground10para2TTLATX210
+LM-054Informationpara1TTLATX210
+LM-114Informationpara1clock10para2signal10para3t18_typical/TTLATX2/design10para4G10
+LM-109Warningpara1t18_typical/TTLATX4/VSS10
+LM-109Warningpara1t18_typical/TTLATX4/VDD10
+LM-175Informationpara1related power/ground10para2TTLATX410
+LM-054Informationpara1TTLATX410
+LM-114Informationpara1clock10para2signal10para3t18_typical/TTLATX4/design10para4G10
+LM-109Warningpara1t18_typical/TTLATXL/VSS10
+LM-109Warningpara1t18_typical/TTLATXL/VDD10
+LM-175Informationpara1related power/ground10para2TTLATXL10
+LM-054Informationpara1TTLATXL10
+LM-114Informationpara1clock10para2signal10para3t18_typical/TTLATXL/design10para4G10
+LM-109Warningpara1t18_typical/XNOR2X1/VSS10
+LM-109Warningpara1t18_typical/XNOR2X1/VDD10
+LM-175Informationpara1related power/ground10para2XNOR2X110
+LM-054Informationpara1XNOR2X110
+LM-109Warningpara1t18_typical/XNOR2X2/VSS10
+LM-109Warningpara1t18_typical/XNOR2X2/VDD10
+LM-175Informationpara1related power/ground10para2XNOR2X210
+LM-054Informationpara1XNOR2X210
+LM-109Warningpara1t18_typical/XNOR2X4/VSS10
+LM-109Warningpara1t18_typical/XNOR2X4/VDD10
+LM-175Informationpara1related power/ground10para2XNOR2X410
+LM-054Informationpara1XNOR2X410
+LM-109Warningpara1t18_typical/XNOR2XL/VSS10
+LM-109Warningpara1t18_typical/XNOR2XL/VDD10
+LM-175Informationpara1related power/ground10para2XNOR2XL10
+LM-054Informationpara1XNOR2XL10
+LM-109Warningpara1t18_typical/XNOR3X2/VSS10
+LM-109Warningpara1t18_typical/XNOR3X2/VDD10
+LM-175Informationpara1related power/ground10para2XNOR3X210
+LM-054Informationpara1XNOR3X210
+LM-109Warningpara1t18_typical/XNOR3X4/VSS10
+LM-109Warningpara1t18_typical/XNOR3X4/VDD10
+LM-175Informationpara1related power/ground10para2XNOR3X410
+LM-054Informationpara1XNOR3X410
+LM-109Warningpara1t18_typical/XOR2X1/VSS10
+LM-109Warningpara1t18_typical/XOR2X1/VDD10
+LM-175Informationpara1related power/ground10para2XOR2X110
+LM-054Informationpara1XOR2X110
+LM-109Warningpara1t18_typical/XOR2X2/VSS10
+LM-109Warningpara1t18_typical/XOR2X2/VDD10
+LM-175Informationpara1related power/ground10para2XOR2X210
+LM-054Informationpara1XOR2X210
+LM-109Warningpara1t18_typical/XOR2X4/VSS10
+LM-109Warningpara1t18_typical/XOR2X4/VDD10
+LM-175Informationpara1related power/ground10para2XOR2X410
+LM-054Informationpara1XOR2X410
+LM-109Warningpara1t18_typical/XOR2XL/VSS10
+LM-109Warningpara1t18_typical/XOR2XL/VDD10
+LM-175Informationpara1related power/ground10para2XOR2XL10
+LM-054Informationpara1XOR2XL10
+LM-109Warningpara1t18_typical/XOR3X2/VSS10
+LM-109Warningpara1t18_typical/XOR3X2/VDD10
+LM-175Informationpara1related power/ground10para2XOR3X210
+LM-054Informationpara1XOR3X210
+LM-109Warningpara1t18_typical/XOR3X4/VSS10
+LM-109Warningpara1t18_typical/XOR3X4/VDD10
+LM-175Informationpara1related power/ground10para2XOR3X410
+LM-054Informationpara1XOR3X410
+LM-034Informationpara147010para2s10para3470 with a design view (464 had ports reordered);10
+LM-052Informationpara1810para2s10
+</Messages>

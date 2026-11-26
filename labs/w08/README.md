@@ -1,4 +1,4 @@
-# Week 8. FIR Filter: PYNQ-Z2 FPGA Bring-up with VIO and ILA
+# Week 8. PYNQ-Z2 FPGA Bring-up and Debug with VIO and ILA
 
 ## 1. Introduction
 

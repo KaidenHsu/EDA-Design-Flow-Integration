@@ -1,0 +1,6 @@
+{
+  "stage": "library",
+  "state": "EXECUTED_REVIEW_REQUIRED",
+  "timing_model": "ZERO_INTERCONNECT_DELAY_EXPECTED; CHECK LOG",
+  "acceptance": "NOT_REVIEWED"
+}

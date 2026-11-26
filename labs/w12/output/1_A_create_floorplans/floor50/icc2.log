@@ -1,0 +1,299 @@
+
+
+
+                              IC Compiler II (TM)
+
+                  Version X-2025.06 for linux64 - May 23, 2025
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# Log each operation and stop if an ICC2 or Library Manager command fails.
+proc step {name command} {
+    puts "W12_BEGIN $name"
+    if {[catch {uplevel #0 $command} result]} {
+        puts "W12_FAIL $name: $result"
+        exit 1
+    }
+    puts "W12_RESULT $name: $result"
+    puts "W12_END $name"
+}
+# Create the design library, then import and link the mapped FIR netlist.
+step CREATE_LIBRARY {create_lib -technology $::env(W12_TECH) -ref_libs [list $::env(W12_NDM)] fir3.dlib}
+W12_BEGIN CREATE_LIBRARY
+Warning: tsmc18_CIC.tf line 266, unsupported syntax 'maxDeltaWidth' in 'Layer' section. It will be ignored. (TECH-002)
+Warning: tsmc18_CIC.tf line 267, unsupported syntax 'nomDeltaWidth' in 'Layer' section. It will be ignored. (TECH-002)
+Warning: tsmc18_CIC.tf line 268, unsupported syntax 'minDeltaWidth' in 'Layer' section. It will be ignored. (TECH-002)
+Warning: Cut layer 'VIA12' has a non-cross primary default ContactCode 'via1'. (line 842) (TECH-083w)
+Warning: Cut layer 'VIA23' has a non-cross primary default ContactCode 'via2'. (line 860) (TECH-083w)
+Warning: Cut layer 'VIA34' has a non-cross primary default ContactCode 'via3'. (line 878) (TECH-083w)
+Warning: Cut layer 'VIA45' has a non-cross primary default ContactCode 'via4'. (line 896) (TECH-083w)
+Information: Loading technology file '/tools/cad/CBDK/CBDK_TSMC018_Arm_f1.0/CIC/ICC/tsmc18_CIC.tf' (FILE-007)
+W12_RESULT CREATE_LIBRARY: _sel1
+W12_END CREATE_LIBRARY
+step IMPORT_NETLIST {read_verilog -top fir3_reference $::env(W12_NETLIST)}
+W12_BEGIN IMPORT_NETLIST
+Information: Reading Verilog into new design 'fir3_reference' in library 'fir3.dlib'. (VR-012)
+Loading verilog file '/home/kaiden/EDA/w12/input/mapped.v'
+Number of modules read: 2
+Top level ports: 22
+Total ports in all modules: 54
+Total nets in all modules: 167
+Total instances in all modules: 105
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+W12_RESULT IMPORT_NETLIST: 1
+W12_END IMPORT_NETLIST
+step LINK_DESIGN {link_block}
+W12_BEGIN LINK_DESIGN
+Using libraries: fir3.dlib t18_typical.dnm
+Linking block fir3.dlib:fir3_reference.design
+Information: User units loaded from library 't18_typical.dnm' (LNK-040)
+Design 'fir3_reference' was successfully linked.
+W12_RESULT LINK_DESIGN: 1
+W12_END LINK_DESIGN
+step CHECK_REFERENCES {
+    set unresolved [sizeof_collection [get_cells -hierarchical -filter {is_unbound == true}]]
+    puts "W12_UNRESOLVED_CELLS=$unresolved"
+    set count [sizeof_collection [get_cells -hierarchical]]
+    puts "W12_CELL_COUNT=$count"
+    if {$unresolved != 0 || $count == 0} {error "Unresolved or empty design"}
+}
+W12_BEGIN CHECK_REFERENCES
+W12_UNRESOLVED_CELLS=0
+W12_CELL_COUNT=105
+W12_RESULT CHECK_REFERENCES: 
+W12_END CHECK_REFERENCES
+step REFERENCE_REPORT {report_ref_libs}
+W12_BEGIN REFERENCE_REPORT
+****************************************
+Report : Reference Library Report
+Library: fir3.dlib
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:50 2026
+****************************************
+
+    Name            Path                                       Location
+    -------------------------------------------------------------------
+*+  t18_typical.dnm /home/kaiden/EDA/w12/input/t18_typical.dnm /home/kaiden/EDA/w12/input/t18_typical.dnm
+    "*" = Library currently open
+    "+" = Library has technology information
+W12_RESULT REFERENCE_REPORT: 1
+W12_END REFERENCE_REPORT
+# Build the core using the utilization target supplied by the runner.
+step FLOORPLAN {initialize_floorplan -core_utilization $::env(W12_UTIL) -shape R -side_ratio {1 1} -core_offset {5}}
+W12_BEGIN FLOORPLAN
+Warning: The routing directions for layer 'METAL1 METAL2 METAL3 METAL4 METAL5 ' are missing. Auto deriving 'horizontal' routing direction for layer 'METAL1'. (DPUI-924)
+Warning: The routing directions for layer 'METAL1 METAL2 METAL3 METAL4 METAL5 ' are missing. Auto deriving 'vertical' routing direction for layer 'METAL2'. (DPUI-924)
+Warning: The routing directions for layer 'METAL1 METAL2 METAL3 METAL4 METAL5 ' are missing. Auto deriving 'horizontal' routing direction for layer 'METAL3'. (DPUI-924)
+Warning: The routing directions for layer 'METAL1 METAL2 METAL3 METAL4 METAL5 ' are missing. Auto deriving 'vertical' routing direction for layer 'METAL4'. (DPUI-924)
+Warning: The routing directions for layer 'METAL1 METAL2 METAL3 METAL4 METAL5 ' are missing. Auto deriving 'horizontal' routing direction for layer 'METAL5'. (DPUI-924)
+Use site_def 'unit' to initialize floorplan.
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 53.12%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+W12_RESULT FLOORPLAN: 
+W12_END FLOORPLAN
+step FLOORPLAN_REPORT {report_design -floorplan}
+W12_BEGIN FLOORPLAN_REPORT
+****************************************
+Report : design
+        -floorplan
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:50 2026
+****************************************
+
+--------------------------------------------------------------------------------
+                              FLOORPLAN INFORMATION
+--------------------------------------------------------------------------------
+
+CORE AND CHIP AREA INFORMATION
+---------------------------
+Core Area is :     6812.467
+Chip Area is :     8563.667
+---------------------------
+
+SITE ROW INFORMATION
+-----------------------------------------------------------------------
+Site Name    Width    Height   Total Rows     Total Tiles          Area
+-----------------------------------------------------------------------
+unit          0.66      5.04           16            2048      6812.467
+-----------------------------------------------------------------------
+
+BLOCKAGE INFORMATION
+------------------------------------------------
+Blockage Type                Count          Area
+------------------------------------------------
+Hard placement                   0         0.000
+Soft placement                   0         0.000
+Hard macro                       0         0.000
+Partial placement                0         0.000
+Register                         0         0.000
+Placement allow Buffer Only      0         0.000
+Placement allow RP Group Only
+                                 0         0.000
+RP Group                         0         0.000
+Category                         0         0.000
+Routing                          0         0.000
+Routing for Top                  0         0.000
+Routing For Design Rule          0         0.000
+Shaping                          0         0.000
+------------------------------------------------
+
+POWER DOMAIN INFORMATION
+--------------------------------------------------------------------
+Power Domain Name    VA Name         Primary Power Net Primary Ground Net
+--------------------------------------------------------------------
+DEFAULT_POWER_DOMAIN DEFAULT_VA      VDD               VSS
+--------------------------------------------------------------------
+
+VOLTAGE AREA INFORMATION
+-------------------------------------------------------------------------------------
+VA Name          Number             Area       Target    bbox    bbox    bbox    bbox
+              of shapes                   Utilization     llx     lly     urx     ury
+-------------------------------------------------------------------------------------
+DEFAULT_VA            1         6812.467         1.00    5.00    5.00   89.48   85.64
+-------------------------------------------------------------------------------------
+
+GROUP BOUND INFORMATION
+----------------------------------------
+No Group Bound exists
+
+EXCLUSIVE MOVEBOUND INFORMATION
+----------------------------------------
+No Exclusive MoveBound exists.
+
+HARD AND SOFT MOVEBOUND INFORMATION
+----------------------------------------
+No Hard Or Soft MoveBound exists.
+
+ROUTE GUIDE INFORMATION
+------------------------------------------------
+Route Guide Type             Count          Area
+------------------------------------------------
+Extra Detour Region              0         0.000
+Over icovl CellLayers            0         0.000
+River Routing                    0         0.000
+Area Double Via                  0         0.000
+Access Preference                0         0.000
+Default                          0         0.000
+Switched Direction Only          0         0.000
+Max Patterns                     0         0.000
+Others                           0         0.000
+------------------------------------------------
+
+MULTIBIT REGISTER INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+MULTIBIT LS/ISO CELLS INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+RP GROUP INFORMATION
+----------------------------------------
+No RP Group exists
+
+LAYER INFORMATION
+--------------------------------------------------------------------------
+Layer Name Direction Ignored Pitch  default minWidth minSpacing    sameNet
+                                      Width                     MinSpacing
+--------------------------------------------------------------------------
+METAL1     Hor       NO       0.56     0.23     0.23       0.23       0.00
+METAL2     Ver       NO       0.66     0.28     0.28       0.28       0.00
+METAL3     Hor       NO       0.56     0.28     0.28       0.28       0.00
+METAL4     Ver       NO       0.66     0.28     0.28       0.28       0.00
+METAL5     Hor       NO       0.61     0.28     0.28       0.28       0.00
+--------------------------------------------------------------------------
+W12_RESULT FLOORPLAN_REPORT: 1
+W12_END FLOORPLAN_REPORT
+step UTILIZATION_REPORT {report_utilization}
+W12_BEGIN UTILIZATION_REPORT
+****************************************
+Report : report_utilization
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:50 2026
+****************************************
+Utilization Ratio:			0.5312
+Utilization options:
+ - Area calculation based on:		site_row of block fir3_reference
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				6812.4672
+Total Capacity Area:			6812.4672
+Total Area of cells:			3619.1232
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.5312
+
+W12_RESULT UTILIZATION_REPORT: 0.5312
+W12_END UTILIZATION_REPORT
+# Save the native checkpoint and export its floorplan DEF.
+step SAVE_CHECKPOINT {save_block; save_lib}
+W12_BEGIN SAVE_CHECKPOINT
+Information: The command 'save_block' cleared the undo history. (UNDO-016)
+Information: Saving block 'fir3.dlib:fir3_reference.design'
+Saving library 'fir3.dlib'
+W12_RESULT SAVE_CHECKPOINT: 1
+W12_END SAVE_CHECKPOINT
+step EXPORT_DEF {write_def floorplan.def}
+W12_BEGIN EXPORT_DEF
+****************************************
+Report : Data Mismatches
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:50 2026
+****************************************
+No mismatches exist on the design.
+Information: Fill shapes with 'active_fill' purpose will be skipped from output DEF. (DEFW-032)
+---------------------------------------
+Number of Written DEF Constructs
+---------------------------------------
+VERSION                        : 1
+DIVIDERCHAR                    : 1
+BUSBITCHARS                    : 1
+DESIGN                         : 1
+UNITS                          : 1
+DIEAREA                        : 1
+ROW                            : 16
+TRACKS                         : 10
+COMPONENTS                     : 104
+PINS                           : 22
+NETS                           : 130
+W12_RESULT EXPORT_DEF: 1
+W12_END EXPORT_DEF
+puts "W12_IMPORT_FLOORPLAN_COMPLETED"
+W12_IMPORT_FLOORPLAN_COMPLETED
+exit
+Maximum memory usage for this session: 379.99 MB
+Maximum memory usage for this session including child processes: 379.99 MB
+CPU usage for this session:      6 seconds (  0.00 hours)
+Elapsed time for this session:      7 seconds (  0.00 hours)
+Thank you for using IC Compiler II.

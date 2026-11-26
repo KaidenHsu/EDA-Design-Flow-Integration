@@ -1,0 +1,575 @@
+
+
+
+                              IC Compiler II (TM)
+
+                  Version X-2025.06 for linux64 - May 23, 2025
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# Log each operation and stop if an ICC2 or Library Manager command fails.
+proc step {name command} {
+    puts "W12_BEGIN $name"
+    if {[catch {uplevel #0 $command} result]} {
+        puts "W12_FAIL $name: $result"
+        exit 1
+    }
+    puts "W12_RESULT $name: $result"
+    puts "W12_END $name"
+}
+# Open a copy of the checkpoint for the selected placement strategy.
+step OPEN_DESIGN {
+    open_lib fir3.dlib
+    open_block fir3_reference.design
+}
+W12_BEGIN OPEN_DESIGN
+Information: Loading library file '/home/kaiden/EDA/w12/output/3_C_place_cells/congestion_report/fir3.dlib' (FILE-007)
+Information: Loading library file '/home/kaiden/EDA/w12/input/t18_typical.dnm' (FILE-007)
+Information: User units loaded from library 't18_typical.dnm' (LNK-040)
+Opening block 'fir3.dlib:fir3_reference.design' in edit mode
+W12_RESULT OPEN_DESIGN: _sel2
+W12_END OPEN_DESIGN
+# Run the congestion analysis and report the physical checks for comparison.
+step CONGESTION {
+    set_app_options -name route.global.timing_driven -value false
+    report_congestion -rerun_global_router
+}
+W12_BEGIN CONGESTION
+Using libraries: fir3.dlib t18_typical.dnm
+Visiting block fir3.dlib:fir3_reference.design
+Design 'fir3_reference' was successfully linked.
+
+Running global router for congestion map ...
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    0  Alloctr    0  Proc 4248 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+global.timing_driven                                    :	 false               
+
+Begin global routing.
+NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
+Warning: The option "route.detail.enable_via_in_non_preferred_region_check" is set, but the tech file syntax "contactDefaultPreferredRegionMode" is not set to 1. The option setting will be ignored. (ZRT-782)
+Cell Min-Routing-Layer = METAL1
+Cell Max-Routing-Layer = METAL5
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 6.10 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 6.10 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Standard cell pin ADDFX2/B has no valid via regions. (ZRT-044)
+Warning: Standard cell pin DFFRHQX1/D has no valid via regions. (ZRT-044)
+Warning: Standard cell pin XOR2X1/B has no valid via regions. (ZRT-044)
+Warning: Standard cell pin XOR2X1/Y has no valid via regions. (ZRT-044)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used    0  Alloctr    0  Proc   12 
+[End of Read DB] Total (MB): Used    0  Alloctr    0  Proc 4260 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00um,0.00um,94.48um,90.64um)
+Number of routing layers = 5
+layer METAL1, dir Hor, min width = 0.23um, min space = 0.23um pitch = 0.56um
+layer METAL2, dir Ver, min width = 0.28um, min space = 0.28um pitch = 0.66um
+layer METAL3, dir Hor, min width = 0.28um, min space = 0.28um pitch = 0.56um
+layer METAL4, dir Ver, min width = 0.28um, min space = 0.28um pitch = 0.66um
+layer METAL5, dir Hor, min width = 0.28um, min space = 0.28um pitch = 0.61um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used    0  Alloctr    0  Proc 4260 
+Net statistics:
+Total number of nets     = 132
+Number of nets to route  = 130
+130 open nets
+ of which 130 are without routing or PSV shapes
+2 nets are fully connected,
+ of which 2 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    1 
+[End of Build All Nets] Total (MB): Used    0  Alloctr    0  Proc 4262 
+Net length statistics: 
+Net Count(Ignore Fully Rted) 130, Total Half Perimeter Wire Length (HPWL) 4241 microns
+HPWL   0 ~   50 microns: Net Count      104	Total HPWL         2155 microns
+HPWL  50 ~  100 microns: Net Count       21	Total HPWL         1474 microns
+HPWL 100 ~  200 microns: Net Count        5	Total HPWL          612 microns
+HPWL 200 ~  300 microns: Net Count        0	Total HPWL            0 microns
+HPWL 300 ~  400 microns: Net Count        0	Total HPWL            0 microns
+HPWL 400 ~  500 microns: Net Count        0	Total HPWL            0 microns
+HPWL 500 ~  600 microns: Net Count        0	Total HPWL            0 microns
+HPWL 600 ~  700 microns: Net Count        0	Total HPWL            0 microns
+HPWL 700 ~  800 microns: Net Count        0	Total HPWL            0 microns
+HPWL 800 ~  900 microns: Net Count        0	Total HPWL            0 microns
+HPWL 900 ~ 1000 microns: Net Count        0	Total HPWL            0 microns
+HPWL     > 1000 microns: Net Count        0	Total HPWL            0 microns
+Number of partitions: 1 (1 x 1)
+Size of partitions: 19 gCells x 18 gCells
+Average gCell capacity  3.62	 on layer (1)	 METAL1
+Average gCell capacity  6.28	 on layer (2)	 METAL2
+Average gCell capacity  7.58	 on layer (3)	 METAL3
+Average gCell capacity  7.47	 on layer (4)	 METAL4
+Average gCell capacity  8.17	 on layer (5)	 METAL5
+Average number of tracks per gCell 9.00	 on layer (1)	 METAL1
+Average number of tracks per gCell 7.58	 on layer (2)	 METAL2
+Average number of tracks per gCell 9.00	 on layer (3)	 METAL3
+Average number of tracks per gCell 7.58	 on layer (4)	 METAL4
+Average number of tracks per gCell 8.28	 on layer (5)	 METAL5
+Number of gCells = 1710
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:00 
+[End of Build Congestion Map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion Map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion Map] Total (MB): Used    0  Alloctr    0  Proc 4262 
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00 
+[End of Add Nets Demand] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Add Nets Demand] Total (MB): Used    0  Alloctr    0  Proc 4262 
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    1 
+[End of Build Data] Total (MB): Used    0  Alloctr    0  Proc 4262 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 19 gCells x 18 gCells
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc  179 
+[End of Blocked Pin Detection] Total (MB): Used    0  Alloctr    0  Proc 4441 
+Information: Using 1 threads for routing. (ZRT-444)
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~6372.0000um (1264 gCells)
+
+Start GR phase 0
+Number of partitions: 1 (1 x 1)
+Size of partitions: 19 gCells x 18 gCells
+[rtAllBotParts] Elapsed real time: 0:00:00 
+[rtAllBotParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[rtTop] Elapsed real time: 0:00:00 
+[rtTop] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used    0  Alloctr    0  Proc 4441 
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+Initial. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. Both Dirs: Overflow =     8 Max = 3 GRCs =    14 (2.05%)
+Initial. H routing: Overflow =     1 Max = 1 (GRCs =  5) GRCs =     5 (1.46%)
+Initial. V routing: Overflow =     6 Max = 3 (GRCs =  1) GRCs =     9 (2.63%)
+Initial. METAL1     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. METAL2     Overflow =     6 Max = 3 (GRCs =  1) GRCs =     9 (2.63%)
+Initial. METAL3     Overflow =     1 Max = 1 (GRCs =  5) GRCs =     5 (1.46%)
+Initial. METAL4     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. METAL5     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 4336.04
+Initial. Layer METAL1 wire length = 106.68
+Initial. Layer METAL2 wire length = 1858.99
+Initial. Layer METAL3 wire length = 2273.29
+Initial. Layer METAL4 wire length = 97.07
+Initial. Layer METAL5 wire length = 0.00
+Initial. Total Number of Contacts = 688
+Initial. Via via1 count = 361
+Initial. Via via2 count = 311
+Initial. Via via3 count = 16
+Initial. Via via4 count = 0
+Initial. completed.
+
+Start GR phase 1
+Fri Nov 27 02:01:39 2026
+Number of partitions: 1 (1 x 1)
+Size of partitions: 19 gCells x 18 gCells
+[rtAllParts] Elapsed real time: 0:00:00 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used    0  Alloctr    0  Proc 4441 
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. Both Dirs: Overflow =     6 Max = 3 GRCs =    10 (1.46%)
+phase1. H routing: Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase1. V routing: Overflow =     5 Max = 3 (GRCs =  1) GRCs =     9 (2.63%)
+phase1. METAL1     Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase1. METAL2     Overflow =     5 Max = 3 (GRCs =  1) GRCs =     9 (2.63%)
+phase1. METAL3     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. METAL4     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. METAL5     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 4342.71
+phase1. Layer METAL1 wire length = 109.98
+phase1. Layer METAL2 wire length = 1859.00
+phase1. Layer METAL3 wire length = 2260.28
+phase1. Layer METAL4 wire length = 113.45
+phase1. Layer METAL5 wire length = 0.00
+phase1. Total Number of Contacts = 692
+phase1. Via via1 count = 362
+phase1. Via via2 count = 309
+phase1. Via via3 count = 21
+phase1. Via via4 count = 0
+phase1. completed.
+
+Start GR phase 2
+Fri Nov 27 02:01:39 2026
+Number of partitions: 1 (1 x 1)
+Size of partitions: 19 gCells x 18 gCells
+[rtAllParts] Elapsed real time: 0:00:00 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[updNetsDmd] Elapsed real time: 0:00:00 
+[updNetsDmd] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used    0  Alloctr    0  Proc 4441 
+phase2. Routing result:
+phase2. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+phase2. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. Both Dirs: Overflow =     0 Max = 1 GRCs =     2 (0.29%)
+phase2. H routing: Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase2. V routing: Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase2. METAL1     Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase2. METAL2     Overflow =     0 Max = 1 (GRCs =  1) GRCs =     1 (0.29%)
+phase2. METAL3     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. METAL4     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. METAL5     Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 4347.32
+phase2. Layer METAL1 wire length = 124.32
+phase2. Layer METAL2 wire length = 1861.23
+phase2. Layer METAL3 wire length = 2245.25
+phase2. Layer METAL4 wire length = 116.52
+phase2. Layer METAL5 wire length = 0.00
+phase2. Total Number of Contacts = 691
+phase2. Via via1 count = 364
+phase2. Via via2 count = 308
+phase2. Via via3 count = 19
+phase2. Via via4 count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc  181 
+[End of Whole Chip Routing] Total (MB): Used    0  Alloctr    0  Proc 4441 
+
+Congestion utilization per direction:
+Average vertical track utilization   = 14.52 %
+Peak    vertical track utilization   = 46.15 %
+Average horizontal track utilization =  9.25 %
+Peak    horizontal track utilization = 38.89 %
+
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc  181 
+[End of Global Routing] Total (MB): Used    0  Alloctr    0  Proc 4441 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[DBOUT] Elapsed real time: 0:00:00 
+[DBOUT] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DBOUT] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[DBOUT] Total (MB): Used    0  Alloctr    0  Proc 4441 
+[End of dbOut] Elapsed real time: 0:00:00 
+[End of dbOut] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of dbOut] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of dbOut] Total (MB): Used    0  Alloctr    0  Proc 4441 
+
+****************************************
+Report : congestion
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:01:39 2026
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |       2 |     1 |       2  ( 0.29%) |       2
+H routing |       1 |     1 |       1  ( 0.29%) |       1
+V routing |       1 |     1 |       1  ( 0.29%) |       1
+
+W12_RESULT CONGESTION: 1
+W12_END CONGESTION
+step LEGALITY {check_legality}
+W12_BEGIN LEGALITY
+
+************************
+
+running check_legality
+
+Warning: Site master "unit" has neither X-Symmetry nor Y-Symmetry. The "legal orientations" for the standard cells will be limited. (LGL-031)
+Warning: Routing direction of metal layer POLY1 is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer METAL1: cached 0 shapes out of 17 total shapes.
+Layer METAL2: cached 9 shapes out of 9 total shapes.
+Cached 113 vias out of 113 total vias.
+
+check_legality for block design fir3_reference ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0786 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer POLY1 is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 7 ref cells (0 fillers) from library
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Sorting rows.
+Checking spacing rule legality.
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design fir3_reference succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+W12_RESULT LEGALITY: 1
+W12_END LEGALITY
+step PG_DRC {check_pg_drc}
+W12_BEGIN PG_DRC
+Command check_pg_drc started  at Fri Nov 27 02:01:39 2026
+Command check_pg_drc finished at Fri Nov 27 02:01:39 2026
+CPU usage for check_pg_drc: 0.02 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.02 seconds ( 0.00 hours)
+No errors found.
+W12_RESULT PG_DRC: 
+W12_END PG_DRC
+step PG_CONNECTIVITY {check_pg_connectivity}
+W12_BEGIN PG_CONNECTIVITY
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 104
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 18
+Number of VDD Vias: 65
+Number of VDD Terminals: 18
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 16
+Number of VSS Vias: 48
+Number of VSS Terminals: 16
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+W12_RESULT PG_CONNECTIVITY: 
+W12_END PG_CONNECTIVITY
+step AREA {report_utilization}
+W12_BEGIN AREA
+****************************************
+Report : report_utilization
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:01:39 2026
+****************************************
+Utilization Ratio:			0.5312
+Utilization options:
+ - Area calculation based on:		site_row of block fir3_reference
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				6812.4672
+Total Capacity Area:			6812.4672
+Total Area of cells:			3619.1232
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.5312
+
+W12_RESULT AREA: 0.5312
+W12_END AREA
+step PLACEMENT {report_placement}
+W12_BEGIN PLACEMENT
+****************************************
+Report : report_placement
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:01:39 2026
+****************************************
+  ==================
+  Note: Including violations of fixed cells or between fixed pairs of cells. 
+        To ignore violations of / between fixed cells, enable -ignore_fixed. 
+  ==================
+
+  Wire length report (all)
+  ==================
+  wire length in design fir3_reference: 3960.470 microns.
+  wire length in design fir3_reference (see through blk pins): 3960.470 microns.
+
+  Physical hierarchy violations report
+  ====================================
+  Violations in design fir3_reference:
+     0 cells have placement violation.
+
+  Voltage area violations report
+  ====================================
+  Voltage area placement violations in design fir3_reference:
+     0 cells placed outside the voltage area which they belong to.
+
+Information: Default error view fir3_reference_dpplace.err is created in GUI error browser. (DPP-054)
+W12_RESULT PLACEMENT: 1
+W12_END PLACEMENT
+puts "W12_CONGESTION_COMPLETED"
+W12_CONGESTION_COMPLETED
+exit
+Maximum memory usage for this session: 575.91 MB
+Maximum memory usage for this session including child processes: 575.91 MB
+CPU usage for this session:      7 seconds (  0.00 hours)
+Elapsed time for this session:      7 seconds (  0.00 hours)
+Thank you for using IC Compiler II.

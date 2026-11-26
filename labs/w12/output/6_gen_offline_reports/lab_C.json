@@ -1,0 +1,51 @@
+{
+  "evidence": "MODEL_ONLY",
+  "initial": {
+    "legal": false,
+    "issues": [
+      "U1: off-grid",
+      "U2: overlaps blocked site R0:4",
+      "U1/U2: overlap",
+      "U3/U4: overlap"
+    ],
+    "eligible_sites": 14,
+    "cell_footprint_sites": 9,
+    "footprint_utilization_pct": 64.28571428571429
+  },
+  "student_candidate": {
+    "legal": true,
+    "issues": [],
+    "eligible_sites": 14,
+    "cell_footprint_sites": 9,
+    "footprint_utilization_pct": 64.28571428571429
+  },
+  "hpwl_example": 7,
+  "overflow": {
+    "A": {
+      "demand": [
+        12,
+        8,
+        9
+      ],
+      "per_region": [
+        2,
+        0,
+        0
+      ],
+      "total": 2
+    },
+    "B": {
+      "demand": [
+        10,
+        10,
+        9
+      ],
+      "per_region": [
+        0,
+        0,
+        0
+      ],
+      "total": 0
+    }
+  }
+}

@@ -1,0 +1,300 @@
+
+
+
+                              IC Compiler II (TM)
+
+                  Version X-2025.06 for linux64 - May 23, 2025
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# Log each operation and stop if an ICC2 or Library Manager command fails.
+proc step {name command} {
+    puts "W12_BEGIN $name"
+    if {[catch {uplevel #0 $command} result]} {
+        puts "W12_FAIL $name: $result"
+        exit 1
+    }
+    puts "W12_RESULT $name: $result"
+    puts "W12_END $name"
+}
+# Open the copied hold-optimized checkpoint in a fresh ICC2 session.
+step OPEN_DESIGN {
+    open_lib fir3.dlib
+    open_block fir3_reference.design
+}
+W12_BEGIN OPEN_DESIGN
+Information: Loading library file '/home/kaiden/EDA/w12/output/5_reopen_checkpoint/fir3.dlib' (FILE-007)
+Information: Loading library file '/home/kaiden/EDA/w12/input/t18_typical.dnm' (FILE-007)
+Information: User units loaded from library 't18_typical.dnm' (LNK-040)
+Opening block 'fir3.dlib:fir3_reference.design' in edit mode
+W12_RESULT OPEN_DESIGN: _sel2
+W12_END OPEN_DESIGN
+# Confirm that physical checks and reports can run on the reopened design.
+step LEGALITY {check_legality}
+W12_BEGIN LEGALITY
+Using libraries: fir3.dlib t18_typical.dnm
+Visiting block fir3.dlib:fir3_reference.design
+Design 'fir3_reference' was successfully linked.
+
+************************
+
+running check_legality
+
+Warning: Site master "unit" has neither X-Symmetry nor Y-Symmetry. The "legal orientations" for the standard cells will be limited. (LGL-031)
+Warning: Routing direction of metal layer POLY1 is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer METAL1: cached 0 shapes out of 17 total shapes.
+Layer METAL2: cached 9 shapes out of 9 total shapes.
+Cached 113 vias out of 113 total vias.
+
+check_legality for block design fir3_reference ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0782 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer POLY1 is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 8 ref cells (0 fillers) from library
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Sorting rows.
+Checking spacing rule legality.
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design fir3_reference succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+W12_RESULT LEGALITY: 1
+W12_END LEGALITY
+step PG_DRC {check_pg_drc}
+W12_BEGIN PG_DRC
+Command check_pg_drc started  at Fri Nov 27 02:02:07 2026
+Command check_pg_drc finished at Fri Nov 27 02:02:07 2026
+CPU usage for check_pg_drc: 0.02 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.02 seconds ( 0.00 hours)
+No errors found.
+W12_RESULT PG_DRC: 
+W12_END PG_DRC
+step PG_CONNECTIVITY {check_pg_connectivity}
+W12_BEGIN PG_CONNECTIVITY
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 105
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 18
+Number of VDD Vias: 65
+Number of VDD Terminals: 18
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 16
+Number of VSS Vias: 48
+Number of VSS Terminals: 16
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+W12_RESULT PG_CONNECTIVITY: 
+W12_END PG_CONNECTIVITY
+step AREA {report_utilization}
+W12_BEGIN AREA
+****************************************
+Report : report_utilization
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:02:07 2026
+****************************************
+Utilization Ratio:			0.5332
+Utilization options:
+ - Area calculation based on:		site_row of block fir3_reference
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				6812.4672
+Total Capacity Area:			6812.4672
+Total Area of cells:			3632.4288
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.5332
+
+W12_RESULT AREA: 0.5332
+W12_END AREA
+step PLACEMENT {report_placement}
+W12_BEGIN PLACEMENT
+****************************************
+Report : report_placement
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:02:07 2026
+****************************************
+  ==================
+  Note: Including violations of fixed cells or between fixed pairs of cells. 
+        To ignore violations of / between fixed cells, enable -ignore_fixed. 
+  ==================
+
+  Wire length report (all)
+  ==================
+  wire length in design fir3_reference: 3992.353 microns.
+  wire length in design fir3_reference (see through blk pins): 3992.353 microns.
+
+  Physical hierarchy violations report
+  ====================================
+  Violations in design fir3_reference:
+     0 cells have placement violation.
+
+  Voltage area violations report
+  ====================================
+  Voltage area placement violations in design fir3_reference:
+     0 cells placed outside the voltage area which they belong to.
+
+Information: Default error view fir3_reference_dpplace.err is created in GUI error browser. (DPP-054)
+W12_RESULT PLACEMENT: 1
+W12_END PLACEMENT
+puts "W12_REOPEN_COMPLETED"
+W12_REOPEN_COMPLETED
+exit
+Maximum memory usage for this session: 379.64 MB
+Maximum memory usage for this session including child processes: 379.64 MB
+CPU usage for this session:      6 seconds (  0.00 hours)
+Elapsed time for this session:      7 seconds (  0.00 hours)
+Thank you for using IC Compiler II.

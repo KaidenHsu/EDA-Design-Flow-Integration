@@ -1,0 +1,29 @@
+{
+  "evidence": "ILLUSTRATIVE",
+  "week11_setup_slack_ns": 1.5,
+  "placed_setup_slack_ns": -0.2,
+  "candidates": {
+    "baseline": {
+      "setup_slack_ns": -0.2,
+      "hold_slack_ns": 0.05,
+      "cell_area_um2": 9600,
+      "area_overhead_pct": 0.0,
+      "overflow_tracks": 2
+    },
+    "A": {
+      "setup_slack_ns": 0.15,
+      "hold_slack_ns": -0.05,
+      "cell_area_um2": 9800,
+      "area_overhead_pct": 2.0833333333333335,
+      "overflow_tracks": 2
+    },
+    "B": {
+      "setup_slack_ns": 0.05,
+      "hold_slack_ns": 0.02,
+      "cell_area_um2": 9900,
+      "area_overhead_pct": 3.125,
+      "overflow_tracks": 0
+    }
+  },
+  "power_IR_EM": "UNAVAILABLE"
+}

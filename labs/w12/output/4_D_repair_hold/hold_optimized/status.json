@@ -1,0 +1,6 @@
+{
+  "stage": "hold_optimized",
+  "state": "EXECUTED_REVIEW_REQUIRED",
+  "timing_model": "ZERO_INTERCONNECT_DELAY_CONFIRMED",
+  "acceptance": "NOT_REVIEWED"
+}

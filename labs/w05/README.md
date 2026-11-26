@@ -1,4 +1,4 @@
-# Week 5. FIR Filter: Parallelism and Pipelining
+# Week 5. Parallelism and Pipelining
 
 ## 1. Introduction
 

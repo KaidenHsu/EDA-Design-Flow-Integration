@@ -1,0 +1,34 @@
+[
+  [
+    "VDD.entry",
+    "VDD.strap"
+  ],
+  [
+    "VDD.strap",
+    "VDD.rail"
+  ],
+  [
+    "VDD.rail",
+    "VDD.P1"
+  ],
+  [
+    "VDD.rail",
+    "VDD.P2"
+  ],
+  [
+    "VSS.entry",
+    "VSS.strap"
+  ],
+  [
+    "VSS.strap",
+    "VSS.rail"
+  ],
+  [
+    "VSS.rail",
+    "VSS.P1"
+  ],
+  [
+    "VSS.rail",
+    "VSS.P2"
+  ]
+]

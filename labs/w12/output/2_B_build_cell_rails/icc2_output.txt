@@ -1,0 +1,204 @@
+ 
+                              IC Compiler II (TM)
+
+                  Version X-2025.06 for linux64 - May 23, 2025
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# Log each operation and stop if an ICC2 or Library Manager command fails.
+proc step {name command} {
+    puts "W12_BEGIN $name"
+    if {[catch {uplevel #0 $command} result]} {
+        puts "W12_FAIL $name: $result"
+        exit 1
+    }
+    puts "W12_RESULT $name: $result"
+    puts "W12_END $name"
+}
+# Open the copied 60% floorplan and connect the logical supply nets.
+step OPEN_DESIGN {
+    open_lib fir3.dlib
+    open_block fir3_reference.design
+}
+W12_BEGIN OPEN_DESIGN
+Information: Loading library file '/home/kaiden/EDA/w12/output/2_B_build_cell_rails/fir3.dlib' (FILE-007)
+Information: Loading library file '/home/kaiden/EDA/w12/input/t18_typical.dnm' (FILE-007)
+Information: User units loaded from library 't18_typical.dnm' (LNK-040)
+Opening block 'fir3.dlib:fir3_reference.design' in edit mode
+W12_RESULT OPEN_DESIGN: _sel2
+W12_END OPEN_DESIGN
+step CONNECT_PG {connect_pg_net -automatic}
+W12_BEGIN CONNECT_PG
+Using libraries: fir3.dlib t18_typical.dnm
+Visiting block fir3.dlib:fir3_reference.design
+Design 'fir3_reference' was successfully linked.
+Information: Connecting to PG and tie pins in automatic mode. (MV-396)
+****************************************
+Report : Power/Ground Connection Summary
+Design : fir3_reference
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:58 2026
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 0/104
+Ground net VSS                0/104
+--------------------------------------------------------------------------------
+Information: connections of 208 power/ground pin(s) are created or changed. (MV-382)
+
+W12_RESULT CONNECT_PG: 1
+W12_END CONNECT_PG
+# Build the standard-cell rails for the rails-only comparison.
+step DEFINE_RAILS {
+    create_pg_std_cell_conn_pattern rail_pattern -layers {METAL1}
+    set_pg_strategy rail_strategy -core -pattern {{name: rail_pattern} {nets: {VDD VSS}}}
+}
+W12_BEGIN DEFINE_RAILS
+Information: The command 'create_pg_std_cell_conn_pattern' cleared the undo history. (UNDO-016)
+Successfully create standard cell rail pattern rail_pattern.
+Successfully set PG strategy rail_strategy.
+W12_RESULT DEFINE_RAILS: 
+W12_END DEFINE_RAILS
+step GENERATE_RAILS {compile_pg -strategies rail_strategy}
+W12_BEGIN GENERATE_RAILS
+Sanity check for inputs.
+Warning: Strategy via rule is not defined. Add appropriate via rule to get expected results and avoid runtime penalties. (PGR-095)
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy rail_strategy.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating standard cell rails.
+Creating standard cell rails for strategy rail_strategy.
+DRC checking and fixing for standard cell rail strategy rail_strategy.
+Number of threads: 1
+Number of partitions: 2
+Direction of partitions: horizontal
+Number of wires: 16
+Checking DRC for 16 wires: 0% 100%
+Creating 16 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committing wires takes 0.00 seconds.
+Committing vias takes 0.00 seconds.
+Committed 16 wires.
+Committed 0 vias.
+Committed 0 wires for via creation.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+W12_RESULT GENERATE_RAILS: 1
+W12_END GENERATE_RAILS
+# Check the physical supply network before saving the checkpoint.
+step PG_DRC {check_pg_drc}
+W12_BEGIN PG_DRC
+Command check_pg_drc started  at Fri Nov 27 02:00:58 2026
+Command check_pg_drc finished at Fri Nov 27 02:00:58 2026
+CPU usage for check_pg_drc: 0.00 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.00 seconds ( 0.00 hours)
+No errors found.
+W12_RESULT PG_DRC: 
+W12_END PG_DRC
+step PG_CONNECTIVITY {check_pg_connectivity}
+W12_BEGIN PG_CONNECTIVITY
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 104
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 8
+Number of VDD Vias: 0
+Number of VDD Terminals: 0
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 7
+  Number of floating vias: 0
+  Number of floating std cells: 104
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 8
+Number of VSS Vias: 0
+Number of VSS Terminals: 0
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 7
+  Number of floating vias: 0
+  Number of floating std cells: 104
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+W12_RESULT PG_CONNECTIVITY: _sel4
+W12_END PG_CONNECTIVITY
+step SAVE_CHECKPOINT {save_block; save_lib; write_def pg_rails.def}
+W12_BEGIN SAVE_CHECKPOINT
+Information: Saving block 'fir3.dlib:fir3_reference.design'
+Saving library 'fir3.dlib'
+****************************************
+Report : Data Mismatches
+Version: X-2025.06
+Date   : Fri Nov 27 02:00:58 2026
+****************************************
+No mismatches exist on the design.
+Information: Fill shapes with 'active_fill' purpose will be skipped from output DEF. (DEFW-032)
+---------------------------------------
+Number of Written DEF Constructs
+---------------------------------------
+VERSION                        : 1
+DIVIDERCHAR                    : 1
+BUSBITCHARS                    : 1
+DESIGN                         : 1
+UNITS                          : 1
+DIEAREA                        : 1
+ROW                            : 15
+TRACKS                         : 10
+COMPONENTS                     : 104
+PINS                           : 24
+SPECIALNETS                    : 2
+NETS                           : 130
+W12_RESULT SAVE_CHECKPOINT: 1
+W12_END SAVE_CHECKPOINT
+puts "W12_RAILS_COMPLETED"
+W12_RAILS_COMPLETED
+exit
+Maximum memory usage for this session: 388.98 MB
+Maximum memory usage for this session including child processes: 388.98 MB
+CPU usage for this session:      6 seconds (  0.00 hours)
+Elapsed time for this session:      7 seconds (  0.00 hours)
+Thank you for using IC Compiler II.
+

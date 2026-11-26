@@ -1,4 +1,4 @@
-# Week 7. FIR Filter: FPGA Implementation with `opt_design`, `place_design`, `route_design`
+# Week 7. FPGA Implementation with `opt_design`, `place_design`, and `route_design`
 
 ## 1. Introduction
 
