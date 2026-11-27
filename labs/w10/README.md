@@ -1,4 +1,4 @@
-# Week 10: Cell-Based Logical Synthesis with Design Compiler
+# Week 10: Logic Synthesis with Design Compiler
 
 ## 1. Introduction
 

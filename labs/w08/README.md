@@ -1,4 +1,4 @@
-# Week 8. PYNQ-Z2 FPGA Bring-up and Debug with VIO and ILA
+# Week 8. PYNQ-Z2 Bring-up and Debug with VIO and ILA
 
 ## 1. Introduction
 
@@ -90,7 +90,7 @@ The XDC does not create an Ethernet clock; it maps the RTL clock port to the boa
 | Generate handoff files | Completes `write_bitstream`, copies the `.bit`, and runs `write_debug_probes`. | `artifacts/fir3_pynqz2.bit` and matching `artifacts/fir3_pynqz2.ltx`. |
 | Accept handoff | Verifies that the `.bit`, `.ltx`, and `.dcp` files exist and are non-empty. | `WEEK8_BOARD_HANDOFF_ACCEPTED` when the programming package is complete. |
 
-## 5. FPGA Programming
+## 5. Board Programming
 
 [vivado/program.tcl](./vivado/program.tcl) operates on the physical PYNQ-Z2 after the build handoff exists. It programs the FPGA, applies a controlled FIR stimulus through VIO, captures the response with ILA, and saves hardware evidence.
 

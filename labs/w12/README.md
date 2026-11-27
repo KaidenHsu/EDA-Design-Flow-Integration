@@ -1,4 +1,4 @@
-# Week 12. Cell-Based Floorplanning, Power Planning, Placement, and Pre-CTS Hold Repair with ICC2
+# Week 12. Floorplanning, Power Planning, Placement, and Pre-CTS Hold Repair with ICC2
 
 ## 1. Introduction
 
