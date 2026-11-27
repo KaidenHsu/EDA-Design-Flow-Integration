@@ -30,7 +30,7 @@ The overview shows how ICC2 uses standard-cell libraries, technology data, and a
 
 <img src="images/icc2_overview.png" alt="ICC2 inputs and design library overview" width="600">
 
-### NDM Reference Library
+### 3.1 NDM Reference Library
 
 <p>
   <img src="./images/icc2_ref_lib_build.png" alt="ICC2 reference library build" width="37%">
@@ -39,13 +39,13 @@ The overview shows how ICC2 uses standard-cell libraries, technology data, and a
 
 The Synopsys New Data Model (NDM) reference library supplies the standard-cell timing models, dimensions, and pin geometry that ICC2 uses during physical design. In this lab, `bash run.sh` launches Synopsys Library Manager before floorplanning. The [build script](tcl/0_build_reference_library.tcl) creates a workspace with the T18 technology file `tsmc18_CIC.tf`, reads timing and logical cell data from `typical.db`, and reads physical cell data from `tsmc18_6lm_cic.lef`. Library Manager validates the workspace with `check_workspace` and writes the NDM with `commit_workspace`. The runner publishes the library to [input/t18_typical.dnm/](input/t18_typical.dnm/) and keeps build diagnostics in `output/0_build_reference_library/`.
 
-### Netlist
+### 3.2 Netlist
 
 This lab reuses the synthesized Week 10 `fir3_reference` design for a 3-tap FIR filter. Before creating the two floorplans, ICC2 imports [the mapped Verilog](input/mapped.v) and matches each cell instance to its definition in the T18 reference library.
 
 ## 4. Experiments
 
-### A: Floorplan Utilization
+### 4.1 A: Floorplan Utilization
 
 <p>
   <img src="./images/week12_slide_08.png" alt="Lab A: Physical-Design Input Audit" width="49%" height="300">
@@ -54,7 +54,7 @@ This lab reuses the synthesized Week 10 `fir3_reference` design for a 3-tap FIR 
 
 In Experiment A, two floorplans are built for the same FIR design at target utilizations of 60% and 50%. The aspect ratio and margins are held constant. The resulting core dimensions, placement rows, and site occupancy are compared to see how the utilization target affects the space available for the same set of cells.
 
-### B: Power Grid Connectivity
+### 4.2 B: Power Grid Connectivity
 
 <p>
   <img src="./images/week12_slide_15.png" alt="Lab B: Construct and Audit a Power Grid" width="49%" height="300">
@@ -70,7 +70,7 @@ In [student_work/power_grid_edges.json](student_work/power_grid_edges.json), eac
   <img src="./images/chip_layout.jpg" alt="Chip layout" width="35%">
 </p>
 
-### C: Placement and Routing Congestion
+### 4.3 C: Placement and Routing Congestion
 
 <p>
   <img src="./images/week12_slide_19.png" alt="Lab C: Legalize a Small Placement Model" width="49%" height="300">
@@ -81,7 +81,7 @@ In Experiment C, a small placement is legalized by aligning cells to sites, avoi
 
 In [student_work/placement.json](student_work/placement.json), each cell’s position is written as `[row, start_site]`. Keep U1–U4 and their existing widths. Use integer start sites and keep each cell within its row, clear of other cells and blocked sites 4–5 in R0. Rerun the offline audit with `python3 scripts/run_lab.py --lab C` and check whether the candidate is legal.
 
-### D: Pre-CTS Hold Repair
+### 4.4 D: Pre-CTS Hold Repair
 
 <p>
   <img src="./images/week12_slide_24.png" alt="Lab D: Controlled Pre-CTS Optimization" width="49%" height="300">
@@ -94,7 +94,7 @@ In Experiment D, a single buffer is added on the path to `valid_out` in a copy o
 
 The tables follow the operations in execution order. In the logs, `W12_BEGIN` and `W12_END` bracket individual operations. ICC2 prints its own progress messages and report headings within those blocks. `EXECUTED_REVIEW_REQUIRED` indicates that execution and artifact checks completed. Review the reports for violations and gaps in coverage.
 
-### Reference Library Build
+### 5.1 Reference Library Build
 
 Inspect [Build Log](output/0_build_reference_library/icc2.log) · [Workspace Diagnostics](output/0_build_reference_library/check_workspace.ems)
 
@@ -106,7 +106,7 @@ Inspect [Build Log](output/0_build_reference_library/icc2.log) · [Workspace Dia
 
 In this build, `TECH-002` flags legacy layer attributes that were ignored, and `LEFR-050` flags LEF via-generation rules that were skipped. Check which entries were affected in the build output.
 
-### A: Floorplan Utilization
+### 5.2 A: Floorplan Utilization
 
 Inspect [60% Floorplan Log](output/1_A_create_floorplans/floor60/icc2.log) · [50% Floorplan Log](output/1_A_create_floorplans/floor50/icc2.log)
 
@@ -118,7 +118,7 @@ Inspect [60% Floorplan Log](output/1_A_create_floorplans/floor60/icc2.log) · [5
 
 Compare actual utilization with the requested target. In this run, `DPUI-924` reports that ICC2 inferred routing directions for layers with no explicit direction.
 
-### B: Power Grid Connectivity
+### 5.3 B: Power Grid Connectivity
 
 Inspect [Rails-Only Log](output/2_B_build_cell_rails/icc2.log) · [Full-Mesh and Placement Log](output/3_C_place_cells/ordinary/icc2.log)
 
@@ -130,7 +130,7 @@ Inspect [Rails-Only Log](output/2_B_build_cell_rails/icc2.log) · [Full-Mesh and
 
 A grid can pass its geometry checks while reporting floating cells. Compare the rails-only design with the full mesh before and after placement to see when physical connections to the cells are established.
 
-### C: Placement and Routing Congestion
+### 5.4 C: Placement and Routing Congestion
 
 Inspect [Placement Log](output/3_C_place_cells/ordinary/icc2.log) · [Ordinary Congestion Log](output/3_C_place_cells/ordinary_report/icc2.log) · [Congestion-Driven Log](output/3_C_place_cells/congestion_report/icc2.log)
 
@@ -143,7 +143,7 @@ Inspect [Placement Log](output/3_C_place_cells/ordinary/icc2.log) · [Ordinary C
 
 The `Start GR phase` messages mark internal routing passes. Use the final `Report : congestion` table to compare how much demand exceeds capacity and how widely it is distributed.
 
-### D: Pre-CTS Hold Repair
+### 5.5 D: Pre-CTS Hold Repair
 
 Inspect [Baseline Log](output/4_D_repair_hold/hold_baseline/icc2.log) · [Optimized Log](output/4_D_repair_hold/hold_optimized/icc2.log) · [Reopen Log](output/5_reopen_checkpoint/icc2.log)
 
@@ -158,7 +158,7 @@ In this run, `TIM-102` reports that timing uses zero interconnect delay. `TCK-00
 
 ## 6. Results
 
-### A: Floorplan Utilization
+### 6.1 A: Floorplan Utilization
 
 Inspect [output/1_A_create_floorplans/](output/1_A_create_floorplans/)
 
@@ -173,7 +173,7 @@ Inspect [output/1_A_create_floorplans/](output/1_A_create_floorplans/)
 - The 50% target produced a larger core for the same cells, leaving more space available for placement.
 - Actual utilization exceeded both targets. Use the reported geometry and utilization when comparing the floorplans.
 
-### B: Power Grid Connectivity
+### 6.2 B: Power Grid Connectivity
 
 Inspect [output/2_B_build_cell_rails/](output/2_B_build_cell_rails/)
 
@@ -189,7 +189,7 @@ Inspect [output/2_B_build_cell_rails/](output/2_B_build_cell_rails/)
 - The edit to `power_grid_edges.json` is correct. Adding the connection from `VDD.rail` to `VDD.P2` changes the offline report’s `student_candidate.disconnected_pins` from one pin to an empty list and sets `connected_without_cross_supply_edges` to `true`. The report’s built-in `initial` case still shows the missing connection.
 - The JSON edit affects the offline connectivity audit only. ICC2 builds its power grid from the Tcl flow.
 
-### C: Placement and Routing Congestion
+### 6.3 C: Placement and Routing Congestion
 
 Inspect [output/3_C_place_cells/](output/3_C_place_cells/)
 
@@ -207,7 +207,7 @@ Inspect [output/3_C_place_cells/](output/3_C_place_cells/)
 - The edit to `placement.json` is correct. The offline report’s `student_candidate` has `legal: true` and an empty `issues` list. The built-in `initial` case still reports off-grid placement, a blocked-site conflict, and cell overlaps.
 - Moving cells in the fixture changes the legality audit while footprint utilization stays at 9 of 14 eligible sites (64.29%). The ICC2 congestion reports are generated independently.
 
-### D: Pre-CTS Hold Repair
+### 6.4 D: Pre-CTS Hold Repair
 
 Inspect [output/4_D_repair_hold/](output/4_D_repair_hold/)
 
